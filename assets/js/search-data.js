@@ -452,13 +452,6 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%6A%61%79.%68%65%73%73%65%6C%62%65%72%74%68@%63%75%61%6E%73%63%68%75%74%7A.%65%64%75", "_blank");
-        },
-      },{
         id: 'social-orcid',
         title: 'ORCID',
         section: 'Socials',
