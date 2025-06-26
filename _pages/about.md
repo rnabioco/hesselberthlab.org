@@ -26,8 +26,8 @@ focused on discovering and translating fundamental principles of RNA regulation.
 
 🧬 **Core Research.** Our major focus in the lab is to understand protein translation through the lens
 of transfer RNA (tRNA). Transfer RNAs link the RNA and protein worlds, and our
-new approaches enable us to tackle questions using new technologies, including
-the application of nanopore analysis to understand the dynamic use of tRNA by cells.
+newest approaches apply nanopore sequencing technologies to understand the dynamic use of tRNA across
+multiple steps in protein translation.
 
 💊 **Clinical Applications.** Our newest efforts focus on RNA therapeutics. We work with
 clinicians at Children's Hospital Colorado to develop RNA therapies for
