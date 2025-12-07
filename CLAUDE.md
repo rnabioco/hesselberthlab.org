@@ -9,29 +9,36 @@ This is the Hesselberth Lab website built with Jekyll using the [al-folio](https
 ## Common Commands
 
 ### Local Development (Docker - Recommended)
+
 ```bash
 docker compose pull
 docker compose up
 ```
+
 Site runs at http://localhost:8080
 
 ### Local Development (Native Ruby)
+
 ```bash
 bundle install
 pip install jupyter
 bundle exec jekyll serve
 ```
+
 Site runs at http://localhost:4000
 
 ### Build for Production
+
 ```bash
 bundle exec jekyll build
 ```
+
 Output goes to `_site/`
 
 ## Architecture
 
 ### Key Content Locations
+
 - `_pages/about.md` - Homepage content (lab mission, research focus)
 - `_bibliography/papers.bib` - Publications in BibTeX format (uses jekyll-scholar)
 - `_news/` - News/announcements organized by year
@@ -40,6 +47,7 @@ Output goes to `_site/`
 - `assets/json/resume.json` - JSON Resume format CV data
 
 ### Configuration
+
 - `_config.yml` - Main Jekyll config including:
   - Site metadata (`title`, `url`, `first_name`, `last_name`)
   - Jekyll Scholar settings for bibliography
@@ -47,6 +55,7 @@ Output goes to `_site/`
   - Plugin configuration
 
 ### Collections
+
 - `news` - Lab announcements
 - `projects` - Research projects
 - `books` - Book collection

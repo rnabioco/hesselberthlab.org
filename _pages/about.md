@@ -14,7 +14,7 @@ profile:
 
 announcements:
   enabled: true
-  limit: 3  # optional: limit number of news items shown
+  limit: 3 # optional: limit number of news items shown
   # scrollable: true  # optional: make news section scrollable
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -34,4 +34,4 @@ clinicians at Children's Hospital Colorado to develop RNA therapies for
 pediatric genetic diseases (lately focused on retinopathies), and with immunologists and virologists to
 develop new ways to manipulate and understand the mammalian immune system.
 
-*See our publications for more detail on these studies.*
+_See our publications for more detail on these studies._
