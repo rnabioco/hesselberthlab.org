@@ -60,6 +60,9 @@ ninja.data = [{
           section: "News",},{id: "news-we-were-awarded-a-golfers-against-cancer-pilot-grant-with-neel-mukherjee-s-group-emily-decurtis-was-appointed-to-the-molecular-biology-nigms-t32-we-were-awarded-a-proof-of-concept-grant-from-the-colorado-oedit-advanced-industries-accelerator-program-welcome-to-emily-decurtis-joining-the-lab-from-the-molecular-biology-program-ira-fleming-was-awarded-an-nih-niaid-f30-investigating-the-role-of-type-1-interferon-signaling-on-mrna-stability-within-lymphatic-endothelial-cells",
           title: 'We were awarded a Golfers Against Cancer Pilot Grant with Neel Mukherjee’s group....',
           description: "",
+          section: "News",},{id: "news-welcome-to-adam-quach-an-undergraduate-from-metropolitan-state-university-and-jake-armstrong-co-founder-of-andon-bio",
+          title: 'Welcome to Adam Quach, an undergraduate from Metropolitan State University, and Jake Armstrong,...',
+          description: "",
           section: "News",},{
         id: 'social-orcid',
         title: 'ORCID',
