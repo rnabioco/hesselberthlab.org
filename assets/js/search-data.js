@@ -63,6 +63,9 @@ ninja.data = [{
           section: "News",},{id: "news-welcome-to-adam-quach-an-undergraduate-from-metropolitan-state-university-and-jake-armstrong-co-founder-of-andon-bio",
           title: 'Welcome to Adam Quach, an undergraduate from Metropolitan State University, and Jake Armstrong,...',
           description: "",
+          section: "News",},{id: "news-we-were-awarded-vista-and-gates-grubstake-pilot-awards-to-support-our-collaborative-work-with-suja-jagannathan-phd-and-scott-demarest-md-on-therapeutic-targeting-of-cryptic-splicing",
+          title: 'We were awarded VISTA and Gates Grubstake pilot awards to support our collaborative...',
+          description: "",
           section: "News",},{
         id: 'social-orcid',
         title: 'ORCID',
