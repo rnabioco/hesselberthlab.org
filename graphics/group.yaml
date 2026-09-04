@@ -33,3 +33,18 @@ images:
       [p-erika-lasda], [p-ryan-sheridan], [p-kezia-dobson], [p-grace-li],
       [p-jill-bilodeaux], [p-emily-decurtis] and [p-ira-fleming] — keep each
       person's hair, glasses and face recognisably their own.
+
+  - name: lab-action
+    aspect-ratio: "16:9"
+    n: 3
+    description: >
+      A busy research laboratory seen in one wide view, with eight colleagues
+      each absorbed in their own work: one pipetting at a bench, one loading a
+      small desktop nanopore sequencer, two at computer screens showing
+      sequencing traces, one writing on a whiteboard covered in RNA structures,
+      one carrying a rack of tubes, and two talking over a result together.
+      Benches, shelves of reagents and stools fill the room. The people are
+      those shown in [p-jay-hesselberth], [p-erika-lasda], [p-ryan-sheridan],
+      [p-kezia-dobson], [p-grace-li], [p-jill-bilodeaux], [p-emily-decurtis]
+      and [p-ira-fleming] — keep each person's hair, glasses and face
+      recognisably their own.
