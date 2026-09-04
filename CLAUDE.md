@@ -69,6 +69,25 @@ Converts `publications.bib` to individual Hugo publication pages in `content/pub
 - `go.mod` - Go module for HugoBlox theme
 - `hugoblox.yaml` - HugoBlox version and deploy config
 
+## Site graphics
+
+Illustrations and headshots are generated with [bananarama](https://hadley.github.io/bananarama/), which drives Google Gemini from a YAML file.
+
+```bash
+pixi run -e graphics graphics-setup   # once — installs the R package
+export GEMINI_API_KEY=...             # or GOOGLE_API_KEY
+pixi run -e graphics graphics         # graphics/site.yaml   -> assets/media/generated/
+pixi run -e graphics headshots        # graphics/headshots.yaml -> assets/media/authors/
+```
+
+R lives in a separate pixi environment (`[feature.graphics]`), so it never enters the default environment that Netlify builds with.
+
+- Each image's `name` becomes `<name>.png` in the config's `output-dir`. Existing files are skipped; set `force: true` on an image to redraw it. Roughly $0.07 per image.
+- `[somename]` in a description is a reference image: bananarama looks for `graphics/somename.png` and passes it to the model.
+- Headshot `name`s must match the profile slug in `data/authors/<slug>.yaml`, since that is how `team-showcase` resolves avatars.
+- The `style` block in each config mirrors the CU palette in `data/themes/cu-anschutz.yaml`; keep them in step.
+- Commit generated images — regenerating costs money and is not deterministic.
+
 ## Publications
 
 Publications are managed via BibTeX in `publications.bib` at the repo root. The `academic` CLI converts BibTeX entries to individual Hugo content pages. Set `featured: true` in a publication's front matter to show on homepage. A GitHub Actions workflow auto-creates a PR when `publications.bib` changes.

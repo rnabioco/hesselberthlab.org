@@ -1,0 +1,57 @@
+# Site graphics for hesselberthlab.org, generated with bananarama.
+#
+#   pixi run -e graphics graphics-setup   # once, installs the R package
+#   export GEMINI_API_KEY=...             # or GOOGLE_API_KEY
+#   pixi run -e graphics graphics
+#
+# Images are written to assets/media/generated/ as <name>.png and are skipped
+# if they already exist — pass force: true on an image (or `force = TRUE` to
+# bananarama()) to redraw one. Roughly $0.07 per image.
+#
+# Reference images: write [somename] in a description and bananarama looks for
+# graphics/somename.png (or .jpg/.jpeg/.webp/.gif) and passes it to the model.
+
+output-dir: ../assets/media/generated
+
+defaults:
+  model: gemini-3.1-flash-image-preview
+  aspect-ratio: "16:9"
+
+  # Keep this in step with data/themes/cu-anschutz.yaml and assets/css/custom.css.
+  style: >
+    Flat vector editorial illustration on a warm cream background (#FAF7F0).
+    Restrained palette: CU gold (#CFB87C), deep gold (#8C7332), near-black ink
+    (#1C1B19) and warm grey (#565A5C) only. Clean geometric linework of even
+    weight, generous negative space, subtle mid-century modern feel. No
+    gradients, no drop shadows, no photorealism, no 3D rendering, no lettering
+    or text of any kind. Calm, precise and scientific rather than playful.
+
+images:
+  - name: og-card
+    aspect-ratio: "16:9"
+    description: >
+      A stylised transfer RNA cloverleaf secondary structure, drawn as a
+      clean schematic of four stems and three loops, positioned left of
+      centre with wide empty space to the right for a title to be overlaid
+      later. The acceptor stem carries a small amino acid marker.
+
+  - name: area-trna
+    aspect-ratio: "4:3"
+    description: >
+      A single strand of RNA threading through a nanopore embedded in a
+      lipid bilayer, shown in cross-section, with a simple ionic-current
+      trace stepping across the lower third.
+
+  - name: area-therapeutics
+    aspect-ratio: "4:3"
+    description: >
+      A short antisense oligonucleotide binding to a pre-mRNA transcript,
+      with an exon skipping event drawn as two boxed exons joining past a
+      greyed-out cryptic exon.
+
+  - name: area-immunity
+    aspect-ratio: "4:3"
+    description: >
+      A lymphatic endothelial cell holding an archived antigen, drawn as a
+      simple rounded cell outline with small geometric antigen shapes held
+      inside it, and a T cell approaching from the right.

@@ -17,3 +17,18 @@ serve = "hugo server --disableFastRender --bind 0.0.0.0"
 build = "hugo --minify && npx pagefind --site public"
 import-pubs = "academic import publications.bib content/publications/ --compact --verbose"
 setup = "pnpm install --no-frozen-lockfile"
+
+# Image generation with bananarama (https://hadley.github.io/bananarama/).
+# Kept in its own environment so R never enters the default env that Netlify
+# builds with. Needs GEMINI_API_KEY (or GOOGLE_API_KEY) in the environment.
+[feature.graphics.dependencies]
+r-base = ">=4.4"
+r-pak = "*"
+
+[feature.graphics.tasks]
+graphics-setup = "Rscript -e 'pak::pak(\"hadley/bananarama\", ask = FALSE)'"
+graphics = "Rscript -e 'bananarama::bananarama(\"graphics/site.yaml\")'"
+headshots = "Rscript -e 'bananarama::bananarama(\"graphics/headshots.yaml\")'"
+
+[environments]
+graphics = ["graphics"]
