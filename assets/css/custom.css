@@ -757,3 +757,22 @@ main > time.mt-12 {
   border-radius: 10px;
   border: 1px solid var(--rule);
 }
+
+/* ---------------------------------------------------------------------------
+   Navbar sizing
+
+   The nav sits in Crimson Pro, whose x-height measures 82% of the system
+   sans — so the theme's 16px nav links read at about the size of 13px sans.
+   That is fine for body copy, which is read, and too small for navigation,
+   which is scanned. Size up so the links land near a 15px sans equivalent.
+   ------------------------------------------------------------------------ */
+
+.navbar .nav-link {
+  font-size: 1.125rem; /* 18px */
+  letter-spacing: 0.005em;
+}
+
+.navbar-brand {
+  font-size: 1.375rem; /* 22px */
+  letter-spacing: -0.005em;
+}

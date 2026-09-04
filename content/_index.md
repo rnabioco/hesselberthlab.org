@@ -17,7 +17,7 @@ sections:
         <div class="wide lab-hero">
           <img class="lab-hero__mark" src="/media/lab-portrait.png" alt="The Hesselberth Lab" width="1018" height="522">
           <div class="lab-hero__body">
-            <p class="eyebrow">RNA Biology &amp; Therapeutics · CU School of Medicine</p>
+            <p class="eyebrow">RNA Technology &amp; Therapeutics · CU School of Medicine</p>
             <h1 class="lab-hero__title">Reading translation, <em>one tRNA at a time.</em></h1>
             <p class="lab-hero__lede">We are RNA biologists, technology developers and data analysts working out how transfer RNA shapes protein synthesis — and turning what we learn into RNA therapies.</p>
             <p class="lab-hero__actions">
