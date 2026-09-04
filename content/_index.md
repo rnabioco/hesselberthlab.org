@@ -14,7 +14,7 @@ sections:
       subtitle: ''
       text: |-
         <div style="text-align: center; margin-bottom: 2rem;">
-          <img src="media/hesselberth-lab-hex-logo.jpg" alt="Hesselberth Lab" style="max-width: 200px; border-radius: 12px;" />
+          <img src="/media/hesselberth-lab-hex-logo.jpg" alt="Hesselberth Lab" style="max-width: 200px; border-radius: 12px;" />
         </div>
 
         **Our Mission.** We are a collaborative research laboratory comprising RNA biologists, technology developers, and data analysts focused on discovering and translating fundamental principles of RNA regulation.

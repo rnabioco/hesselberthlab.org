@@ -15,6 +15,7 @@ authors:
 - Sujatha Jagannathan
 date: '2025-10-15'
 publishDate: '2026-02-13T13:27:51.361492Z'
+featured: true
 publication_types:
 - manuscript
 abstract: Bardet-Biedl Syndrome (BBS) is a ciliopathy often associated with progressive
