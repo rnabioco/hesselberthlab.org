@@ -1,0 +1,135 @@
+# Lab portraits and science illustrations — cu variant.
+# University of Colorado palette: cream, CU gold, ochre, ink, warm grey
+#
+#   pixi run -e graphics cu     # 12 images, ~$0.81
+#
+# Renders to graphics/out/cu/ (gitignored) so the two variants can be
+# compared side by side before either is promoted into assets/media/.
+# Portrait `name`s are the eventual data/authors/<slug>.yaml slugs; the
+# bracketed reference is the source photograph's filename.
+#
+# The two configs share one subject list and differ only in the palette
+# paragraph below — keep the subjects in step.
+
+output-dir: out/cu
+
+defaults:
+  model: gemini-3.1-flash-image-preview
+  n: 1
+  style: >
+    Flat vector editorial illustration with a prominent grainy, chalk-pastel
+    texture overlaid on the entire image. The style is lineless, relying on
+    colour blocking and soft, textured shading to define forms.
+    The colour palette is restricted to the University of Colorado colours and
+    nothing else: warm cream, CU gold, a deeper ochre gold, near-black ink and
+    warm grey. Gold carries the largest areas of colour in every image. Do not
+    introduce blues, greens, pinks or any other hue.
+    Calm and unfussy. No lettering or text of any kind.
+
+images:
+  - name: jay-hesselberth
+    aspect-ratio: "1:1"
+    description: >
+      A head-and-shoulders portrait of the person shown in [jay-hesselberth], squarely
+      framed and centred, keeping their face, glasses and hair recognisable.
+      Neutral, friendly expression.
+      Fill the whole square edge to edge, with no border, frame or
+      margin. The background is a single flat block of colour, never a gradient
+      or a glow.
+
+  - name: ryan-sheridan
+    aspect-ratio: "1:1"
+    description: >
+      A head-and-shoulders portrait of the person shown in [ryan], squarely
+      framed and centred, keeping their face and hair recognisable.
+      Neutral, friendly expression.
+      Fill the whole square edge to edge, with no border, frame or
+      margin. The background is a single flat block of colour, never a gradient
+      or a glow.
+
+  - name: kezia-dobson
+    aspect-ratio: "1:1"
+    description: >
+      A head-and-shoulders portrait of the person shown in [kezia], squarely
+      framed and centred, keeping their face and hair recognisable.
+      Neutral, friendly expression.
+      Fill the whole square edge to edge, with no border, frame or
+      margin. The background is a single flat block of colour, never a gradient
+      or a glow.
+
+  - name: jill-bilodeaux
+    aspect-ratio: "1:1"
+    description: >
+      A head-and-shoulders portrait of the person shown in [jill], squarely
+      framed and centred, keeping their face and hair recognisable.
+      Neutral, friendly expression.
+      Fill the whole square edge to edge, with no border, frame or
+      margin. The background is a single flat block of colour, never a gradient
+      or a glow.
+
+  - name: emily-decurtis
+    aspect-ratio: "1:1"
+    description: >
+      A head-and-shoulders portrait of the person shown in [emily], squarely
+      framed and centred, keeping their face, glasses and hair recognisable.
+      Neutral, friendly expression.
+      Fill the whole square edge to edge, with no border, frame or
+      margin. The background is a single flat block of colour, never a gradient
+      or a glow.
+
+  - name: erika-lasda
+    aspect-ratio: "1:1"
+    description: >
+      A head-and-shoulders portrait of the person shown in [erika], squarely
+      framed and centred, keeping their face and hair recognisable.
+      Neutral, friendly expression.
+      Fill the whole square edge to edge, with no border, frame or
+      margin. The background is a single flat block of colour, never a gradient
+      or a glow.
+
+  - name: ira-fleming
+    aspect-ratio: "1:1"
+    description: >
+      A head-and-shoulders portrait of the person shown in [ira], squarely
+      framed and centred, keeping their face and hair recognisable.
+      Neutral, friendly expression.
+      Fill the whole square edge to edge, with no border, frame or
+      margin. The background is a single flat block of colour, never a gradient
+      or a glow.
+
+  - name: grace-li
+    aspect-ratio: "1:1"
+    description: >
+      A head-and-shoulders portrait of the person shown in [grace], squarely
+      framed and centred, keeping their face and hair recognisable.
+      Neutral, friendly expression.
+      Fill the whole square edge to edge, with no border, frame or
+      margin. The background is a single flat block of colour, never a gradient
+      or a glow.
+
+  - name: sharing
+    aspect-ratio: "16:9"
+    description: >
+      A transfer RNA folded into its cloverleaf shape, sitting left of
+      centre with open space to the right, and a small amino acid attached at
+      the top of its acceptor stem.
+
+  - name: area-trna
+    aspect-ratio: "4:3"
+    description: >
+      A single unpaired strand of RNA threading down through a narrow
+      protein pore set in a membrane, with the electrical trace it produces
+      running underneath. The strand is single-stranded, not a double helix.
+
+  - name: area-therapeutics
+    aspect-ratio: "4:3"
+    description: >
+      A short therapeutic oligonucleotide pairing with a much
+      longer RNA transcript, with a section of the transcript looped out and
+      skipped over.
+
+  - name: area-immunity
+    aspect-ratio: "4:3"
+    description: >
+      A cell holding a few small archived fragments inside it, with
+      another immune cell approaching to inspect them.

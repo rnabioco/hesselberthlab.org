@@ -45,9 +45,8 @@ R_LIBS_USER = "$PIXI_PROJECT_ROOT/.pixi/rlibs"
 
 [feature.graphics.tasks]
 graphics-setup = "Rscript -e 'dir.create(Sys.getenv(\"R_LIBS_USER\"), recursive = TRUE, showWarnings = FALSE); remotes::install_github(\"hadley/bananarama\", upgrade = \"never\")'"
-trial = "Rscript -e 'bananarama::bananarama(\"graphics/trial.yaml\")'"
-graphics = "Rscript -e 'bananarama::bananarama(\"graphics/site.yaml\")'"
-headshots = "Rscript -e 'bananarama::bananarama(\"graphics/headshots.yaml\")'"
+pastel = "Rscript -e 'bananarama::bananarama(\"graphics/pastel.yaml\")'"
+cu = "Rscript -e 'bananarama::bananarama(\"graphics/cu.yaml\")'"
 
 [environments]
 graphics = ["graphics"]
