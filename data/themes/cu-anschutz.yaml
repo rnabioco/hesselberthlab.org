@@ -2,10 +2,12 @@
 #
 # Warm cream ground keyed to the University of Colorado palette.
 #
-# CU gold (#CFB87C) is ~1.5:1 against the cream background, so it is used for
+# CU gold (#CFB87C) is 1.82:1 against the cream background, so it is used for
 # decoration only — rules, motifs, fills, borders. Text and links use the
-# deeper gold (#8C7332, ~5.4:1 on cream) instead. In dark mode the roles swap:
-# CU gold reads well as the accent on near-black.
+# deeper gold (#756026): 5.68:1 on cream and 5.16:1 on the section band, both
+# past the 4.5:1 AA threshold. An earlier #8C7332 measured only 4.25:1 and was
+# failing Lighthouse. In dark mode the roles swap: CU gold on near-black is
+# 10.2:1.
 
 hugoblox:
   meta:
@@ -20,7 +22,7 @@ hugoblox:
 
   light:
     colors:
-      primary: "#8C7332" # Deep gold — accessible on cream
+      primary: "#756026" # Deep gold — 5.68:1 on cream, passes AA
       secondary: "#565A5C" # CU dark gray
       neutral: "#78736A" # Warm stone
     surfaces:

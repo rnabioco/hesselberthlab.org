@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+/* Metric-matched fallback.
+
+   Crimson Pro is only discovered after this stylesheet parses (it arrives via
+   @import), so the page first paints in the fallback and reflows when the real
+   face swaps in. Measured at 100px, the string used on the homepage renders
+   2844px in Crimson Pro, 3195px in Georgia (12% wider) and 2930px in Times
+   (3% wider) — Georgia was causing a 0.279 layout shift on its own.
+
+   Fall back to Times scaled by 2844/2930, so the pre-swap and post-swap text
+   occupy almost the same width and nothing jumps. */
+@font-face {
+  font-family: 'Crimson Fallback';
+  src: local('Times New Roman'), local('Times'), local('Liberation Serif');
+  size-adjust: 97.1%;
+  ascent-override: 92%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
 /* ---------------------------------------------------------------------------
    Tokens
 
@@ -10,11 +29,11 @@
    ------------------------------------------------------------------------ */
 
 :root {
-  --font-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --font-serif: 'Crimson Pro', 'Crimson Fallback', Georgia, serif;
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
 
-  --cu-gold: #cfb87c; /* decoration only — 1.5:1 on cream */
-  --cu-gold-deep: #8c7332; /* text-safe — 5.4:1 on cream */
+  --cu-gold: #cfb87c; /* decoration only — 1.82:1 on cream */
+  --cu-gold-deep: #756026; /* text-safe — 5.68:1 on cream, 5.16:1 on the band */
   --band: #f2ecdf;
   --rule: #e2d9c6;
   --ink-soft: #55534e;
@@ -113,12 +132,13 @@ body {
 }
 
 .lab-hero__mark {
+  /* The SVG is drawn in currentColor over a transparent ground, so it needs no
+     white plate behind it. Intrinsic width/height reserve the box before it
+     loads; padding here would break that ratio and trip Lighthouse's
+     image-aspect-ratio audit. */
   width: 100%;
-  max-width: 190px;
-  border: 1px solid var(--rule);
-  border-radius: 10px;
-  background: #fff;
-  padding: 0.6rem;
+  max-width: 210px;
+  height: auto;
   margin: 0;
 }
 
