@@ -1,0 +1,39 @@
+# Two trial images, to judge whether the house style is worth building on.
+#
+#   pixi run -e graphics trial     # ~$0.14
+#
+# Output goes to graphics/out/ (gitignored) and is reviewed before anything is
+# promoted. In particular this must never write over
+# assets/media/authors/jay-hesselberth.png, which is a real photograph.
+
+output-dir: out
+
+defaults:
+  model: gemini-3.1-flash-image-preview
+  n: 1
+
+  # Following https://tidydesign.substack.com/p/illustrating-my-slides-with-ai:
+  # lineless colour blocking with a chalk-pastel texture, and a deliberately
+  # loose brief — over-specifying makes the result worse, not better.
+  # Palette is keyed to data/themes/cu-anschutz.yaml.
+  style: >
+    Flat vector editorial illustration with a prominent grainy, chalk-pastel
+    texture overlaid on the entire image. The style is lineless, relying on
+    colour blocking and soft, textured shading to define forms. The colour
+    palette is muted and desaturated, built from warm cream, soft gold, deep
+    ochre, near-black ink and warm grey. Calm and unfussy. No lettering or text
+    of any kind.
+
+images:
+  - name: jay-hesselberth
+    aspect-ratio: "1:1"
+    description: >
+      A head-and-shoulders portrait of the person shown in [jay-hesselberth],
+      keeping their face, glasses and hair recognisable. Plain background,
+      neutral friendly expression.
+
+  - name: trna
+    aspect-ratio: "16:9"
+    description: >
+      A transfer RNA molecule threading through a nanopore in a membrane,
+      with a suggestion of the electrical signal it produces.

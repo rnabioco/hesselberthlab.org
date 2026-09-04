@@ -74,13 +74,20 @@ Converts `publications.bib` to individual Hugo publication pages in `content/pub
 Illustrations and headshots are generated with [bananarama](https://hadley.github.io/bananarama/), which drives Google Gemini from a YAML file.
 
 ```bash
-pixi run -e graphics graphics-setup   # once — installs the R package
-export GEMINI_API_KEY=...             # or GOOGLE_API_KEY
+pixi run -e graphics graphics-setup   # once — installs bananarama from GitHub
+pixi run -e graphics trial            # graphics/trial.yaml  -> graphics/out/  (gitignored)
 pixi run -e graphics graphics         # graphics/site.yaml   -> assets/media/generated/
 pixi run -e graphics headshots        # graphics/headshots.yaml -> assets/media/authors/
 ```
 
-R lives in a separate pixi environment (`[feature.graphics]`), so it never enters the default environment that Netlify builds with.
+The API key is read from `~/.Renviron` (`GEMINI_API_KEY` or `GOOGLE_API_KEY`); it is never stored in the repo.
+
+R lives in a separate pixi environment (`[feature.graphics]`), so it never enters the default environment that Netlify builds with. Two things about that environment are load-bearing:
+
+- `R_LIBS_USER` is repointed at `.pixi/rlibs`. R otherwise defaults it to `~/Library/R`, which sorts *ahead* of the environment's own library — that is how a stale global ellmer 0.2.1 shadowed the pinned 0.4.2 and broke image generation with `Unknown content type ... "inlineData" and "thoughtSignature"`. Image generation needs ellmer >= 0.4.0.
+- Setup uses `remotes`, not `pak`. conda-forge's `r-pak` ships a wrong-architecture private library on osx-arm64 and is non-functional there.
+
+Use `graphics/trial.yaml` to test prompt and style changes on one or two images before running a whole config — generation is billed per image.
 
 - Each image's `name` becomes `<name>.png` in the config's `output-dir`. Existing files are skipped; set `force: true` on an image to redraw it. Roughly $0.07 per image.
 - `[somename]` in a description is a reference image: bananarama looks for `graphics/somename.png` and passes it to the model.

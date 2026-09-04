@@ -23,10 +23,29 @@ setup = "pnpm install --no-frozen-lockfile"
 # builds with. Needs GEMINI_API_KEY (or GOOGLE_API_KEY) in the environment.
 [feature.graphics.dependencies]
 r-base = ">=4.4"
-r-pak = "*"
+# conda-forge's r-pak ships a wrong-architecture private library on osx-arm64
+# ("Wrong OS or architecture, pak is probably dysfunctional"), so use remotes
+# to install the one package that is only on GitHub.
+r-remotes = "*"
+# bananarama's imports, as conda binaries so nothing has to be compiled.
+# Image generation needs ellmer >= 0.4.0; the site's old system ellmer was 0.2.1.
+r-ellmer = ">=0.4"
+r-magick = "*"
+r-openssl = "*"
+r-cli = "*"
+r-rlang = "*"
+r-yaml = "*"
+
+# R defaults R_LIBS_USER to ~/Library/R, which sorts ahead of the environment's
+# own library and shadows the pinned packages with whatever is installed
+# globally. Point it at a project-local library instead so the graphics
+# environment is self-contained.
+[feature.graphics.activation.env]
+R_LIBS_USER = "$PIXI_PROJECT_ROOT/.pixi/rlibs"
 
 [feature.graphics.tasks]
-graphics-setup = "Rscript -e 'pak::pak(\"hadley/bananarama\", ask = FALSE)'"
+graphics-setup = "Rscript -e 'dir.create(Sys.getenv(\"R_LIBS_USER\"), recursive = TRUE, showWarnings = FALSE); remotes::install_github(\"hadley/bananarama\", upgrade = \"never\")'"
+trial = "Rscript -e 'bananarama::bananarama(\"graphics/trial.yaml\")'"
 graphics = "Rscript -e 'bananarama::bananarama(\"graphics/site.yaml\")'"
 headshots = "Rscript -e 'bananarama::bananarama(\"graphics/headshots.yaml\")'"
 
