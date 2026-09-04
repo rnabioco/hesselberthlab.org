@@ -1,0 +1,28 @@
+# Site favicon. Renders to graphics/out/cu/favicon/; the chosen one is copied to
+# assets/media/icon.png, which the theme auto-detects as the site icon.
+#
+#   pixi run -e graphics favicon     # 3 variants, ~$0.20
+#
+# A favicon is read at 16-32px, so the brief is deliberately blunt: one shape,
+# heavy strokes, no detail. n:3 because this is exactly the case where picking
+# from replicates beats tweaking the prompt.
+
+output-dir: out/cu/favicon
+
+defaults:
+  model: gemini-3.1-flash-image-preview
+  aspect-ratio: "1:1"
+  n: 3
+  style: >
+    A single bold pictogram filling the frame edge to edge, in the style of an
+    app icon. Solid CU gold on a warm cream ground, with near-black ink for
+    detail — no other colours, no gradients, no texture, no lettering. Very
+    heavy line weights and large simple shapes, with no fine detail at all,
+    because this is displayed at 32 pixels across.
+
+images:
+  - name: favicon
+    description: >
+      A transfer RNA drawn as a cloverleaf: a vertical stem with a small
+      circle at the top, and three rounded loops arranged symmetrically below
+      it. Bold and symmetrical, centred, filling the frame.

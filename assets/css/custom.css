@@ -683,3 +683,33 @@ main .max-w-prose.grid > div:nth-child(odd) {
   text-decoration-color: var(--cu-gold);
   text-underline-offset: 2px;
 }
+
+/* ---------------------------------------------------------------------------
+   Publication page density
+
+   The theme repeats every author as a full-width block under the paper, which
+   on an eight-author paper was 1216px of a 2124px page — 57% of it — restating
+   the byline that already sits under the title, with links. Drop it, and close
+   the gaps the theme leaves around the metadata.
+   ------------------------------------------------------------------------ */
+
+main .flex.pt-12.pb-4 {
+  display: none;
+}
+
+main > .article-header.featured-image-wrapper {
+  margin-bottom: 1rem;
+}
+
+main > .max-w-prose.grid {
+  margin-block: 0.5rem 1rem;
+}
+
+main > .mt-4.mb-16 {
+  margin-bottom: 1.25rem;
+}
+
+main > time.mt-12 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
