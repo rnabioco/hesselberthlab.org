@@ -1,0 +1,37 @@
+---
+title: Vaccine adjuvant-elicited CD8+ T cell immunity is co-dependent on T-bet and
+  FOXO1
+authors:
+- Daria L Ivanova
+- Scott B Thompson
+- Jared Klarquist
+- Michael G Harbell
+- Augustus M Kilgore
+- Erika L Lasda
+- Jay R Hesselberth
+- Christopher A Hunter
+- Ross M Kedl
+date: '2023-07-01'
+publishDate: '2026-02-13T13:27:51.423627Z'
+publication_types:
+- article-journal
+publication: '*Cell Rep.*'
+abstract: T-bet and FOXO1 are transcription factors canonically associated with effector
+  and memory T cell fates, respectively. During an infectious response, these factors
+  direct the development of CD8+ T cell fates, where T-bet deficiency leads to ablation
+  of only short-lived effector cells, while FOXO1 deficiency results in selective
+  loss of memory. In contrast, following adjuvanted subunit vaccination in mice, both
+  effector- and memory-fated T cells are compromised in the absence of either T-bet
+  or FOXO1. Thus, unlike responses to challenge with Listeria monocytogenes, productive
+  CD8+ T cell responses to adjuvanted vaccination require coordinated regulation of
+  FOXO1 and T-bet transcriptional programs. Single-cell RNA sequencing analysis confirms
+  simultaneous T-bet, FOXO1, and TCF1 transcriptional activity in vaccine-elicited,
+  but not infection-elicited, T cells undergoing clonal expansion. Collectively, our
+  data show that subunit vaccine adjuvants elicit T cell responses dependent on transcription
+  factors associated with effector and memory cell fates.
+tags:
+- 'CD8; CP: Immunology; FOXO1; T cell; T-bet; adjuvant; transcription factor; vaccine'
+hugoblox:
+  ids:
+    doi: 10.1016/j.celrep.2023.112911
+---

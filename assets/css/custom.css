@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  --font-family-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+}
+
+body {
+  font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+}
+
+/* Cap content width to match al-folio's 930px feel */
+.page-body,
+.universal-wrapper {
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tighter section spacing on landing pages */
+.hb-section {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Reduce card padding */
+.card {
+  padding: 0.75rem;
+}
+
+/* Compact article/citation list items */
+.citation,
+.article-grid .card {
+  margin-bottom: 0.5rem;
+}
+
+/* Tighter heading margins */
+.page-body h1,
+.page-body h2,
+.page-body h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Reduce navbar height */
+.hb-navbar {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Tighter footer */
+footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

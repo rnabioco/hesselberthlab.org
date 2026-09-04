@@ -4,66 +4,75 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the Hesselberth Lab website built with Jekyll using the [al-folio](https://github.com/alshedivat/al-folio) academic theme. The site is deployed to https://hesselberthlab.org via GitHub Pages.
+This is the Hesselberth Lab website built with [Hugo](https://gohugo.io/) using the [HugoBlox](https://hugoblox.com/) academic theme. The site is deployed to https://hesselberthlab.org via GitHub Pages. Dependencies are managed with [pixi](https://pixi.sh/).
 
 ## Common Commands
 
-### Local Development (Docker - Recommended)
+### Setup
 
 ```bash
-docker compose pull
-docker compose up
+pixi run setup
 ```
 
-Site runs at http://localhost:8080
+Installs Node.js dependencies via pnpm (corepack + pnpm install).
 
-### Local Development (Native Ruby)
+### Local Development
 
 ```bash
-bundle install
-pip install jupyter
-bundle exec jekyll serve
+pixi run serve
 ```
 
-Site runs at http://localhost:4000
+Site runs at http://localhost:1313
 
 ### Build for Production
 
 ```bash
-bundle exec jekyll build
+pixi run build
 ```
 
-Output goes to `_site/`
+Builds with Hugo + Pagefind search index. Output goes to `public/`.
+
+### Import Publications
+
+```bash
+pixi run import-pubs
+```
+
+Converts `publications.bib` to individual Hugo publication pages in `content/publications/` using the `academic` CLI.
 
 ## Architecture
 
 ### Key Content Locations
 
-- `_pages/about.md` - Homepage content (lab mission, research focus)
-- `_bibliography/papers.bib` - Publications in BibTeX format (uses jekyll-scholar)
-- `_news/` - News/announcements organized by year
-- `_data/repositories.yml` - GitHub repos to feature
-- `_data/cv.yml` - CV data (fallback if no JSON resume)
-- `assets/json/resume.json` - JSON Resume format CV data
+- `content/_index.md` - Homepage (HugoBlox block-based landing page)
+- `content/publications/` - Publication pages (auto-generated from BibTeX)
+- `content/blog/` - News/announcements as blog posts
+- `content/software.md` - Software and tools page
+- `content/people.md` - Lab members page
+- `content/authors/` - Author profiles (one directory per person)
+- `publications.bib` - Publications in BibTeX format (source of truth)
+- `assets/media/` - Images and media files
+- `assets/css/custom.css` - Custom CSS (Crimson Pro font)
 
 ### Configuration
 
-- `_config.yml` - Main Jekyll config including:
-  - Site metadata (`title`, `url`, `first_name`, `last_name`)
-  - Jekyll Scholar settings for bibliography
-  - Theme options (dark mode, masonry, math typesetting)
-  - Plugin configuration
+- `config/_default/hugo.yaml` - Main Hugo config (baseURL, build settings)
+- `config/_default/params.yaml` - HugoBlox theme params (identity, theme, typography, header, footer)
+- `config/_default/menus.yaml` - Navigation menu
+- `config/_default/module.yaml` - Hugo module imports (HugoBlox)
+- `config/_default/languages.yaml` - Language settings
 
-### Collections
+### Dependencies
 
-- `news` - Lab announcements
-- `projects` - Research projects
-- `books` - Book collection
+- `pixi.toml` - pixi workspace (Hugo, Go, Node.js, Python, academic CLI)
+- `package.json` - Node.js dependencies (Tailwind CSS, Pagefind, Preact)
+- `go.mod` - Go module for HugoBlox theme
+- `hugoblox.yaml` - HugoBlox version and deploy config
 
 ## Publications
 
-Publications are managed via BibTeX in `_bibliography/papers.bib`. Supported fields include: `abstract`, `pdf`, `code`, `html`, `arxiv`, `doi`, `poster`, `slides`, `video`, `website`. Set `selected={true}` to feature on homepage.
+Publications are managed via BibTeX in `publications.bib` at the repo root. The `academic` CLI converts BibTeX entries to individual Hugo content pages. Set `featured: true` in a publication's front matter to show on homepage. A GitHub Actions workflow auto-creates a PR when `publications.bib` changes.
 
 ## Deployment
 
-Automatic deployment via GitHub Actions on push to `main` branch. The workflow builds the site and deploys to `gh-pages` branch.
+Automatic deployment via GitHub Actions on push to `main` branch. The workflow uses pixi to install dependencies, builds with Hugo + Pagefind, and deploys to GitHub Pages via `actions/deploy-pages`.

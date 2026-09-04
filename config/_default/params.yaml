@@ -1,0 +1,142 @@
+hugoblox:
+  schema: "2.0"
+
+  identity:
+    name: "Hesselberth Lab"
+    organization: "University of Colorado School of Medicine"
+    type: organization
+    tagline: "RNA Biology & Therapeutics"
+    description: "The Hesselberth Lab studies RNA biology, tRNA regulation, and RNA therapeutics at the University of Colorado School of Medicine."
+    social:
+      twitter: ""
+
+  theme:
+    mode: system
+    pack: "default"
+    colors:
+      primary: ""
+      secondary: ""
+      neutral: ""
+    colors_light: {}
+    colors_dark: {}
+    surfaces:
+      background: ""
+      foreground: ""
+      header:
+        background: ""
+        foreground: ""
+      footer:
+        background: ""
+        foreground: ""
+
+  typography:
+    font: "serif"
+    size: "sm"
+
+  layout:
+    radius: "sm"
+    spacing: "compact"
+    avatar_shape: circle
+
+  header:
+    enable: true
+    style: navbar
+    sticky: true
+    align: center
+    search: true
+    theme_toggle: true
+    theme_picker: false
+    language_switcher: false
+    cta:
+      enable: false
+      text: ""
+      url: ""
+
+  footer:
+    style: minimal
+    language_switcher: false
+    text: ""
+
+  copyright:
+    notice: "© {year} {name}"
+    license:
+      type: cc
+      allow_derivatives: false
+      share_alike: true
+      allow_commercial: false
+
+  seo:
+    title: "Hesselberth Lab"
+    location:
+      address:
+        street: ""
+        city: "Aurora"
+        region: "CO"
+        postal_code: "80045"
+        country: "US"
+      coordinates:
+        latitude: null
+        longitude: null
+      phone: ""
+    ai:
+      allow:
+        - /
+      disallow: []
+      note: ""
+      contact: ""
+
+  content:
+    math:
+      enable: true
+    toc:
+      enable: true
+    reading_time:
+      enable: false
+    citations:
+      style: apa
+
+  search:
+    enable: true
+    suggestions: []
+    quick_actions: []
+
+  comments:
+    enable: false
+    provider: ""
+
+  analytics:
+    google:
+      measurement_id: ""
+
+  verification:
+    google: ""
+    bing: ""
+
+  repository:
+    enable: false
+    url: "https://github.com/rnabioco/hesselberthlab.org"
+    branch: main
+    content_dir: content
+
+  locale:
+    date_format: "Jan 2, 2006"
+    time_format: "3:04 PM"
+    address_format: en-us
+
+  security:
+    csp:
+      policy: ""
+      report_only: false
+    frame_options: allow
+    permissions_policy: ""
+
+  privacy:
+    enable: false
+    anonymize_analytics: true
+
+  debug:
+    enable: false
+
+  pro:
+    hide_attribution: false
+    affiliate_code: ""
