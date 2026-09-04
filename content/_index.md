@@ -91,5 +91,5 @@ sections:
       offset: 0
       order: desc
     design:
-      view: date-title-summary
+      view: news-line
 ---

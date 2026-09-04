@@ -445,12 +445,83 @@ body {
 }
 
 /* ---------------------------------------------------------------------------
-   Interior pages inherit the palette; keep their measure readable.
+   Interior pages
+
+   62rem here used to cap the whole page at 992px. With the theme's 256px
+   contents sidebar that left an article 480px wide, and the publication
+   metadata grid's fixed 200px label column then squeezed the abstract into
+   168px. Let the theme's own max-w-screen-xl (1280px) govern instead.
    ------------------------------------------------------------------------ */
 
 .page-body {
-  max-width: 62rem;
+  max-width: 80rem;
   margin-inline: auto;
+}
+
+/* ---------------------------------------------------------------------------
+   Publication pages
+
+   Put the generated illustration beside the abstract rather than stacked above
+   it, and give the abstract a readable measure. Scoped with :has() so pages
+   without an illustration keep the theme's single column.
+   ------------------------------------------------------------------------ */
+
+/* Publication pages have no headings, so the contents rail renders empty but
+   still reserves 256px. Reclaim it wherever the TOC has no entries. */
+.hb-toc:not(:has(li)) {
+  display: none;
+}
+
+main:has(> .featured-image-wrapper img) {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  column-gap: 2.5rem;
+  align-items: start;
+}
+
+main:has(> .featured-image-wrapper img) > * {
+  grid-column: 1 / -1;
+}
+
+main:has(> .featured-image-wrapper img) > .featured-image-wrapper {
+  grid-column: 1;
+  grid-row: 3;
+  margin-block: 0;
+}
+
+main:has(> .featured-image-wrapper img) > .max-w-prose.grid {
+  grid-column: 2;
+  grid-row: 3;
+  margin-top: 0;
+}
+
+.featured-image-wrapper img {
+  border-radius: 10px;
+  border: 1px solid var(--rule);
+}
+
+/* The label column is fixed at 200px, which on a narrow article leaves almost
+   nothing for the value. Shrink it and drop the prose cap. */
+main .max-w-prose.grid {
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  main .max-w-prose.grid {
+    /* 128px so "Publication" fits on one line. */
+    grid-template-columns: 128px minmax(0, 1fr);
+  }
+}
+
+/* The grid alternates label, value, label, value — so every odd child is a
+   label, not just the first. */
+main .max-w-prose.grid > div:nth-child(odd) {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding-top: 0.25rem;
 }
 
 /* ---------------------------------------------------------------------------
@@ -563,4 +634,52 @@ body {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* ---------------------------------------------------------------------------
+   News running list (layouts/_partials/views/news-line)
+
+   Items are single sentences with no page of their own, so the text is the
+   content rather than a link to it.
+   ------------------------------------------------------------------------ */
+
+.news-list {
+  border-top: 1px solid var(--rule);
+}
+
+.news-line {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (min-width: 640px) {
+  .news-line {
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: baseline;
+  }
+}
+
+.news-date {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cu-gold-deep);
+  white-space: nowrap;
+}
+
+.news-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.news-text a {
+  text-decoration: underline;
+  text-decoration-color: var(--cu-gold);
+  text-underline-offset: 2px;
 }

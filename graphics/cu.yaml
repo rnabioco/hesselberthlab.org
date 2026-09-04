@@ -89,6 +89,7 @@ images:
 
   - name: ira-fleming
     aspect-ratio: "1:1"
+    force: true  # redrawn from an updated photograph
     description: >
       A head-and-shoulders portrait of the person shown in [ira], squarely
       framed and centred, keeping their face and hair recognisable.

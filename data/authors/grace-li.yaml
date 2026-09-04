@@ -13,3 +13,8 @@ user_groups:
 affiliations:
   - name: University of Colorado School of Medicine
     url: https://www.cuanschutz.edu/
+
+links:
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/grace-li-8b0927296/
+    label: LinkedIn

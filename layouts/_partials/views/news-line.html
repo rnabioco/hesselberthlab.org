@@ -1,0 +1,14 @@
+{{/* A running list of one-line news items.
+
+     These pages are built with `render: never`, so there is no page to link
+     to — the item's text is the content. Any links written inside the item
+     body are surfaced here instead. */}}
+{{ $item := .item }}
+{{ $date := $item.Params.event_start | default $item.Date }}
+
+<div class="news-line">
+  <time class="news-date" datetime="{{ time.Format "2006-01-02" $date }}">
+    {{ time.Format (site.Params.hugoblox.locale.date_format | default ":date_medium") $date }}
+  </time>
+  <div class="news-text">{{ $item.Content }}</div>
+</div>
