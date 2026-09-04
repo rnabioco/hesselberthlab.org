@@ -73,7 +73,7 @@ sections:
           - publications
         featured_only: true
     design:
-      view: citation
+      view: citation-image
 
   - block: collection
     id: news

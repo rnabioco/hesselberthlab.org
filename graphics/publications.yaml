@@ -1,0 +1,49 @@
+# One illustration per featured publication, distilled from its abstract.
+#
+#   pixi run -e graphics publications     # 4 images, ~$0.27
+#
+# Renders to graphics/out/cu/pubs/. A chosen image is copied into the paper's
+# page bundle as content/publications/<slug>/featured.png, where Hugo picks it
+# up as a page resource.
+#
+# `name` must match the publication's directory under content/publications/.
+
+output-dir: out/cu/pubs
+
+defaults:
+  model: gemini-3.1-flash-image-preview
+  aspect-ratio: "1:1"
+  n: 1
+  # Same house style as graphics/cu.yaml — keep the two in step.
+  style: >
+    Flat vector editorial illustration with a prominent grainy, chalk-pastel
+    texture overlaid on the entire image. The style is lineless, relying on
+    colour blocking and soft, textured shading to define forms.
+    The colour palette is restricted to the University of Colorado colours and
+    nothing else: warm cream, CU gold, a deeper ochre gold, near-black ink and
+    warm grey. Gold carries the largest areas of colour. Do not introduce
+    blues, greens, pinks or any other hue.
+    A single clear subject, generous negative space, readable when shrunk to a
+    small thumbnail. No lettering or text of any kind.
+
+images:
+  - name: white-2025-bm
+    description: >
+      A transfer RNA with a single amino acid joined to the top of its acceptor
+      stem, being drawn down into a narrow pore in a membrane.
+
+  - name: white-2024-np
+    description: >
+      A transfer RNA cloverleaf studded with many small distinct marks along
+      its arms, each mark a different simple shape.
+
+  - name: mc-entee-2025-il
+    description: >
+      A short oligonucleotide laid across a strand of RNA, masking one segment
+      so it is skipped, with the suggestion of an eye in the negative space
+      behind.
+
+  - name: kolakada-2025-wv
+    description: >
+      A ribosome halted partway along a strand of messenger RNA at an early
+      stop, with the remainder of the strand breaking apart behind it.

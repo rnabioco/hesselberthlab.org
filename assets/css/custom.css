@@ -528,3 +528,39 @@ body {
   content: '★ ';
   color: var(--cu-gold);
 }
+
+/* ---------------------------------------------------------------------------
+   Selected publications with thumbnails (layouts/_partials/views/citation-image)
+   ------------------------------------------------------------------------ */
+
+.pub-with-thumb {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Papers without a generated image keep their text in the same column. */
+.pub-with-thumb:not(:has(.pub-thumb)) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.pub-with-thumb:not(:has(.pub-thumb)) .pub-cite {
+  grid-column: 1;
+}
+
+.pub-thumb {
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.pub-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
