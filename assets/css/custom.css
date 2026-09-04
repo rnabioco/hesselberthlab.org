@@ -126,7 +126,7 @@ body {
 
 @media (min-width: 820px) {
   .lab-hero {
-    grid-template-columns: 190px minmax(0, 1fr);
+    grid-template-columns: 260px minmax(0, 1fr);
     gap: 2.75rem;
   }
 }
@@ -137,7 +137,7 @@ body {
      loads; padding here would break that ratio and trip Lighthouse's
      image-aspect-ratio audit. */
   width: 100%;
-  max-width: 210px;
+  max-width: 260px;
   height: auto;
   margin: 0;
 }

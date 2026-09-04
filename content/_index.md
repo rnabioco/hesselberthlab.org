@@ -15,7 +15,7 @@ sections:
       subtitle: ''
       text: |-
         <div class="wide lab-hero">
-          <img class="lab-hero__mark" src="/media/lab-logo.svg" alt="Hesselberth Lab" width="500" height="283">
+          <img class="lab-hero__mark" src="/media/lab-portrait.png" alt="The Hesselberth Lab" width="1018" height="522">
           <div class="lab-hero__body">
             <p class="eyebrow">RNA Biology &amp; Therapeutics · CU School of Medicine</p>
             <h1 class="lab-hero__title">Reading translation, <em>one tRNA at a time.</em></h1>
