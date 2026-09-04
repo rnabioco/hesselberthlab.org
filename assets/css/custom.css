@@ -733,3 +733,27 @@ main > time.mt-12 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
+/* ---------------------------------------------------------------------------
+   Closing lab shot
+
+   Full-bleed within the content measure, below the news list. Intrinsic
+   width/height on the img reserve the box so it cannot shift the page as it
+   loads — the same trap that put CLS at 0.279 before.
+   ------------------------------------------------------------------------ */
+
+#labshot.hbb-section {
+  padding-block: 0 0;
+}
+
+.lab-shot {
+  margin: 0;
+}
+
+.lab-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--rule);
+}

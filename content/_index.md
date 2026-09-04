@@ -92,4 +92,15 @@ sections:
       order: desc
     design:
       view: news-line
+
+  - block: markdown
+    id: labshot
+    content:
+      title: ''
+      text: |-
+        <div class="wide lab-shot">
+          <img src="/media/lab-action.png" alt="Illustration of the Hesselberth Lab at work" width="1376" height="768">
+        </div>
+    design:
+      columns: '1'
 ---
