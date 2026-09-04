@@ -1,0 +1,42 @@
+{{- /*
+Netlify _headers file.
+
+Overrides the template in the HugoBlox netlify integration module, whose
+whitespace trimming collapses the `/*` path glob onto the first header line:
+
+    /*X-XSS-Protection: 1; mode=block
+
+Netlify reads everything before the first newline as the path glob, so the
+security headers never applied. Drop this file if the module is fixed upstream.
+
+X-Frame-Options is emitted only when hugoblox.security.frame_options in
+params.yaml is "sameorigin" or "deny"; it is currently "allow", which
+deliberately omits the header.
+
+Documentation: https://docs.hugoblox.com/hugo-tutorials/security/
+*/ -}}
+{{- $csp_policy := site.Params.hugoblox.security.csp.policy | default "" -}}
+{{- $csp_report_only := site.Params.hugoblox.security.csp.report_only | default false -}}
+{{- $frame_options := site.Params.hugoblox.security.frame_options | default "sameorigin" -}}
+{{- $default_perms := "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()" -}}
+{{- $permissions_policy := site.Params.hugoblox.security.permissions_policy | default $default_perms -}}
+# Netlify headers
+# Automatically generated from layouts/index.headers
+/*
+{{- if ne $frame_options "allow" }}
+  X-Frame-Options: {{ cond (eq $frame_options "sameorigin") "SAMEORIGIN" "DENY" }}
+{{- end }}
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Referrer-Policy: strict-origin-when-cross-origin
+{{- with $csp_policy }}
+  Content-Security-Policy{{ if $csp_report_only }}-Report-Only{{ end }}: {{ replaceRE "(\\s\\s+)" " " (trim . " ") }}
+{{- end }}
+{{- with $permissions_policy }}
+  Permissions-Policy: {{ replaceRE "(\\s\\s+)" " " (trim . " ") }}
+{{- end }}
+/index.webmanifest
+  Content-Type: application/manifest+json
+/index.xml
+  Content-Type: application/rss+xml
