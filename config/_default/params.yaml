@@ -11,8 +11,8 @@ hugoblox:
       twitter: ""
 
   theme:
-    mode: system
-    pack: "default"
+    mode: light
+    pack: "cu-anschutz"
     colors:
       primary: ""
       secondary: ""

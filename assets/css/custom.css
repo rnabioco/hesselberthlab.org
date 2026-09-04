@@ -1,54 +1,372 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+/* ---------------------------------------------------------------------------
+   Tokens
+
+   Surfaces and the primary/secondary ramps come from the CU Anschutz theme
+   pack (data/themes/cu-anschutz.yaml). These are the extras that pack cannot
+   express: the band used for alternating sections, hairline rules, and the
+   decorative CU gold that is too low-contrast for text.
+   ------------------------------------------------------------------------ */
+
 :root {
-  --font-family-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --font-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  --cu-gold: #cfb87c; /* decoration only — 1.5:1 on cream */
+  --cu-gold-deep: #8c7332; /* text-safe — 5.4:1 on cream */
+  --band: #f2ecdf;
+  --rule: #e2d9c6;
+  --ink-soft: #55534e;
+}
+
+.dark {
+  --cu-gold: #cfb87c;
+  --cu-gold-deep: #d9c48f;
+  --band: #211f1d;
+  --rule: #35322d;
+  --ink-soft: #b8b1a3;
 }
 
 body {
-  font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  font-family: var(--font-serif);
 }
 
-/* Cap content width to match al-folio's 930px feel */
-.page-body,
-.universal-wrapper {
-  max-width: 930px;
-  margin-left: auto;
-  margin-right: auto;
+/* ---------------------------------------------------------------------------
+   Density
+
+   The theme centres every block in a `max-w-prose` column. That is right for
+   running text and wrong for everything else, so sections that lay out their
+   own grid opt out via `.wide`.
+   ------------------------------------------------------------------------ */
+
+.hbb-section {
+  padding-block: 2.5rem;
 }
 
-/* Tighter section spacing on landing pages */
-.hb-section {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+#intro.hbb-section {
+  padding-block: 3.25rem 2.75rem;
 }
 
-/* Reduce card padding */
-.card {
-  padding: 0.75rem;
+.hbb-section .wide,
+.hbb-section:has(.wide) .max-w-prose {
+  max-width: 74rem;
 }
 
-/* Compact article/citation list items */
-.citation,
-.article-grid .card {
-  margin-bottom: 0.5rem;
+/* Alternating bands give the page rhythm without extra chrome. */
+#research .home-section-bg,
+#news .home-section-bg {
+  background: var(--band);
 }
 
-/* Tighter heading margins */
-.page-body h1,
-.page-body h2,
-.page-body h3 {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+#research,
+#news {
+  border-block: 1px solid var(--rule);
 }
 
-/* Reduce navbar height */
-.hb-navbar {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+/* ---------------------------------------------------------------------------
+   Eyebrow labels
+
+   Monospace, letterspaced, under a small tRNA motif — the repeating mark that
+   ties the sections together.
+   ------------------------------------------------------------------------ */
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 0.5rem;
 }
 
-/* Tighter footer */
-footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 132px;
+  height: 16px;
+  margin-bottom: 0.6rem;
+  background: url('/media/motif-trna.svg') left center / contain no-repeat;
+}
+
+.eyebrow--bare::before {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Hero
+   ------------------------------------------------------------------------ */
+
+.lab-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: center;
+}
+
+@media (min-width: 820px) {
+  .lab-hero {
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 2.75rem;
+  }
+}
+
+.lab-hero__mark {
+  width: 100%;
+  max-width: 190px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: #fff;
+  padding: 0.6rem;
+  margin: 0;
+}
+
+.lab-hero__title {
+  font-size: clamp(2rem, 4.4vw, 3rem);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+  margin: 0 0 0.65rem;
+  text-wrap: balance;
+}
+
+.lab-hero__title em {
+  font-style: normal;
+  color: var(--cu-gold-deep);
+  border-bottom: 3px solid var(--cu-gold);
+  padding-bottom: 1px;
+}
+
+.lab-hero__lede {
+  font-size: 1.1875rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0 0 1.1rem;
+  max-width: 46rem;
+}
+
+.lab-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.btn-gold,
+.btn-plain {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.95rem;
+  border-radius: 4px;
+  border: 1px solid var(--cu-gold-deep);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-gold {
+  background: var(--cu-gold);
+  color: #1c1b19;
+  border-color: var(--cu-gold);
+}
+
+.btn-gold:hover {
+  background: var(--cu-gold-deep);
+  color: #fff;
+  border-color: var(--cu-gold-deep);
+}
+
+.btn-plain {
+  color: var(--cu-gold-deep);
+}
+
+.btn-plain:hover {
+  background: var(--cu-gold);
+  color: #1c1b19;
+}
+
+/* Dense inline affiliation row, replacing the old stacked list. */
+.affil {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  margin: 1.5rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--rule);
+}
+
+.affil a {
+  color: var(--ink-soft);
+  text-decoration-color: var(--cu-gold);
+  text-underline-offset: 3px;
+}
+
+.affil a:hover {
+  color: var(--cu-gold-deep);
+}
+
+/* ---------------------------------------------------------------------------
+   Research areas — three dense columns, hairline separators, no cards
+   ------------------------------------------------------------------------ */
+
+.section-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.areas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 760px) {
+  .areas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .areas > * + * {
+    border-left: 1px solid var(--rule);
+    padding-left: 1.75rem;
+    margin-left: 1.75rem;
+  }
+}
+
+.areas h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  margin: 0 0 0.4rem;
+}
+
+.areas h3 .n {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--cu-gold-deep);
+  letter-spacing: 0.1em;
+  margin-right: 0.45rem;
+}
+
+.areas p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.areas .with {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--cu-gold-deep);
+  margin-top: 0.6rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Collections
+
+   Tighten the stock views: the citation list and the date/title news list are
+   both built for generous spacing.
+   ------------------------------------------------------------------------ */
+
+/* Headings ship centred in a prose column; left-align them and give them the
+   same motif and measure as the markdown sections above. */
+.blox-collection > .max-w-prose {
+  max-width: 74rem;
+  align-items: flex-start;
+  padding-inline: 1.5rem;
+}
+
+.blox-collection > .max-w-prose > .text-3xl {
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  margin-bottom: 0;
+}
+
+.blox-collection > .max-w-prose > .text-3xl::before {
+  content: '';
+  display: block;
+  width: 132px;
+  height: 16px;
+  margin-bottom: 0.6rem;
+  background: url('/media/motif-trna.svg') left center / contain no-repeat;
+}
+
+/* Both views open with `mt-16 sm:mt-20`, leaving a large gap under the
+   heading, and cap themselves at max-w-3xl. */
+.blox-collection .mt-16 {
+  margin-top: 1.1rem;
+}
+
+.blox-collection .max-w-3xl {
+  max-width: 74rem;
+}
+
+/* date-title-summary wraps the list in `w-fit`, which shrink-wraps it. */
+#news .w-fit {
+  width: 100%;
+}
+
+/* This Tailwind build implements space-y as margin-bottom on
+   `> :not(:last-child)`, so overriding margin-top has no effect. */
+#news .space-y-16 > * {
+  margin-block: 0;
+}
+
+#news article {
+  padding-block: 0.9rem;
+  border-top: 1px solid var(--rule);
+}
+
+#news article:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+#news time {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cu-gold-deep);
+}
+
+#news h2 {
+  font-size: 1.0625rem;
+}
+
+/* The homepage news list is an index, not a feed. These posts are bullet
+   lists, so Hugo renders the summary as a <ul> *outside* the theme's
+   line-clamped <p> (which ends up empty) — there is nothing to truncate
+   cleanly. Show date and headline only; the post is one click away. */
+#news article > div > p,
+#news article > div > ul,
+#news article > div > div[aria-hidden='true'] {
+  display: none;
+}
+
+#news article > div > h2 {
+  margin: 0;
+}
+
+#papers .space-y-3 > * + * {
+  margin-top: 0.65rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Interior pages inherit the palette; keep their measure readable.
+   ------------------------------------------------------------------------ */
+
+.page-body {
+  max-width: 62rem;
+  margin-inline: auto;
 }
