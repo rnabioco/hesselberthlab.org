@@ -1,0 +1,32 @@
+# Netlify build configuration.
+#
+# Settings here take precedence over the build settings configured in the
+# Netlify UI, so this file is the single source of truth for how the site is
+# built and deployed.
+#
+# The toolchain (Hugo, Go, Node, pnpm) is pinned by pixi.lock, so Netlify
+# builds with exactly the versions used locally. Netlify's build image does
+# not ship pixi, so the command bootstraps it first.
+#
+# HTTP headers and redirects are NOT configured here: the HugoBlox Netlify
+# integration module generates `_headers` and `_redirects` into `public/`
+# during the build. Adding a [[redirects]] block below would silently take
+# precedence over that generated file.
+
+[build]
+  publish = "public"
+  command = """\
+curl -fsSL https://pixi.sh/install.sh | bash && \
+export PATH="$HOME/.pixi/bin:$PATH" && \
+pixi run setup && \
+if [ "$CONTEXT" = "production" ]; then \
+  pixi run build; \
+else \
+  HUGO_BASEURL="$DEPLOY_PRIME_URL" pixi run build; \
+fi\
+"""
+
+# Deploy previews and branch deploys are served from a generated netlify.app
+# URL, so the baseURL in config/_default/hugo.yaml would produce links back to
+# the live site. The command above overrides it with $DEPLOY_PRIME_URL for
+# every non-production context.

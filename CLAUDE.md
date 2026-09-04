@@ -75,4 +75,10 @@ Publications are managed via BibTeX in `publications.bib` at the repo root. The 
 
 ## Deployment
 
-Automatic deployment via GitHub Actions on push to `main` branch. The workflow uses pixi to install dependencies, builds with Hugo + Pagefind, and deploys to GitHub Pages via `actions/deploy-pages`.
+Deployed by [Netlify](https://www.netlify.com/), which builds from the repo on every push to `main`. Build settings live in `netlify.toml` (not the Netlify UI — the file takes precedence): it bootstraps pixi, then runs `pixi run setup && pixi run build`, publishing `public/`.
+
+Pull requests get a deploy preview automatically; previews and branch deploys build with `HUGO_BASEURL` set to the generated Netlify URL so links resolve.
+
+HTTP headers and redirects are generated into `public/_headers` and `public/_redirects` by the HugoBlox Netlify integration module (`config/_default/module.yaml` plus the `headers`/`redirects` outputs in `hugo.yaml`) — don't duplicate them in `netlify.toml`.
+
+The domain hesselberthlab.org resolves through Cloudflare to Netlify.
