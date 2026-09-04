@@ -1,0 +1,48 @@
+name:
+  given: Jay
+  family: Hesselberth
+  display: Jay Hesselberth
+
+role: Professor of Biochemistry & Molecular Genetics
+
+bio: RNA biology, tRNA regulation, nanopore sequencing, RNA therapeutics.
+
+is_owner: true
+
+user_groups:
+  - Principal Investigator
+
+affiliations:
+  - name: University of Colorado School of Medicine
+    url: https://www.cuanschutz.edu/
+  - name: RNA Bioscience Initiative
+    url: https://medschool.cuanschutz.edu/rbi
+
+interests:
+  - Transfer RNA biology
+  - Nanopore sequencing
+  - RNA therapeutics
+  - Computational biology
+
+education:
+  - area: PhD Biochemistry
+    institution: Fred Hutchinson Cancer Research Center / University of Washington
+  - area: BS Biochemistry
+    institution: University of Arizona
+
+ids:
+  orcid: 0000-0002-6299-179X
+
+links:
+  - icon: hero/envelope
+    url: 'mailto:jay.hesselberth@cuanschutz.edu'
+    label: Email
+  - icon: brands/github
+    url: https://github.com/jayhesselberth
+    label: GitHub
+  - icon: brands/google-scholar
+    url: https://scholar.google.com/citations?user=NM4i7GIAAAAJ
+    label: Google Scholar
+  - icon: brands/orcid
+    url: https://orcid.org/0000-0002-6299-179X
+    label: ORCID
