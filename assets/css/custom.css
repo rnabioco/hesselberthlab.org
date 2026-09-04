@@ -372,8 +372,8 @@ body {
    ------------------------------------------------------------------------ */
 
 .blox-team-showcase a.aspect-square {
-  width: 168px;
-  margin: 1.5rem auto 0;
+  width: 116px;
+  margin: 1.1rem auto 0;
   border-radius: 9999px;
   background: transparent;
   border: 1px solid var(--rule);
@@ -406,18 +406,31 @@ body {
 }
 
 .blox-team-showcase .p-6 {
-  padding: 0.9rem 1rem 1.1rem;
+  padding: 0.7rem 0.8rem 0.9rem;
   text-align: center;
 }
 
 .blox-team-showcase h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.15rem;
+  font-size: 0.98rem;
+  margin-bottom: 0.1rem;
 }
 
 .blox-team-showcase .flex.gap-3 {
   justify-content: center;
   border-top: 0;
+}
+
+.blox-team-showcase .p-6 > div {
+  margin-bottom: 0.4rem;
+}
+
+.blox-team-showcase .p-6 p {
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.blox-team-showcase .grid {
+  gap: 1rem;
 }
 
 /* Group headings, matched to the section labels used on the homepage. */
@@ -438,4 +451,80 @@ body {
 .page-body {
   max-width: 62rem;
   margin-inline: auto;
+}
+
+/* ---------------------------------------------------------------------------
+   Software
+
+   Card grid mirroring the People page: hairline borders on the page's own
+   ground, gold on hover, no drop shadows.
+   ------------------------------------------------------------------------ */
+
+.sw-lede {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 46rem;
+  margin: 0 0 2rem;
+}
+
+.sw-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.85rem;
+  margin: 0 0 2.25rem;
+}
+
+.sw-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.9rem 1rem 0.85rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.sw-card:hover {
+  border-color: var(--cu-gold);
+  background: var(--band);
+}
+
+.sw-name {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cu-gold-deep);
+}
+
+.sw-desc {
+  font-size: 0.87rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  flex: 1;
+}
+
+.sw-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.sw-lang {
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.1rem 0.35rem;
+}
+
+.sw-stars::before {
+  content: '★ ';
+  color: var(--cu-gold);
 }

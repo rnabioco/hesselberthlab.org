@@ -2,7 +2,7 @@
 title: News
 cms_exclude: true
 
-view: card
+view: date-title-summary
 
 banner:
   caption: ''

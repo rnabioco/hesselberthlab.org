@@ -3,6 +3,8 @@ name:
   family: Hesselberth
   display: Jay Hesselberth
 
+weight: 1
+
 role: Professor of Biochemistry & Molecular Genetics
 
 bio: RNA biology, tRNA regulation, nanopore sequencing, RNA therapeutics.

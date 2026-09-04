@@ -133,3 +133,14 @@ images:
     description: >
       A cell holding a few small archived fragments inside it, with
       another immune cell approaching to inspect them.
+
+  - name: lab-logo
+    aspect-ratio: "16:9"
+    n: 3
+    description: >
+      A refined redrawing of the laboratory logo shown in [lab-logo], keeping
+      its row of interlocking hexagons and its overall proportions, and keeping
+      the small scientific motifs held inside the hexagons. Render it as a
+      clean emblem on a warm cream ground rather than flat white, so it sits on
+      the page without a visible box. Do not reproduce the wordmark or any
+      lettering.

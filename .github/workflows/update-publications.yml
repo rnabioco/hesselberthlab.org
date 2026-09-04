@@ -1,0 +1,76 @@
+name: Find new publications
+
+on:
+  schedule:
+    # 09:00 UTC — roughly 2am Denver, after PubMed's nightly load.
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'How many days of PubMed history to search (0 = all time)'
+        required: false
+        default: '30'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-publications
+  cancel-in-progress: false
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pixi
+        uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          cache: true
+
+      - name: Search PubMed for new publications
+        env:
+          # Optional: raises the E-utilities rate limit and identifies us to NCBI.
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
+        run: |
+          pixi run python scripts/find_new_publications.py \
+            --bib publications.bib \
+            --days "${{ github.event.inputs.days || '30' }}"
+
+      - name: Stop early if nothing was added
+        id: changed
+        run: |
+          if git diff --quiet -- publications.bib; then
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "No new publications."
+          else
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "added=$(git diff -U0 -- publications.bib | grep -c '^+@')" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Regenerate publication pages
+        if: steps.changed.outputs.found == 'true'
+        run: pixi run import-pubs
+
+      - name: Open a pull request
+        if: steps.changed.outputs.found == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'content: add ${{ steps.changed.outputs.added }} new publication(s) from PubMed'
+          title: 'Add ${{ steps.changed.outputs.added }} new publication(s)'
+          body: |
+            Found by the nightly PubMed search
+            (`scripts/find_new_publications.py`) and imported with
+            `pixi run import-pubs`.
+
+            Entries are de-duplicated against `publications.bib` by PMID, DOI
+            and normalised title, but the search matches on author name — so
+            **check for same-name authors from other labs** before merging, and
+            confirm the generated citation keys and dates look right.
+          branch: new-publications
+          delete-branch: true
+          labels: publications
