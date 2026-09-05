@@ -1,0 +1,135 @@
+name: Update HugoBlox
+
+# Nothing tracks the theme. The modules are pinned to commits on HugoBlox's
+# default branch, and `hugo mod get -u` is worse than useless against that: Go
+# sorts a v0.0.0-<date> pseudo-version below the v0.12.0 tag, so -u "upgrades"
+# blox eight months backwards onto a release whose templates call site.Locale
+# and no longer render. Asking for @main by name is the only thing that moves
+# them forwards. Dependabot's gomod support has the same flaw, which is why
+# .github/dependabot.yml leaves Go alone.
+#
+# A theme bump can also outrun the Hugo pinned in pixi.toml — blox already
+# wants Hugo >= 0.161.1 — so the site is built here before anything is
+# proposed. Builds clean, and it opens a pull request; does not build, and it
+# opens an issue instead, because that one needs a person to move Hugo at the
+# same time.
+
+on:
+  schedule:
+    - cron: '0 11 * * 1' # Mondays, an hour after the link check
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: update-hugoblox
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup pixi
+        uses: prefix-dev/setup-pixi@v0.10.2
+        with:
+          cache: true
+
+      # Read the module list out of go.mod rather than repeating it here, so a
+      # fourth HugoBlox module starts being tracked by being added to the site.
+      - name: Move the theme to the tip of HugoBlox main
+        shell: bash
+        run: |
+          mods=$(grep -o 'github\.com/HugoBlox/kit/modules/[^ ]*' go.mod | sort -u | sed 's/$/@main/')
+          echo "$mods"
+          pixi run hugo mod get $mods
+
+      - name: Is there anything to propose
+        id: changed
+        shell: bash
+        run: |
+          if git diff --quiet -- go.mod go.sum; then
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "Already on the tip of main."
+          else
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            {
+              echo 'Module versions in `go.mod`:'
+              echo
+              echo '```diff'
+              git diff -- go.mod | grep -E '^[-+]\s+github\.com/HugoBlox'
+              echo '```'
+            } > notes.md
+            cat notes.md
+          fi
+
+      - name: Install Node dependencies
+        if: steps.changed.outputs.found == 'true'
+        run: pixi run setup
+
+      - name: Does the site still build
+        id: build
+        if: steps.changed.outputs.found == 'true'
+        continue-on-error: true
+        shell: bash
+        run: HUGO_BASEURL=http://localhost/ pixi run build 2>&1 | tee build.log
+
+      - name: Open a pull request
+        if: steps.changed.outputs.found == 'true' && steps.build.outcome == 'success'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: 'deps: move the HugoBlox modules to the tip of main'
+          title: Update HugoBlox
+          body-path: notes.md
+          branch: update-hugoblox
+          delete-branch: true
+          labels: dependencies
+
+      # A theme bump that does not build is usually the Hugo pin in pixi.toml
+      # being too old for the new templates, which is a judgement call rather
+      # than something to open a red pull request about every Monday.
+      - name: Collect the failure
+        if: steps.changed.outputs.found == 'true' && steps.build.outcome != 'success'
+        shell: bash
+        run: |
+          {
+            cat notes.md
+            echo
+            if grep -m1 'is not compatible with this Hugo version' build.log; then
+              echo
+              echo 'That is the Hugo pin in `pixi.toml`, not the theme.'
+            fi
+            echo
+            echo '<details><summary>Build output</summary>'
+            echo
+            echo '```'
+            tail -40 build.log
+            echo '```'
+            echo
+            echo '</details>'
+          } > issue.md
+
+      # Reuse the open issue rather than filing the same one every Monday.
+      - name: Is one already open
+        id: existing
+        if: steps.changed.outputs.found == 'true' && steps.build.outcome != 'success'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          n=$(gh issue list --state open --search 'HugoBlox update does not build in:title' \
+                --json number -q '.[0].number // empty')
+          echo "number=$n" >> "$GITHUB_OUTPUT"
+
+      - name: Open an issue
+        if: steps.changed.outputs.found == 'true' && steps.build.outcome != 'success' && steps.existing.outputs.number == ''
+        uses: peter-evans/create-issue-from-file@v6
+        with:
+          title: HugoBlox update does not build
+          content-filepath: issue.md
+          labels: dependencies
