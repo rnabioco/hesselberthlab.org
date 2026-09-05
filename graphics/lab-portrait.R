@@ -12,7 +12,15 @@ library(magick)
 
 slugs <- c("jay-hesselberth", "erika-lasda", "ryan-sheridan", "kezia-dobson",
            "grace-li", "jill-bilodeaux", "emily-decurtis", "ira-fleming")
-CREAM <- "#FAF7F0"
+# Transparent, not cream: a baked-in light ground shows as a white block in
+# dark mode. Each portrait keeps its own gold circle; only the gaps between
+# them become see-through.
+#
+# The composites below must pass operator = "over". image_composite defaults
+# to "atop", which draws only where the destination is already opaque — on a
+# transparent ground that silently discards every circle and writes an empty
+# PNG.
+GROUND <- "none"
 
 # A circular crop. image_composite(..., "copyopacity") is the operator that
 # actually works here: "In" and "DstIn" both return an opaque black corner.
@@ -30,19 +38,21 @@ circle <- function(slug, d) {
 # Overlapping row — a wide banner.
 d <- 260; ov <- 58
 cs <- lapply(slugs, circle, d = d)
-band <- image_blank(d * length(cs) - ov * (length(cs) - 1), d, CREAM)
+band <- image_blank(d * length(cs) - ov * (length(cs) - 1), d, GROUND)
 for (i in seq_along(cs))
-  band <- image_composite(band, cs[[i]], offset = geometry_point((i - 1) * (d - ov), 0))
-image_write(image_border(band, CREAM, "26x26"), "graphics/out/lab-portrait-row.png", format = "png")
+  band <- image_composite(band, cs[[i]], operator = "over",
+                          offset = geometry_point((i - 1) * (d - ov), 0))
+image_write(image_border(band, GROUND, "26x26"), "graphics/out/lab-portrait-row.png", format = "png")
 
 # 4 x 2 block — compact enough to sit beside the hero text.
 d2 <- 230; gap <- 18
 cs2 <- lapply(slugs, circle, d = d2)
-blk <- image_blank(4 * d2 + 3 * gap, 2 * d2 + gap, CREAM)
+blk <- image_blank(4 * d2 + 3 * gap, 2 * d2 + gap, GROUND)
 for (i in seq_along(cs2)) {
   r <- (i - 1) %/% 4; c <- (i - 1) %% 4
-  blk <- image_composite(blk, cs2[[i]], offset = geometry_point(c * (d2 + gap), r * (d2 + gap)))
+  blk <- image_composite(blk, cs2[[i]], operator = "over",
+                         offset = geometry_point(c * (d2 + gap), r * (d2 + gap)))
 }
-image_write(image_border(blk, CREAM, "22x22"), "graphics/out/lab-portrait-block.png", format = "png")
+image_write(image_border(blk, GROUND, "22x22"), "graphics/out/lab-portrait-block.png", format = "png")
 
 cat("wrote graphics/out/lab-portrait-{row,block}.png\n")
