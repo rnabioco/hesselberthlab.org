@@ -1,7 +1,7 @@
 ---
 title: Nanopore sequencing of internal 2'-PO4 modifications installed by RNA repair
 authors:
-- Laura K White
+- laura-white
 - Saylor M Strugar
 - Andrea MacFadden
 - jay-hesselberth

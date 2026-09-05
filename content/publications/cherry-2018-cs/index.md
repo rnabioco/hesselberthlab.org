@@ -2,7 +2,7 @@
 title: Genetic bypass of essential RNA repair enzymes in budding yeast
 authors:
 - Patrick D Cherry
-- Laura K White
+- laura-white
 - Kerri York
 - jay-hesselberth
 date: '2018-03-01'
