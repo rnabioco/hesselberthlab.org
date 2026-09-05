@@ -18,8 +18,8 @@ sections:
           <img class="lab-hero__mark" src="/media/lab-portrait.png" alt="The Hesselberth Lab" width="1018" height="522">
           <div class="lab-hero__body">
             <p class="eyebrow">RNA Technology &amp; Therapeutics · CU School of Medicine</p>
-            <h1 class="lab-hero__title">How cells read, use <em>and destroy RNA.</em></h1>
-            <p class="lab-hero__lede">Every transcript carries more than its sequence — modifications, charging state, structure — and cells act on all of it. We build the sequencing methods that make those features visible, and follow them into translation, immunity and disease.</p>
+            <h1 class="lab-hero__title">We study translation — <em>and we translate.</em></h1>
+            <p class="lab-hero__lede">A collaborative lab of RNA biologists, technology developers and data analysts, discovering and translating fundamental principles of RNA regulation — from how transfer RNA links the RNA and protein worlds, to RNA therapies built with clinicians at Children's Hospital Colorado.</p>
             <p class="lab-hero__actions">
               <a class="btn-gold" href="/publications/">Publications</a>
               <a class="btn-plain" href="/people/">Meet the lab</a>
