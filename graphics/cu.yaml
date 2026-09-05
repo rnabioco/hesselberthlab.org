@@ -8,8 +8,9 @@
 # Portrait `name`s are the eventual data/authors/<slug>.yaml slugs; the
 # bracketed reference is the source photograph's filename.
 #
-# The two configs share one subject list and differ only in the palette
-# paragraph below — keep the subjects in step.
+# The two configs share one subject list and differ only in their palette —
+# the style paragraph below, and the portrait background, which is gold here
+# and any one pastel there. Keep the subjects and framing in step.
 
 output-dir: out/cu
 
@@ -19,7 +20,8 @@ defaults:
   style: >
     Flat vector editorial illustration with a prominent grainy, chalk-pastel
     texture overlaid on the entire image. The style is lineless, relying on
-    colour blocking and soft, textured shading to define forms.
+    colour blocking and soft, textured shading to define forms: no visible
+    pen, pencil or ink outlines, and no cross-hatching.
     The colour palette is restricted to the University of Colorado colours and
     nothing else: warm cream, CU gold, a deeper ochre gold, near-black ink and
     warm grey. Gold carries the largest areas of colour in every image. Do not
@@ -32,180 +34,216 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [jay-hesselberth], squarely
       framed and centred, keeping their face, glasses and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: ryan-sheridan
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [ryan], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: kezia-dobson
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [kezia], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: jill-bilodeaux
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [jill], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: emily-decurtis
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [emily], squarely
       framed and centred, keeping their face, glasses and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: erika-lasda
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [erika], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: ira-fleming
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [ira], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: grace-li
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [grace], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: laura-white
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [laura], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: neelanjan-mukherjee
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [neelanjan-mukherjee], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: kathryn-walters
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [kathryn-walters], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: amber-thomas
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [amber-thomas], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: beth-tamburini
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [beth-tamburini], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: tem-morrison
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [tem-morrison], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: suja-jagannathan
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [suja-jagannathan], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: scott-demarest
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [scott-demarest], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: emily-mccourt
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [emily-mccourt], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: austin-larson
     aspect-ratio: "1:1"
     description: >
       A head-and-shoulders portrait of the person shown in [austin-larson], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
-      margin. The background is a single flat block of colour, never a gradient
-      or a glow.
+      margin. The background is a single flat block of CU gold, never a
+      gradient or a glow.
 
   - name: sharing
     aspect-ratio: "16:9"

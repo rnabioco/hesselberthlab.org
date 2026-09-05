@@ -20,7 +20,8 @@ defaults:
   style: >
     Flat vector editorial illustration with a prominent grainy, chalk-pastel
     texture overlaid on the entire image. The style is lineless, relying on
-    colour blocking and soft, textured shading to define forms.
+    colour blocking and soft, textured shading to define forms: no visible
+    pen, pencil or ink outlines, and no cross-hatching.
     The colour palette is muted and desaturated throughout, built from chalky
     pastels: dusty rose, pale sage, soft slate blue, muted terracotta and warm
     sand. Each image leans on a different pastel so a set reads as varied.
@@ -32,7 +33,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [jay-hesselberth], squarely
       framed and centred, keeping their face, glasses and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -42,7 +45,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [ryan], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -52,7 +57,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [kezia], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -62,7 +69,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [jill], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -72,7 +81,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [emily], squarely
       framed and centred, keeping their face, glasses and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -82,7 +93,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [erika], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -92,7 +105,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [ira], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -102,7 +117,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [grace], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -112,7 +129,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [laura], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -122,7 +141,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [neelanjan-mukherjee], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -132,7 +153,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [kathryn-walters], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -142,7 +165,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [amber-thomas], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -152,7 +177,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [beth-tamburini], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -162,7 +189,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [tem-morrison], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -172,7 +201,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [suja-jagannathan], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -182,7 +213,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [scott-demarest], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -192,7 +225,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [emily-mccourt], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
@@ -202,7 +237,9 @@ images:
     description: >
       A head-and-shoulders portrait of the person shown in [austin-larson], squarely
       framed and centred, keeping their face and hair recognisable.
-      Neutral, friendly expression.
+      Neutral, friendly expression. Frame from the chest up so both
+      shoulders are visible, with a little space above the head, never a
+      tight crop of the face alone.
       Fill the whole square edge to edge, with no border, frame or
       margin. The background is a single flat block of colour, never a gradient
       or a glow.
