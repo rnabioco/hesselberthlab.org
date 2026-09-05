@@ -6,9 +6,10 @@
 # just a name and a link; entries with no `contact` leave that cell empty.
 # `contact` takes any profile URL — the label is derived from the host.
 #
-# Others whose photographs are in the old site but who have no destination
-# recorded anywhere in the repo: Ashlyn Stahly, Catherine Nicholas, Kelly
-# McEntee, and a first-name-only entry for maggie.
+# Still unaccounted for from the old site's people photographs: Ashlyn Stahly
+# (MSTP > MOLB student, 2023) and Kelly McEntee (PRA, 2023, who publishes as
+# Kelleen E McEntee and is first author on the 2025 Bardet-Biedl paper, so may
+# not be an alum at all).
 #
 # `category` is the person's role in the lab; "former" is implied by the
 # section, so it reads "Graduate student" rather than "Former graduate
@@ -16,7 +17,12 @@
 
 - name: Rachel Ancar, MD, PhD
   category: Graduate student
-  position: Resident, Massachusetts General Hospital
+  position: Pulmonary fellowship, Harvard Medical School
+  url: https://www.pulmonaryfellowship.hms.harvard.edu/the-fellowship-experience
+
+- name: Maggie Balas, PhD
+  category: Postdoc
+  contact: https://www.linkedin.com/in/maggie-balas/
 
 - name: Patrick Cherry, PhD
   category: Graduate student
@@ -65,6 +71,10 @@
 - name: Saylor Strugar
   position: Graduate student, University of Wisconsin
   url: https://ipib.wisc.edu/
+
+- name: Shannon Walsh, PhD
+  category: Postdoc
+  contact: https://www.linkedin.com/in/shannonwalsh1/
 
 - name: Kristen Wells, PhD
   category: RBI fellow
