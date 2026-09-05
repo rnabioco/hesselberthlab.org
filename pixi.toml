@@ -3,7 +3,7 @@ channels = ["conda-forge"]
 platforms = ["osx-arm64", "linux-64"]
 
 [dependencies]
-hugo = ">=0.154.0"
+hugo = ">=0.161.1"
 go = ">=1.22"
 nodejs = ">=20"
 pnpm = ">=10"
@@ -16,7 +16,13 @@ academic = ">=0.10.0"
 serve = "hugo server --disableFastRender --bind 0.0.0.0"
 build = "hugo --minify && npx pagefind --site public"
 import-pubs = { cmd = "academic import publications.bib content/publications/ --compact --verbose && python scripts/normalize_authors.py", description = "Import BibTeX, then point lab-member bylines at their profiles" }
-setup = "pnpm install --no-frozen-lockfile"
+# Hugo compiles the stylesheet by running the Tailwind CLI itself, and it
+# insists that binary be a Node.js script. pnpm writes node_modules/.bin
+# entries as POSIX shell wrappers, which Hugo rejects with `binary
+# "tailwindcss" is not a Node.js script`, so point the entry straight at the
+# CLI's own .mjs. Hugo runs it with node, which is why security.exec.allow in
+# hugo.yaml lists node and tailwindcss.
+setup = "pnpm install --no-frozen-lockfile && ln -sf ../@tailwindcss/cli/dist/index.mjs node_modules/.bin/tailwindcss"
 
 # Image generation with bananarama (https://hadley.github.io/bananarama/).
 # Kept in its own environment so R never enters the default env that Netlify

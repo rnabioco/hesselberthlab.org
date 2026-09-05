@@ -21,7 +21,7 @@ removePathAccents: true
 ############################
 
 cascade:
-  - _target:
+  - target:
       path: /slides/**
       kind: page
     outputs: [HTML, present]
@@ -60,5 +60,16 @@ markup:
     lineNos: false
 security:
   _merge: deep
+  exec:
+    # Hugo's defaults, plus tailwindcss: HugoBlox now compiles the stylesheet
+    # through Hugo's built-in Tailwind transform rather than a separate CLI
+    # step, and Hugo refuses to run any binary not listed here.
+    allow:
+      - ^(dart-)?sass(-embedded)?$
+      - ^go$
+      - ^node$
+      - ^npx$
+      - ^postcss$
+      - ^tailwindcss$
 sitemap:
   _merge: deep
