@@ -10,7 +10,12 @@ date: '2020-06-01'
 publishDate: '2026-02-13T13:27:51.472128Z'
 publication_types:
 - article-journal
-publication: '*Nucleic Acids Res.*'
+publication:
+  name: Nucleic Acids Res.
+  volume: '48'
+  issue: '10'
+  pages: e59
+  publisher: Oxford University Press
 abstract: Methods to measure heterogeneity among cells are rapidly transforming our
   understanding of biology but are currently limited to molecular abundance measurements.
   We developed an approach to simultaneously measure biochemical activities and mRNA

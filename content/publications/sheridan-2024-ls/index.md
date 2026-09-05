@@ -14,7 +14,9 @@ date: '2024-04-01'
 publishDate: '2026-02-13T13:27:51.407015Z'
 publication_types:
 - manuscript
-publication: '*bioRxiv*'
+publication:
+  name: bioRxiv
+  pages: 2024.04.01.587647
 abstract: 'Antigens from protein subunit vaccination traffic from the tissue to the
   draining lymph node, either passively via the lymph or carried by dendritic cells
   at the local injection site. Lymph node (LN) lymphatic endothelial cells (LEC) actively

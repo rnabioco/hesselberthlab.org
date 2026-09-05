@@ -17,7 +17,11 @@ date: '2019-03-01'
 publishDate: '2026-02-13T13:27:51.600013Z'
 publication_types:
 - article-journal
-publication: '*JCI Insight*'
+publication:
+  name: JCI Insight
+  volume: '5'
+  issue: '8'
+  publisher: American Society for Clinical Investigation
 abstract: 'Many lung diseases result from a failure of efficient regeneration of damaged
   alveolar epithelial cells (AECs) after lung injury. During regeneration, AEC2s proliferate
   to replace lost cells, after which proliferation halts and some AEC2s transdifferentiate

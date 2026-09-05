@@ -15,7 +15,11 @@ date: '2023-07-01'
 publishDate: '2026-02-13T13:27:51.423627Z'
 publication_types:
 - article-journal
-publication: '*Cell Rep.*'
+publication:
+  name: Cell Rep.
+  volume: '42'
+  issue: '8'
+  pages: '112911'
 abstract: T-bet and FOXO1 are transcription factors canonically associated with effector
   and memory T cell fates, respectively. During an infectious response, these factors
   direct the development of CD8+ T cell fates, where T-bet deficiency leads to ablation

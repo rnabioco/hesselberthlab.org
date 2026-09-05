@@ -12,7 +12,12 @@ date: '2018-11-01'
 publishDate: '2026-02-13T13:27:51.572483Z'
 publication_types:
 - article-journal
-publication: '*RNA*'
+publication:
+  name: RNA
+  volume: '24'
+  issue: '11'
+  pages: 1481–1495
+  publisher: Cold Spring Harbor Laboratory
 abstract: RNA editing diversifies genomically encoded information to expand the complexity
   of the transcriptome. In ectothermic organisms, including Drosophila and Cephalopoda,
   where body temperature mirrors ambient temperature, decreases in environmental temperature

@@ -19,7 +19,8 @@ publishDate: '2026-02-13T13:27:51.403440Z'
 featured: true
 publication_types:
 - manuscript
-publication: '*bioRxiv*'
+publication:
+  name: bioRxiv
 abstract: Transfer RNAs are the fundamental adapter molecules of protein synthesis
   and the most abundant and heterogeneous class of noncoding RNA molecules in cells.
   The study of tRNA repertoires remains challenging, complicated by the presence of

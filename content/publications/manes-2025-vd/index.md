@@ -22,7 +22,9 @@ date: '2025-04-17'
 publishDate: '2026-02-13T13:27:51.389510Z'
 publication_types:
 - article-journal
-publication: '*J. Clin. Invest.*'
+publication:
+  name: J. Clin. Invest.
+  publisher: American Society for Clinical Investigation
 abstract: The presence of B cells is essential for the formation of CD8 T cell memory
   after infection and vaccination. In this study, we investigated whether B cells
   influence the programming of naïve CD8 T cells prior to their involvement in an

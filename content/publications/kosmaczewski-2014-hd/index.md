@@ -15,7 +15,11 @@ date: '2014-12-01'
 publishDate: '2026-02-13T13:27:51.638770Z'
 publication_types:
 - article-journal
-publication: '*EMBO Rep.*'
+publication:
+  name: EMBO Rep.
+  volume: '15'
+  issue: '12'
+  pages: 1278–1285
 abstract: RNA ligation can regulate RNA function by altering RNA sequence, structure
   and coding potential. For example, the function of XBP1 in mediating the unfolded
   protein response requires RNA ligation, as does the maturation of some tRNAs. Here,

@@ -15,5 +15,9 @@ date: '2014-01-01'
 publishDate: '2026-02-13T13:27:51.557584Z'
 publication_types:
 - article-journal
-publication: '*EMBO Rep.*'
+publication:
+  name: EMBO Rep.
+  volume: '15'
+  issue: '12'
+  pages: 1278–1285
 ---

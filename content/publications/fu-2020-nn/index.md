@@ -13,7 +13,10 @@ date: '2020-04-01'
 publishDate: '2026-02-13T13:27:51.455898Z'
 publication_types:
 - article-journal
-publication: '*F1000Res.*'
+publication:
+  name: F1000Res.
+  volume: '9'
+  pages: '223'
 abstract: Assignment of cell types from single-cell RNA sequencing (scRNA-seq) data
   remains a time-consuming and error-prone process. Current packages for identity
   assignment use limited types of reference data and often have rigid data structure

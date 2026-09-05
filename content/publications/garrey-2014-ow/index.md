@@ -15,7 +15,11 @@ date: '2014-08-01'
 publishDate: '2026-02-13T13:27:51.486939Z'
 publication_types:
 - article-journal
-publication: '*RNA*'
+publication:
+  name: RNA
+  volume: '20'
+  issue: '8'
+  pages: 1337–1348
 abstract: Turnover of the branched RNA intermediates and products of pre-mRNA splicing
   is mediated by the lariat-debranching enzyme Dbr1. We characterized a homolog of
   Dbr1 from Saccharomyces cerevisiae, Drn1/Ygr093w, that has a pseudo-metallophosphodiesterase

@@ -23,7 +23,11 @@ date: '2018-12-01'
 publishDate: '2026-02-13T13:27:51.545584Z'
 publication_types:
 - article-journal
-publication: '*Nat. Med.*'
+publication:
+  name: Nat. Med.
+  volume: '24'
+  issue: '12'
+  pages: 1859–1866
 abstract: Acute myeloid leukemia (AML) is the most common acute leukemia in adults.
   Leukemia stem cells (LSCs) drive the initiation and perpetuation of AML, are quantifiably
   associated with worse clinical outcomes, and often persist after conventional chemotherapy

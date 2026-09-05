@@ -9,7 +9,10 @@ date: '2019-03-01'
 publishDate: '2026-02-13T13:27:51.606983Z'
 publication_types:
 - article-journal
-publication: '*Elife*'
+publication:
+  name: Elife
+  volume: '8'
+  publisher: eLife Sciences Publications, Ltd
 abstract: In the unfolded protein response (UPR), stress in the endoplasmic reticulum
   (ER) activates a large transcriptional program to increase ER folding capacity.
   During the budding yeast UPR, Ire1 excises an intron from the HAC1 mRNA and the

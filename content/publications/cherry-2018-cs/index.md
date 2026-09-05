@@ -9,7 +9,11 @@ date: '2018-03-01'
 publishDate: '2026-02-13T13:27:51.622655Z'
 publication_types:
 - article-journal
-publication: '*RNA*'
+publication:
+  name: RNA
+  volume: '24'
+  issue: '3'
+  pages: 313–323
 abstract: RNA repair enzymes catalyze rejoining of an RNA molecule after cleavage
   of phosphodiester linkages. RNA repair in budding yeast is catalyzed by two separate
   enzymes that process tRNA exons during their splicing andHAC1mRNA exons during activation

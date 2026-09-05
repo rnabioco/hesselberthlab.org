@@ -14,7 +14,11 @@ date: '2015-09-01'
 publishDate: '2026-02-13T13:27:51.529224Z'
 publication_types:
 - article-journal
-publication: '*Dev. Biol.*'
+publication:
+  name: Dev. Biol.
+  volume: '405'
+  issue: '2'
+  pages: 280–290
 abstract: The brain plays a critical yet incompletely understood role in regulating
   organismal fat. We performed a neuronal silencing screen in Drosophila larvae to
   identify brain regions required to maintain proper levels of organismal fat. When

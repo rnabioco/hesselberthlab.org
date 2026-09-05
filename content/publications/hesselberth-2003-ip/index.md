@@ -9,7 +9,11 @@ date: '2003-01-01'
 publishDate: '2026-02-13T13:27:51.563219Z'
 publication_types:
 - article-journal
-publication: '*Anal. Biochem.*'
+publication:
+  name: Anal. Biochem.
+  volume: '312'
+  issue: '2'
+  pages: 106–112
 abstract: Allosteric ribozymes (aptazymes) can transduce the noncovalent recognition
   of analytes into the catalytic generation of readily observable signals. Aptazymes
   are easily engineered, can detect diverse classes of biologically relevant molecules,

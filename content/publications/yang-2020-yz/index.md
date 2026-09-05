@@ -16,7 +16,11 @@ date: '2020-02-01'
 publishDate: '2026-02-13T13:27:51.448643Z'
 publication_types:
 - article-journal
-publication: '*Stem Cell Reports*'
+publication:
+  name: Stem Cell Reports
+  volume: '14'
+  issue: '2'
+  pages: 285–299
 abstract: The Mixed Lineage Leukemia (MLL1, KMT2A) gene is critical for development
   and maintenance of hematopoietic stem cells (HSCs), however, whether this protein
   is limiting for HSC development is unknown due to lack of physiologic model systems.

@@ -17,7 +17,12 @@ date: '2019-02-01'
 publishDate: '2026-02-13T13:27:51.603499Z'
 publication_types:
 - article-journal
-publication: '*Nucleic Acids Res.*'
+publication:
+  name: Nucleic Acids Res.
+  volume: '47'
+  issue: '4'
+  pages: e20
+  publisher: Oxford University Press (OUP)
 abstract: Single-cell RNA sequencing (scRNA-seq) methods generate sparse gene expression
   profiles for thousands of single cells in a single experiment. The information in
   these profiles is sufficient to classify cell types by distinct expression patterns

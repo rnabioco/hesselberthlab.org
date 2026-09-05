@@ -10,7 +10,11 @@ date: '2021-07-01'
 publishDate: '2026-02-13T13:27:51.442055Z'
 publication_types:
 - article-journal
-publication: '*Neurotherapeutics*'
+publication:
+  name: Neurotherapeutics
+  volume: '18'
+  issue: '3'
+  pages: 1500–1514
 abstract: This review summarizes the pathogenic mechanisms that underpin the monogenic
   epilepsies and discusses the potential of novel precision therapeutics to treat
   these disorders. Pathogenic mechanisms of epilepsy include recessive (null alleles),

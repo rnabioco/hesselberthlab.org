@@ -19,7 +19,9 @@ date: '2021-10-01'
 publishDate: '2026-02-13T13:27:51.445209Z'
 publication_types:
 - article-journal
-publication: '*EMBO J.*'
+publication:
+  name: EMBO J.
+  pages: e108966
 abstract: Viremia in the vertebrate host is a major determinant of arboviral reservoir
   competency, transmission efficiency, and disease severity. However, immune mechanisms
   that control arboviral viremia are poorly defined. Here, we identify critical roles

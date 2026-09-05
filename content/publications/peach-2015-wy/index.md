@@ -8,7 +8,11 @@ date: '2015-09-01'
 publishDate: '2026-02-13T13:27:51.610167Z'
 publication_types:
 - article-journal
-publication: '*Nucleic Acids Res.*'
+publication:
+  name: Nucleic Acids Res.
+  volume: '43'
+  issue: '17'
+  pages: e108
 abstract: "RNA cleavage by some endoribonucleases and self-cleaving ribozymes produces
   RNA fragments with 5'-hydroxyl (5'-OH) and 2',3'-cyclic phosphate termini. To identify
   5'-OH RNA fragments produced by these cleavage events, we exploited the unique ligation

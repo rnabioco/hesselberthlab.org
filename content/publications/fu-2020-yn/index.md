@@ -14,7 +14,10 @@ date: '2020-01-01'
 publishDate: '2026-02-13T13:27:51.452149Z'
 publication_types:
 - article-journal
-publication: '*Front. Physiol.*'
+publication:
+  name: Front. Physiol.
+  volume: '11'
+  pages: '624677'
 abstract: Hibernation is a physiological and behavioral phenotype that minimizes energy
   expenditure. Hibernators cycle between profound depression and rapid hyperactivation
   of multiple physiological processes, challenging our concept of mammalian homeostasis.

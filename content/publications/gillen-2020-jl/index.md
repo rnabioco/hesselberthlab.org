@@ -23,7 +23,11 @@ date: '2020-08-01'
 publishDate: '2026-02-13T13:27:51.513439Z'
 publication_types:
 - article-journal
-publication: '*Cell Rep.*'
+publication:
+  name: Cell Rep.
+  volume: '32'
+  issue: '6'
+  pages: '108023'
 abstract: Ependymoma (EPN) is a brain tumor commonly presenting in childhood that
   remains fatal in most children. Intra-tumoral cellular heterogeneity in bulk-tumor
   samples significantly confounds our understanding of EPN biology, impeding development

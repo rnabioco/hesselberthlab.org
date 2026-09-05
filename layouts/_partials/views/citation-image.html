@@ -24,10 +24,12 @@
     </span>
     ({{- $year -}}).
     <a href="{{ $item.RelPermalink }}" class="underline">{{ $item.Title }}</a>.
-    {{ if $item.Params.publication_short }}
-      {{- $item.Params.publication_short | markdownify -}}.
-    {{ else if $item.Params.publication }}
-      {{- $item.Params.publication | markdownify -}}.
+    {{/* The theme's resolver handles both the structured `publication` mapping
+         and the legacy flat string, and assembles "*Journal*, 12(3), 100-120"
+         for us. Reading `.Params.publication` directly would break on the
+         mapping. */}}
+    {{ with (partial "functions/resolve_publication.html" $item).display_short }}
+      {{- . | markdownify -}}.
     {{ end }}
 
     {{ if $has_attachments }}

@@ -13,7 +13,8 @@ date: '2024-11-01'
 publishDate: '2026-02-13T13:27:51.400174Z'
 publication_types:
 - article-journal
-publication: '*bioRxiv*'
+publication:
+  name: bioRxiv
 abstract: Transfer RNAs (tRNA) are decorated during biogenesis with a variety of modifications
   that modulate their stability, aminoacylation, and decoding potential during translation.
   The complex landscape of tRNA modification presents significant analysis challenges

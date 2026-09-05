@@ -10,7 +10,11 @@ date: '2021-05-01'
 publishDate: '2026-02-13T13:27:51.458997Z'
 publication_types:
 - article-journal
-publication: '*PLoS Biol.*'
+publication:
+  name: PLoS Biol.
+  volume: '19'
+  issue: '5'
+  pages: e3001077
 abstract: Single-cell RNA sequencing (scRNA-seq) provides an unprecedented view of
   cellular diversity of biological systems. However, across the thousands of publications
   and datasets generated using this technology, we estimate that only a minority (<25%)

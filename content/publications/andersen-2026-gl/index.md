@@ -12,8 +12,11 @@ date: '2026-01-01'
 publishDate: '2026-09-05T09:02:20.461779Z'
 publication_types:
 - article-journal
-publication: '*PLoS Biol*'
-doi: 10.1371/journal.pbio.3003991
+publication:
+  name: PLoS Biol
+  volume: '24'
+  issue: '8'
+  pages: e3003991
 abstract: 'Renewed interest in phage therapy has highlighted a need to understand
   how bacteria subvert phage infection through antiphage defense systems. Traditionally,
   strategies to identify antiphage defense systems lack throughput or have limitations
@@ -31,4 +34,8 @@ abstract: 'Renewed interest in phage therapy has highlighted a need to understan
   © 2026 Andersen et al. This is an open access article distributed under the terms
   of the Creative Commons Attribution License, which permits unrestricted use, distribution,
   and reproduction in any medium, provided the original author and source are credited.'
+hugoblox:
+  ids:
+    doi: 10.1371/journal.pbio.3003991
+
 ---

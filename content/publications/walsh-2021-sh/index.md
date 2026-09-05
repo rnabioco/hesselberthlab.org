@@ -16,7 +16,10 @@ date: '2021-04-01'
 publishDate: '2026-02-13T13:27:51.468754Z'
 publication_types:
 - article-journal
-publication: '*Elife*'
+publication:
+  name: Elife
+  volume: '10'
+  publisher: eLife Sciences Publications, Ltd
 abstract: The detection of foreign antigens in vivo has relied on fluorescent conjugation
   or indirect read-outs such as antigen presentation. In our studies, we found that
   these widely used techniques had several technical limitations that have precluded

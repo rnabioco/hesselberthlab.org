@@ -21,7 +21,11 @@ date: '2018-07-01'
 publishDate: '2026-02-13T13:27:51.590652Z'
 publication_types:
 - article-journal
-publication: '*Nat. Commun.*'
+publication:
+  name: Nat. Commun.
+  volume: '9'
+  issue: '1'
+  pages: '2650'
 abstract: During development in the thymus, invariant natural killer T (iNKT) cells
   commit to one of three major functionally different subsets, iNKT1, iNKT2, and iNKT17.
   Here, we show that T cell antigen receptor (TCR) signal strength governs the development

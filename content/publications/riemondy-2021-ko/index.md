@@ -27,7 +27,8 @@ date: '2021-06-01'
 publishDate: '2026-02-13T13:27:51.461946Z'
 publication_types:
 - article-journal
-publication: '*Neuro. Oncol.*'
+publication:
+  name: Neuro. Oncol.
 abstract: 'BACKGROUND: Medulloblastoma (MB) is a heterogeneous disease in which neoplastic
   cells and associated immune cells contribute to disease progression. We aimed to
   determine the influence of neoplastic and immune cell diversity on MB biology in

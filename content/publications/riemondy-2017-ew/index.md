@@ -11,7 +11,11 @@ date: '2017-06-01'
 publishDate: '2026-02-13T13:27:51.575883Z'
 publication_types:
 - article-journal
-publication: '*F1000Res.*'
+publication:
+  name: F1000Res.
+  volume: '6'
+  pages: '1025'
+  publisher: F1000 Research Ltd
 abstract: New tools for reproducible exploratory data analysis of large datasets are
   important to address the rising size and complexity of genomic data. We developed
   the valr R package to enable flexible and efficient genomic interval analysis. valr
