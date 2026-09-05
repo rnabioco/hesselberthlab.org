@@ -1,0 +1,50 @@
+# A true group portrait: everyone in one scene, as an alternative to the
+# grid composite in static/media/lab-portrait.png.
+#
+#   pixi run -e graphics group     # 2 variants, ~$0.15
+#
+# Eight reference images in one prompt is a lot, and likeness fidelity drops
+# as references are added — treat the result as a group illustration rather
+# than a portrait of specific individuals, and check each face before using it.
+
+output-dir: out/cu/group
+
+defaults:
+  model: gemini-3.1-flash-image-preview
+  aspect-ratio: "16:9"
+  n: 2
+  style: >
+    Flat vector editorial illustration with a prominent grainy, chalk-pastel
+    texture overlaid on the entire image. The style is lineless, relying on
+    colour blocking and soft, textured shading to define forms.
+    The colour palette is restricted to the University of Colorado colours and
+    nothing else: warm cream, CU gold, a deeper ochre gold, near-black ink and
+    warm grey. Gold carries the largest areas of colour. Do not introduce
+    blues, greens, pinks or any other hue.
+    No lettering or text of any kind.
+
+images:
+  - name: lab-group
+    description: >
+      A group portrait of eight colleagues standing together in two loose rows,
+      as a research group would pose for a lab photograph, all facing forward
+      with relaxed friendly expressions against a plain warm background.
+      The eight people are those shown in [p-jay-hesselberth],
+      [p-erika-lasda], [p-ryan-sheridan], [p-kezia-dobson], [p-grace-li],
+      [p-jill-bilodeaux], [p-emily-decurtis] and [p-ira-fleming] — keep each
+      person's hair, glasses and face recognisably their own.
+
+  - name: lab-action
+    aspect-ratio: "16:9"
+    n: 3
+    description: >
+      A busy research laboratory seen in one wide view, with eight colleagues
+      each absorbed in their own work: one pipetting at a bench, one loading a
+      small desktop nanopore sequencer, two at computer screens showing
+      sequencing traces, one writing on a whiteboard covered in RNA structures,
+      one carrying a rack of tubes, and two talking over a result together.
+      Benches, shelves of reagents and stools fill the room. The people are
+      those shown in [p-jay-hesselberth], [p-erika-lasda], [p-ryan-sheridan],
+      [p-kezia-dobson], [p-grace-li], [p-jill-bilodeaux], [p-emily-decurtis]
+      and [p-ira-fleming] — keep each person's hair, glasses and face
+      recognisably their own.

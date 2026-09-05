@@ -1,0 +1,37 @@
+---
+title: A specific and portable gene expression program underlies antigen archiving
+  by lymphatic endothelial cells
+authors:
+- ryan-sheridan
+- Thu A Doan
+- Cormac Lucas
+- Tadg S Forward
+- Aspen Uecker-Martin
+- Thomas E Morrison
+- jay-hesselberth
+- Beth A Jiron Tamburini
+date: '2024-04-01'
+publishDate: '2026-02-13T13:27:51.407015Z'
+publication_types:
+- manuscript
+publication: '*bioRxiv*'
+abstract: 'Antigens from protein subunit vaccination traffic from the tissue to the
+  draining lymph node, either passively via the lymph or carried by dendritic cells
+  at the local injection site. Lymph node (LN) lymphatic endothelial cells (LEC) actively
+  acquire and archive foreign antigens, and archived antigen can be released during
+  subsequent inflammatory stimulus to improve immune responses. Here, we answer questions
+  about how LECs achieve durable antigen archiving and whether there are transcriptional
+  signatures associated with LECs containing high levels of antigen. We used single
+  cell sequencing in dissociated LN tissue to quantify antigen levels in LEC and dendritic
+  cell populations at multiple timepoints after immunization, and used machine learning
+  to define a unique transcriptional program within archiving LECs that can predict
+  LEC archiving capacity in independent data sets. Finally, we validated this modeling,
+  showing we could predict antigen archiving from a transcriptional dataset of CHIKV
+  infected mice and demonstrated in vivo the accuracy of our prediction. Collectively,
+  our findings establish a unique transcriptional program in LECs that promotes antigen
+  archiving that can be translated to other systems. ### Competing Interest Statement
+  The authors have declared no competing interest.'
+hugoblox:
+  ids:
+    doi: 10.1101/2024.04.01.587647
+---

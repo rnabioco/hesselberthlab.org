@@ -4,66 +4,107 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the Hesselberth Lab website built with Jekyll using the [al-folio](https://github.com/alshedivat/al-folio) academic theme. The site is deployed to https://hesselberthlab.org via GitHub Pages.
+This is the Hesselberth Lab website built with [Hugo](https://gohugo.io/) using the [HugoBlox](https://hugoblox.com/) academic theme. The site is deployed to https://hesselberthlab.org via GitHub Pages. Dependencies are managed with [pixi](https://pixi.sh/).
 
 ## Common Commands
 
-### Local Development (Docker - Recommended)
+### Setup
 
 ```bash
-docker compose pull
-docker compose up
+pixi run setup
 ```
 
-Site runs at http://localhost:8080
+Installs Node.js dependencies via pnpm (corepack + pnpm install).
 
-### Local Development (Native Ruby)
+### Local Development
 
 ```bash
-bundle install
-pip install jupyter
-bundle exec jekyll serve
+pixi run serve
 ```
 
-Site runs at http://localhost:4000
+Site runs at http://localhost:1313
 
 ### Build for Production
 
 ```bash
-bundle exec jekyll build
+pixi run build
 ```
 
-Output goes to `_site/`
+Builds with Hugo + Pagefind search index. Output goes to `public/`.
+
+### Import Publications
+
+```bash
+pixi run import-pubs
+```
+
+Converts `publications.bib` to individual Hugo publication pages in `content/publications/` using the `academic` CLI.
 
 ## Architecture
 
 ### Key Content Locations
 
-- `_pages/about.md` - Homepage content (lab mission, research focus)
-- `_bibliography/papers.bib` - Publications in BibTeX format (uses jekyll-scholar)
-- `_news/` - News/announcements organized by year
-- `_data/repositories.yml` - GitHub repos to feature
-- `_data/cv.yml` - CV data (fallback if no JSON resume)
-- `assets/json/resume.json` - JSON Resume format CV data
+- `content/_index.md` - Homepage (HugoBlox block-based landing page)
+- `content/publications/` - Publication pages (auto-generated from BibTeX)
+- `content/blog/` - News/announcements as blog posts
+- `content/software.md` - Software and tools page
+- `content/people.md` - Lab members page
+- `content/authors/` - Author profiles (one directory per person)
+- `publications.bib` - Publications in BibTeX format (source of truth)
+- `assets/media/` - Images and media files
+- `assets/css/custom.css` - Custom CSS (Crimson Pro font)
 
 ### Configuration
 
-- `_config.yml` - Main Jekyll config including:
-  - Site metadata (`title`, `url`, `first_name`, `last_name`)
-  - Jekyll Scholar settings for bibliography
-  - Theme options (dark mode, masonry, math typesetting)
-  - Plugin configuration
+- `config/_default/hugo.yaml` - Main Hugo config (baseURL, build settings)
+- `config/_default/params.yaml` - HugoBlox theme params (identity, theme, typography, header, footer)
+- `config/_default/menus.yaml` - Navigation menu
+- `config/_default/module.yaml` - Hugo module imports (HugoBlox)
+- `config/_default/languages.yaml` - Language settings
 
-### Collections
+### Dependencies
 
-- `news` - Lab announcements
-- `projects` - Research projects
-- `books` - Book collection
+- `pixi.toml` - pixi workspace (Hugo, Go, Node.js, Python, academic CLI)
+- `package.json` - Node.js dependencies (Tailwind CSS, Pagefind, Preact)
+- `go.mod` - Go module for HugoBlox theme
+- `hugoblox.yaml` - HugoBlox version and deploy config
+
+## Site graphics
+
+Illustrations and headshots are generated with [bananarama](https://hadley.github.io/bananarama/), which drives Google Gemini from a YAML file.
+
+```bash
+pixi run -e graphics graphics-setup   # once — installs bananarama from GitHub
+pixi run -e graphics trial            # graphics/trial.yaml  -> graphics/out/  (gitignored)
+pixi run -e graphics graphics         # graphics/site.yaml   -> assets/media/generated/
+pixi run -e graphics headshots        # graphics/headshots.yaml -> assets/media/authors/
+```
+
+The API key is read from `~/.Renviron` (`GEMINI_API_KEY` or `GOOGLE_API_KEY`); it is never stored in the repo.
+
+R lives in a separate pixi environment (`[feature.graphics]`), so it never enters the default environment that Netlify builds with. Two things about that environment are load-bearing:
+
+- `R_LIBS_USER` is repointed at `.pixi/rlibs`. R otherwise defaults it to `~/Library/R`, which sorts *ahead* of the environment's own library — that is how a stale global ellmer 0.2.1 shadowed the pinned 0.4.2 and broke image generation with `Unknown content type ... "inlineData" and "thoughtSignature"`. Image generation needs ellmer >= 0.4.0.
+- Setup uses `remotes`, not `pak`. conda-forge's `r-pak` ships a wrong-architecture private library on osx-arm64 and is non-functional there.
+
+Use `graphics/trial.yaml` to test prompt and style changes on one or two images before running a whole config — generation is billed per image.
+
+- Each image's `name` becomes `<name>.png` in the config's `output-dir`. Existing files are skipped; set `force: true` on an image to redraw it. Roughly $0.07 per image.
+- `[somename]` in a description is a reference image: bananarama looks for `graphics/somename.png` and passes it to the model.
+- Headshot `name`s must match the profile slug in `data/authors/<slug>.yaml`, since that is how `team-showcase` resolves avatars.
+- The `style` block in each config mirrors the CU palette in `data/themes/cu-anschutz.yaml`; keep them in step.
+- Commit generated images — regenerating costs money and is not deterministic.
 
 ## Publications
 
-Publications are managed via BibTeX in `_bibliography/papers.bib`. Supported fields include: `abstract`, `pdf`, `code`, `html`, `arxiv`, `doi`, `poster`, `slides`, `video`, `website`. Set `selected={true}` to feature on homepage.
+Publications are managed via BibTeX in `publications.bib` at the repo root. The `academic` CLI converts BibTeX entries to individual Hugo content pages. Set `featured: true` in a publication's front matter to show on homepage. A GitHub Actions workflow auto-creates a PR when `publications.bib` changes.
 
 ## Deployment
 
-Automatic deployment via GitHub Actions on push to `main` branch. The workflow builds the site and deploys to `gh-pages` branch.
+Deployed by [Netlify](https://www.netlify.com/), which builds from the repo on every push to `main`. Build settings live in `netlify.toml` (not the Netlify UI — the file takes precedence): it bootstraps pixi, then runs `pixi run setup && pixi run build`, publishing `public/`.
+
+Pull requests get a deploy preview automatically; previews and branch deploys build with `HUGO_BASEURL` set to the generated Netlify URL so links resolve.
+
+HTTP headers and redirects are generated into `public/_headers` and `public/_redirects` by the HugoBlox Netlify integration module (`config/_default/module.yaml` plus the `headers`/`redirects` outputs in `hugo.yaml`) — don't duplicate them in `netlify.toml`.
+
+The domain hesselberthlab.org resolves through Cloudflare to Netlify.

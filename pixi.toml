@@ -1,0 +1,56 @@
+[workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[dependencies]
+hugo = ">=0.154.0"
+go = ">=1.22"
+nodejs = ">=20"
+pnpm = ">=10"
+python = ">=3.12"
+
+[pypi-dependencies]
+academic = ">=0.10.0"
+
+[tasks]
+serve = "hugo server --disableFastRender --bind 0.0.0.0"
+build = "hugo --minify && npx pagefind --site public"
+import-pubs = { cmd = "academic import publications.bib content/publications/ --compact --verbose && python scripts/normalize_authors.py", description = "Import BibTeX, then point lab-member bylines at their profiles" }
+setup = "pnpm install --no-frozen-lockfile"
+
+# Image generation with bananarama (https://hadley.github.io/bananarama/).
+# Kept in its own environment so R never enters the default env that Netlify
+# builds with. Needs GEMINI_API_KEY (or GOOGLE_API_KEY) in the environment.
+[feature.graphics.dependencies]
+r-base = ">=4.4"
+# conda-forge's r-pak ships a wrong-architecture private library on osx-arm64
+# ("Wrong OS or architecture, pak is probably dysfunctional"), so use remotes
+# to install the one package that is only on GitHub.
+r-remotes = "*"
+# bananarama's imports, as conda binaries so nothing has to be compiled.
+# Image generation needs ellmer >= 0.4.0; the site's old system ellmer was 0.2.1.
+r-ellmer = ">=0.4"
+r-magick = "*"
+r-openssl = "*"
+r-cli = "*"
+r-rlang = "*"
+r-yaml = "*"
+
+# R defaults R_LIBS_USER to ~/Library/R, which sorts ahead of the environment's
+# own library and shadows the pinned packages with whatever is installed
+# globally. Point it at a project-local library instead so the graphics
+# environment is self-contained.
+[feature.graphics.activation.env]
+R_LIBS_USER = "$PIXI_PROJECT_ROOT/.pixi/rlibs"
+
+[feature.graphics.tasks]
+graphics-setup = "Rscript -e 'dir.create(Sys.getenv(\"R_LIBS_USER\"), recursive = TRUE, showWarnings = FALSE); remotes::install_github(\"hadley/bananarama\", upgrade = \"never\")'"
+pastel = "Rscript -e 'bananarama::bananarama(\"graphics/pastel.yaml\")'"
+group = "Rscript -e 'bananarama::bananarama(\"graphics/group.yaml\")'"
+portrait = "Rscript graphics/lab-portrait.R"
+favicon = "Rscript -e 'bananarama::bananarama(\"graphics/favicon.yaml\")'"
+publications = "Rscript -e 'bananarama::bananarama(\"graphics/publications.yaml\")'"
+cu = "Rscript -e 'bananarama::bananarama(\"graphics/cu.yaml\")'"
+
+[environments]
+graphics = ["graphics"]

@@ -1,0 +1,51 @@
+# HugoBlox Theme Pack — CU Anschutz
+#
+# Warm cream ground keyed to the University of Colorado palette.
+#
+# CU gold (#CFB87C) is 1.82:1 against the cream background, so it is used for
+# decoration only — rules, motifs, fills, borders. Text and links use the
+# deeper gold (#756026): 5.68:1 on cream and 5.16:1 on the section band, both
+# past the 4.5:1 AA threshold. An earlier #8C7332 measured only 4.25:1 and was
+# failing Lighthouse. In dark mode the roles swap: CU gold on near-black is
+# 10.2:1.
+
+hugoblox:
+  meta:
+    format: "hugoblox-theme@1"
+    name: "CU Anschutz"
+    vendor: "hesselberthlab"
+    version: "1.0.0"
+    license: "MIT"
+    description: "Warm cream and CU gold"
+
+  type: "dual"
+
+  light:
+    colors:
+      primary: "#756026" # Deep gold — 5.68:1 on cream, passes AA
+      secondary: "#565A5C" # CU dark gray
+      neutral: "#78736A" # Warm stone
+    surfaces:
+      background: "#FAF7F0" # Cream
+      foreground: "#1C1B19" # Ink
+      header:
+        background: "#F2ECDF" # Warm band, distinct from content
+        foreground: "#1C1B19"
+      footer:
+        background: "#EDE6D7"
+        foreground: "#45413A"
+
+  dark:
+    colors:
+      primary: "#CFB87C" # CU gold reads well on near-black
+      secondary: "#A2A4A3" # CU light gray
+      neutral: "#6B665D"
+    surfaces:
+      background: "#1A1917"
+      foreground: "#EDE7DA"
+      header:
+        background: "#1A1917"
+        foreground: "#EDE7DA"
+      footer:
+        background: "#141311"
+        foreground: "#C9C2B4"

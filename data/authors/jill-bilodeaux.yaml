@@ -1,0 +1,20 @@
+name:
+  given: Jill
+  family: Bilodeaux
+  display: Jill Bilodeaux
+
+weight: 20
+
+role: Graduate Student, Microbiology
+
+user_groups:
+  - Graduate Students
+
+affiliations:
+  - name: University of Colorado School of Medicine
+    url: https://www.cuanschutz.edu/
+
+links:
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/jill-bilodeaux-999767107/
+    label: LinkedIn

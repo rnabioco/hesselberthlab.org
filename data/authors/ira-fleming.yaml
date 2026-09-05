@@ -1,0 +1,20 @@
+name:
+  given: Ira
+  family: Fleming
+  display: Ira Fleming
+
+weight: 22
+
+role: MD/PhD Student, MSTP
+
+user_groups:
+  - Graduate Students
+
+affiliations:
+  - name: University of Colorado School of Medicine
+    url: https://www.cuanschutz.edu/
+
+links:
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/ira-fleming-40b508b0/
+    label: LinkedIn

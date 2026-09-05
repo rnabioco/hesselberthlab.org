@@ -1,0 +1,782 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Metric-matched fallback.
+
+   Crimson Pro is only discovered after this stylesheet parses (it arrives via
+   @import), so the page first paints in the fallback and reflows when the real
+   face swaps in. Measured at 100px, the string used on the homepage renders
+   2844px in Crimson Pro, 3195px in Georgia (12% wider) and 2930px in Times
+   (3% wider) — Georgia was causing a 0.279 layout shift on its own.
+
+   Fall back to Times scaled by 2844/2930, so the pre-swap and post-swap text
+   occupy almost the same width and nothing jumps. */
+@font-face {
+  font-family: 'Crimson Fallback';
+  src: local('Times New Roman'), local('Times'), local('Liberation Serif');
+  size-adjust: 97.1%;
+  ascent-override: 92%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+/* ---------------------------------------------------------------------------
+   Tokens
+
+   Surfaces and the primary/secondary ramps come from the CU Anschutz theme
+   pack (data/themes/cu-anschutz.yaml). These are the extras that pack cannot
+   express: the band used for alternating sections, hairline rules, and the
+   decorative CU gold that is too low-contrast for text.
+   ------------------------------------------------------------------------ */
+
+:root {
+  --font-serif: 'Crimson Pro', 'Crimson Fallback', Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  --cu-gold: #cfb87c; /* decoration only — 1.82:1 on cream */
+  --cu-gold-deep: #756026; /* text-safe — 5.68:1 on cream, 5.16:1 on the band */
+  --band: #f2ecdf;
+  --rule: #e2d9c6;
+  --ink-soft: #55534e;
+}
+
+.dark {
+  --cu-gold: #cfb87c;
+  --cu-gold-deep: #d9c48f;
+  --band: #211f1d;
+  --rule: #35322d;
+  --ink-soft: #b8b1a3;
+}
+
+body {
+  font-family: var(--font-serif);
+}
+
+/* ---------------------------------------------------------------------------
+   Density
+
+   The theme centres every block in a `max-w-prose` column. That is right for
+   running text and wrong for everything else, so sections that lay out their
+   own grid opt out via `.wide`.
+   ------------------------------------------------------------------------ */
+
+.hbb-section {
+  padding-block: 2.5rem;
+}
+
+#intro.hbb-section {
+  padding-block: 3.25rem 2.75rem;
+}
+
+.hbb-section .wide,
+.hbb-section:has(.wide) .max-w-prose {
+  max-width: 74rem;
+}
+
+/* Alternating bands give the page rhythm without extra chrome. */
+#research .home-section-bg,
+#news .home-section-bg {
+  background: var(--band);
+}
+
+#research,
+#news {
+  border-block: 1px solid var(--rule);
+}
+
+/* ---------------------------------------------------------------------------
+   Eyebrow labels
+
+   Monospace, letterspaced, under a small tRNA motif — the repeating mark that
+   ties the sections together.
+   ------------------------------------------------------------------------ */
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 0.5rem;
+}
+
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 132px;
+  height: 16px;
+  margin-bottom: 0.6rem;
+  background: url('/media/motif-trna.svg') left center / contain no-repeat;
+}
+
+.eyebrow--bare::before {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------------
+   Hero
+   ------------------------------------------------------------------------ */
+
+.lab-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: center;
+}
+
+@media (min-width: 820px) {
+  .lab-hero {
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 2.75rem;
+  }
+}
+
+.lab-hero__mark {
+  /* The SVG is drawn in currentColor over a transparent ground, so it needs no
+     white plate behind it. Intrinsic width/height reserve the box before it
+     loads; padding here would break that ratio and trip Lighthouse's
+     image-aspect-ratio audit. */
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin: 0;
+}
+
+.lab-hero__title {
+  font-size: clamp(2rem, 4.4vw, 3rem);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  font-weight: 700;
+  margin: 0 0 0.65rem;
+  text-wrap: balance;
+}
+
+.lab-hero__title em {
+  font-style: normal;
+  color: var(--cu-gold-deep);
+  border-bottom: 3px solid var(--cu-gold);
+  padding-bottom: 1px;
+}
+
+.lab-hero__lede {
+  font-size: 1.1875rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0 0 1.1rem;
+  max-width: 46rem;
+}
+
+.lab-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.btn-gold,
+.btn-plain {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.95rem;
+  border-radius: 4px;
+  border: 1px solid var(--cu-gold-deep);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-gold {
+  background: var(--cu-gold);
+  color: #1c1b19;
+  border-color: var(--cu-gold);
+}
+
+.btn-gold:hover {
+  background: var(--cu-gold-deep);
+  color: #fff;
+  border-color: var(--cu-gold-deep);
+}
+
+.btn-plain {
+  color: var(--cu-gold-deep);
+}
+
+.btn-plain:hover {
+  background: var(--cu-gold);
+  color: #1c1b19;
+}
+
+/* Dense inline affiliation row, replacing the old stacked list. */
+.affil {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  margin: 1.5rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--rule);
+}
+
+.affil a {
+  color: var(--ink-soft);
+  text-decoration-color: var(--cu-gold);
+  text-underline-offset: 3px;
+}
+
+.affil a:hover {
+  color: var(--cu-gold-deep);
+}
+
+/* ---------------------------------------------------------------------------
+   Research areas — three dense columns, hairline separators, no cards
+   ------------------------------------------------------------------------ */
+
+.section-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.areas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 760px) {
+  .areas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .areas > * + * {
+    border-left: 1px solid var(--rule);
+    padding-left: 1.75rem;
+    margin-left: 1.75rem;
+  }
+}
+
+.areas h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  margin: 0 0 0.4rem;
+}
+
+.areas h3 .n {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--cu-gold-deep);
+  letter-spacing: 0.1em;
+  margin-right: 0.45rem;
+}
+
+.areas p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.areas .with {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--cu-gold-deep);
+  margin-top: 0.6rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Collections
+
+   Tighten the stock views: the citation list and the date/title news list are
+   both built for generous spacing.
+   ------------------------------------------------------------------------ */
+
+/* Headings ship centred in a prose column; left-align them and give them the
+   same motif and measure as the markdown sections above. */
+.blox-collection > .max-w-prose {
+  max-width: 74rem;
+  align-items: flex-start;
+  padding-inline: 1.5rem;
+}
+
+.blox-collection > .max-w-prose > .text-3xl {
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  margin-bottom: 0;
+}
+
+.blox-collection > .max-w-prose > .text-3xl::before {
+  content: '';
+  display: block;
+  width: 132px;
+  height: 16px;
+  margin-bottom: 0.6rem;
+  background: url('/media/motif-trna.svg') left center / contain no-repeat;
+}
+
+/* Both views open with `mt-16 sm:mt-20`, leaving a large gap under the
+   heading, and cap themselves at max-w-3xl. */
+.blox-collection .mt-16 {
+  margin-top: 1.1rem;
+}
+
+.blox-collection .max-w-3xl {
+  max-width: 74rem;
+}
+
+/* date-title-summary wraps the list in `w-fit`, which shrink-wraps it. */
+#news .w-fit {
+  width: 100%;
+}
+
+/* This Tailwind build implements space-y as margin-bottom on
+   `> :not(:last-child)`, so overriding margin-top has no effect. */
+#news .space-y-16 > * {
+  margin-block: 0;
+}
+
+#news article {
+  padding-block: 0.9rem;
+  border-top: 1px solid var(--rule);
+}
+
+#news article:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+#news time {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cu-gold-deep);
+}
+
+#news h2 {
+  font-size: 1.0625rem;
+}
+
+/* The homepage news list is an index, not a feed. These posts are bullet
+   lists, so Hugo renders the summary as a <ul> *outside* the theme's
+   line-clamped <p> (which ends up empty) — there is nothing to truncate
+   cleanly. Show date and headline only; the post is one click away. */
+#news article > div > p,
+#news article > div > ul,
+#news article > div > div[aria-hidden='true'] {
+  display: none;
+}
+
+#news article > div > h2 {
+  margin: 0;
+}
+
+#papers .space-y-3 > * + * {
+  margin-top: 0.65rem;
+}
+
+/* ---------------------------------------------------------------------------
+   People
+
+   The team-showcase block renders a full-bleed square avatar at the top of a
+   white card. Make the headshot a centred circle on the page's own ground, and
+   tone the card down to a hairline so the row reads closer to the rest of the
+   site.
+   ------------------------------------------------------------------------ */
+
+.blox-team-showcase a.aspect-square {
+  width: 116px;
+  margin: 1.1rem auto 0;
+  border-radius: 9999px;
+  background: transparent;
+  border: 1px solid var(--rule);
+}
+
+/* Portraits are square, so cover fills the circle without letterboxing. */
+.blox-team-showcase a.aspect-square img {
+  object-fit: cover;
+}
+
+/* Cards in a row otherwise end up ragged when a role wraps to two lines. */
+.blox-team-showcase .group {
+  display: flex;
+}
+
+.blox-team-showcase .rounded-2xl {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+}
+
+.blox-team-showcase .rounded-2xl:hover {
+  box-shadow: none;
+  transform: none;
+  border-color: var(--cu-gold);
+}
+
+.blox-team-showcase .p-6 {
+  padding: 0.7rem 0.8rem 0.9rem;
+  text-align: center;
+}
+
+.blox-team-showcase h3 {
+  font-size: 0.98rem;
+  margin-bottom: 0.1rem;
+}
+
+.blox-team-showcase .flex.gap-3 {
+  justify-content: center;
+  border-top: 0;
+}
+
+.blox-team-showcase .p-6 > div {
+  margin-bottom: 0.4rem;
+}
+
+.blox-team-showcase .p-6 p {
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.blox-team-showcase .grid {
+  gap: 1rem;
+}
+
+/* Group headings, matched to the section labels used on the homepage. */
+.blox-team-showcase h3.text-2xl {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  border-bottom-color: var(--rule);
+}
+
+/* ---------------------------------------------------------------------------
+   Interior pages
+
+   62rem here used to cap the whole page at 992px. With the theme's 256px
+   contents sidebar that left an article 480px wide, and the publication
+   metadata grid's fixed 200px label column then squeezed the abstract into
+   168px. Let the theme's own max-w-screen-xl (1280px) govern instead.
+   ------------------------------------------------------------------------ */
+
+.page-body {
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+/* ---------------------------------------------------------------------------
+   Publication pages
+
+   Put the generated illustration beside the abstract rather than stacked above
+   it, and give the abstract a readable measure. Scoped with :has() so pages
+   without an illustration keep the theme's single column.
+   ------------------------------------------------------------------------ */
+
+/* Publication pages have no headings, so the contents rail renders empty but
+   still reserves 256px. Reclaim it wherever the TOC has no entries. */
+.hb-toc:not(:has(li)) {
+  display: none;
+}
+
+main:has(> .featured-image-wrapper img) {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  column-gap: 2.5rem;
+  align-items: start;
+}
+
+main:has(> .featured-image-wrapper img) > * {
+  grid-column: 1 / -1;
+}
+
+main:has(> .featured-image-wrapper img) > .featured-image-wrapper {
+  grid-column: 1;
+  grid-row: 3;
+  margin-block: 0;
+}
+
+main:has(> .featured-image-wrapper img) > .max-w-prose.grid {
+  grid-column: 2;
+  grid-row: 3;
+  margin-top: 0;
+}
+
+.featured-image-wrapper img {
+  border-radius: 10px;
+  border: 1px solid var(--rule);
+}
+
+/* The label column is fixed at 200px, which on a narrow article leaves almost
+   nothing for the value. Shrink it and drop the prose cap. */
+main .max-w-prose.grid {
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  main .max-w-prose.grid {
+    /* 128px so "Publication" fits on one line. */
+    grid-template-columns: 128px minmax(0, 1fr);
+  }
+}
+
+/* The grid alternates label, value, label, value — so every odd child is a
+   label, not just the first. */
+main .max-w-prose.grid > div:nth-child(odd) {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding-top: 0.25rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Software
+
+   Card grid mirroring the People page: hairline borders on the page's own
+   ground, gold on hover, no drop shadows.
+   ------------------------------------------------------------------------ */
+
+.sw-lede {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 46rem;
+  margin: 0 0 2rem;
+}
+
+.sw-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.85rem;
+  margin: 0 0 2.25rem;
+}
+
+.sw-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.9rem 1rem 0.85rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.sw-card:hover {
+  border-color: var(--cu-gold);
+  background: var(--band);
+}
+
+.sw-name {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cu-gold-deep);
+}
+
+.sw-desc {
+  font-size: 0.87rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  flex: 1;
+}
+
+.sw-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.sw-lang {
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.1rem 0.35rem;
+}
+
+.sw-stars::before {
+  content: '★ ';
+  color: var(--cu-gold);
+}
+
+/* ---------------------------------------------------------------------------
+   Selected publications with thumbnails (layouts/_partials/views/citation-image)
+   ------------------------------------------------------------------------ */
+
+.pub-with-thumb {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Only a few papers have an illustration, so the thumbnail column is reserved
+   on every row rather than collapsed on the ones without. Collapsing it left
+   the citations zigzagging by 90px down the full publications list. */
+.pub-with-thumb:not(:has(.pub-thumb)) .pub-cite {
+  grid-column: 2;
+}
+
+.pub-thumb {
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.pub-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------------------------------------------------------------------------
+   News running list (layouts/_partials/views/news-line)
+
+   Items are single sentences with no page of their own, so the text is the
+   content rather than a link to it.
+   ------------------------------------------------------------------------ */
+
+.news-list {
+  border-top: 1px solid var(--rule);
+}
+
+.news-line {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (min-width: 640px) {
+  .news-line {
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: baseline;
+  }
+}
+
+.news-date {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cu-gold-deep);
+  white-space: nowrap;
+}
+
+.news-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.news-text a {
+  text-decoration: underline;
+  text-decoration-color: var(--cu-gold);
+  text-underline-offset: 2px;
+}
+
+/* ---------------------------------------------------------------------------
+   Publication page density
+
+   The theme repeats every author as a full-width block under the paper, which
+   on an eight-author paper was 1216px of a 2124px page — 57% of it — restating
+   the byline that already sits under the title, with links. Drop it, and close
+   the gaps the theme leaves around the metadata.
+   ------------------------------------------------------------------------ */
+
+main .flex.pt-12.pb-4 {
+  display: none;
+}
+
+main > .article-header.featured-image-wrapper {
+  margin-bottom: 1rem;
+}
+
+main > .max-w-prose.grid {
+  margin-block: 0.5rem 1rem;
+}
+
+main > .mt-4.mb-16 {
+  margin-bottom: 1.25rem;
+}
+
+main > time.mt-12 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Closing lab shot
+
+   Full-bleed within the content measure, below the news list. Intrinsic
+   width/height on the img reserve the box so it cannot shift the page as it
+   loads — the same trap that put CLS at 0.279 before.
+   ------------------------------------------------------------------------ */
+
+#labshot.hbb-section {
+  padding-block: 0 0;
+}
+
+.lab-shot {
+  margin: 0;
+}
+
+.lab-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--rule);
+}
+
+/* ---------------------------------------------------------------------------
+   Navbar sizing
+
+   The nav sits in Crimson Pro, whose x-height measures 82% of the system
+   sans — so the theme's 16px nav links read at about the size of 13px sans.
+   That is fine for body copy, which is read, and too small for navigation,
+   which is scanned. Size up so the links land near a 15px sans equivalent.
+   ------------------------------------------------------------------------ */
+
+.navbar .nav-link {
+  font-size: 1.125rem; /* 18px */
+  letter-spacing: 0.005em;
+}
+
+.navbar-brand {
+  font-size: 1.375rem; /* 22px */
+  letter-spacing: -0.005em;
+}
+
+/* Uppercasing turns tRNA into TRNA and aa-tRNA-seq into AA-TRNA-SEQ, which is
+   wrong for terms of art. Opt individual words out of the caps treatment. */
+.nocaps {
+  text-transform: none;
+}

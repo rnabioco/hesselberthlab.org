@@ -1,0 +1,20 @@
+name:
+  given: Kezia
+  family: Dobson
+  display: Kezia Dobson
+
+weight: 12
+
+role: Research Services Professional
+
+user_groups:
+  - Researchers
+
+affiliations:
+  - name: University of Colorado School of Medicine
+    url: https://www.cuanschutz.edu/
+
+links:
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/kezia-dobson-04436b25b/
+    label: LinkedIn
