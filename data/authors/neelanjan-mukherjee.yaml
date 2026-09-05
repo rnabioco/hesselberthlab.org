@@ -1,7 +1,9 @@
 name:
+  # `given` is the published form and feeds citation bylines, which have to
+  # match the papers; `display` is what the People card shows.
   given: Neelanjan
   family: Mukherjee
-  display: Neelanjan Mukherjee, Ph.D.
+  display: Neel Mukherjee, Ph.D.
 
 weight: 20
 
@@ -11,6 +13,9 @@ user_groups:
   - Friends
 
 links:
+  - icon: hero/globe-alt
+    url: https://mukherjeelab.org
+    label: Mukherjee Lab
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/neelanjan-mukherjee-65052010/
     label: LinkedIn

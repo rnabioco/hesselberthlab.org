@@ -11,6 +11,9 @@ user_groups:
   - Friends
 
 links:
+  - icon: hero/globe-alt
+    url: https://jagannathan-lab.org
+    label: Jagannathan Lab
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/sujathajagannathan/
     label: LinkedIn
