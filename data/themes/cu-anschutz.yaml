@@ -8,6 +8,10 @@
 # past the 4.5:1 AA threshold. An earlier #8C7332 measured only 4.25:1 and was
 # failing Lighthouse. In dark mode the roles swap: CU gold on near-black is
 # 10.2:1.
+#
+# The neutral ramp is text too: it styles publication bylines. #78736A was
+# 4.40:1 on cream and 4.00:1 on the band, both under AA, which a manual audit
+# of the page missed and Lighthouse CI caught.
 
 hugoblox:
   meta:
@@ -24,7 +28,7 @@ hugoblox:
     colors:
       primary: "#756026" # Deep gold — 5.68:1 on cream, passes AA
       secondary: "#565A5C" # CU dark gray
-      neutral: "#78736A" # Warm stone
+      neutral: "#6B665D" # Warm stone — 5.33:1 on cream, 4.84:1 on the band
     surfaces:
       background: "#FAF7F0" # Cream
       foreground: "#1C1B19" # Ink

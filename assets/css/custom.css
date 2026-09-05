@@ -780,3 +780,11 @@ main > time.mt-12 {
 .nocaps {
   text-transform: none;
 }
+
+/* Tailwind's neutral-500 is #737373, which is 4.43:1 on the cream ground —
+   just under the 4.5:1 AA threshold. The theme uses it for small metadata such
+   as the dates under the previous/next links at the foot of a publication.
+   Map it onto the palette's muted ink instead, which is 7.18:1. */
+.text-neutral-500 {
+  color: var(--ink-soft);
+}
