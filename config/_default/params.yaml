@@ -55,7 +55,7 @@ hugoblox:
   footer:
     style: minimal
     language_switcher: false
-    text: ""
+    text: '<span class="pano-credit">Footer illustration after a <a href="https://unsplash.com/photos/snow-covered-mountain-under-blue-sky-during-daytime-rM-rzoHusAU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">photograph</a> by <a href="https://unsplash.com/@onthesearchforpineapples?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Colin Lloyd</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>'
 
   copyright:
     notice: "© {year} {name}"

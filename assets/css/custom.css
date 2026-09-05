@@ -969,3 +969,85 @@ main > time.mt-12 {
   font-weight: 600;
   white-space: nowrap;
 }
+
+/* ---------------------------------------------------------------------------
+   Footer panorama
+
+   The Sangre de Cristos over the Great Sand Dunes, drawn in the CU palette
+   from graphics/cu.yaml and then knocked out to a transparent sky, so the
+   page's own ground shows through the band instead of a rectangle of flat
+   grey. See CLAUDE.md for the knockout command.
+
+   It hangs off `.page-footer` rather than `<footer>`, which the theme sizes as
+   `container mx-auto` and so stops at the content measure — a horizon needs
+   the full width of the viewport. `isolation` keeps the negative z-index
+   inside this wrapper, behind the footer's own text but never over the page
+   above it.
+   ------------------------------------------------------------------------ */
+
+.page-footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  /* Reserve the band's own height and centre the footer text inside it, so the
+     text sits in the middle of the panorama rather than above it. The
+     expression mirrors the ::before sizing below: 438/1584 = 0.2765. */
+  display: grid;
+  align-content: center;
+  min-height: 27.65vw;
+  margin-top: 4rem;
+}
+
+.page-footer::before {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  z-index: -1;
+  /* The band keeps the trimmed PNG's intrinsic ratio and grows with the
+     viewport, so the ridge is never stretched and never cropped. A
+     `max-height` here would crop it, cutting a hard horizontal line across the
+     peaks on wide screens — the reason to let it scale instead.
+
+     `width` has to be stated: given `aspect-ratio`, an absolutely positioned
+     box will derive its width from its height rather than from the left/right
+     offsets, and the band ends up short of the viewport with the page showing
+     through beside it. */
+  width: 100%;
+  aspect-ratio: 1584 / 438;
+  background: url('/media/footer-panorama.png') no-repeat center bottom / 100% auto;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.dark .page-footer::before {
+  /* Gold on near-black carries much further than gold on cream. */
+  opacity: 0.16;
+}
+
+/* The theme's own `mt-24 mb-4` would fight the centring above. The inline
+   padding is for the credit line, which is the widest thing in the footer and
+   otherwise runs to both edges on a phone. */
+.page-footer footer {
+  margin-block: 0;
+  padding-inline: 1.25rem;
+}
+
+.pano-credit {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  /* Colour is inherited rather than set: over the darkest part of the band,
+     --ink-soft measures 4.37:1, just under AA for text this size, where the
+     footer's own foreground measures 5.76:1. */
+}
+
+.pano-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--cu-gold);
+  text-underline-offset: 2px;
+}
+
+.pano-credit a:hover {
+  color: var(--cu-gold-deep);
+}

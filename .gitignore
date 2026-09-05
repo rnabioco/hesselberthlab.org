@@ -23,3 +23,6 @@ graphics/out/
 
 # Python bytecode from scripts/
 __pycache__/
+
+# Screenshots and traces from the Playwright MCP server
+.playwright-mcp/

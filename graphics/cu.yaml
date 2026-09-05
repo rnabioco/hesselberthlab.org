@@ -245,6 +245,16 @@ images:
       margin. The background is a single flat block of CU gold, never a
       gradient or a glow.
 
+  - name: footer-panorama
+    aspect-ratio: "21:9"
+    description: >
+      A wide panorama of the Colorado range shown in [colin-lloyd]: snow-capped
+      peaks along the skyline, rounded foothills below them and a run of sand
+      dunes in front, built from flat overlapping bands that lighten towards the
+      horizon. The ridge sits low in the frame with empty, uncluttered sky above
+      it, so the whole image reads as a band along the bottom edge. No clouds,
+      people, buildings, roads or lettering.
+
   - name: sharing
     aspect-ratio: "16:9"
     description: >

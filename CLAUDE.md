@@ -95,6 +95,23 @@ Use `graphics/trial.yaml` to test prompt and style changes on one or two images 
 - The `style` block in each config mirrors the CU palette in `data/themes/cu-anschutz.yaml`; keep them in step.
 - Commit generated images — regenerating costs money and is not deterministic.
 
+The footer panorama is the one image with a post-processing step. It is drawn
+with a flat sky, which is knocked out so the page's own ground shows through
+the band instead of a rectangle of grey:
+
+```bash
+magick graphics/out/cu/footer-panorama.png -alpha set -fuzz 10% -fill none \
+  -draw 'color 0,0 floodfill' -draw 'color 1583,0 floodfill' \
+  -draw 'color 792,4 floodfill' -trim +repage -colors 128 \
+  PNG8:static/media/footer-panorama.png
+```
+
+The floodfill seeds are three points in the sky, so only the connected sky
+goes transparent and the cream snow does not. `-trim` then drops the empty
+rows, which is what makes the intrinsic ratio in `custom.css` (1584/438)
+match the ridge. Re-run it if the panorama is ever redrawn — the seeds and
+the ratio both depend on the render.
+
 ## Publications
 
 Publications are managed via BibTeX in `publications.bib` at the repo root. The `academic` CLI converts BibTeX entries to individual Hugo content pages. Set `featured: true` in a publication's front matter to show on homepage. A GitHub Actions workflow auto-creates a PR when `publications.bib` changes.
