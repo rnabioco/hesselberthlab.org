@@ -9,6 +9,7 @@ role: MD/PhD Student, MSTP
 
 user_groups:
   - Graduate Students
+  - Lab
 
 affiliations:
   - name: University of Colorado School of Medicine

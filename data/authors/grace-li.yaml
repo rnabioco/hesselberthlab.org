@@ -9,6 +9,7 @@ role: Research Services Professional
 
 user_groups:
   - Researchers
+  - Lab
 
 affiliations:
   - name: University of Colorado School of Medicine

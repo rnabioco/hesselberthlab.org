@@ -9,6 +9,7 @@ role: Graduate Student, Molecular Biology
 
 user_groups:
   - Graduate Students
+  - Lab
 
 affiliations:
   - name: University of Colorado School of Medicine
