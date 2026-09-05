@@ -29,7 +29,7 @@ sections:
     id: friends
     content:
       title: Friends of the Lab
-      subtitle: Alumni and collaborators we work with.
+      subtitle: Collaborators we work with.
       sort_by: weight
       sort_ascending: true
       user_groups:
@@ -39,4 +39,19 @@ sections:
       show_interests: false
       show_role: true
       show_social: true
+
+  - block: markdown
+    id: alumni
+    content:
+      title: ''
+      # The heading lives in the markdown rather than the block's `title`, which
+      # centres it in a prose column; this matches the left-aligned section
+      # headings used elsewhere.
+      text: |-
+        <div class="wide">
+          <h2 class="section-title">Alumni</h2>
+          {{< alumni >}}
+        </div>
+    design:
+      columns: '1'
 ---

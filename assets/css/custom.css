@@ -898,3 +898,74 @@ main > time.mt-12 {
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
 }
+
+/* ---------------------------------------------------------------------------
+   Alumni table (layouts/_shortcodes/alumni.html)
+
+   A plain table on the page's own ground: hairline rules, monospace column
+   heads matching the eyebrow labels, and no zebra striping or card.
+   ------------------------------------------------------------------------ */
+
+/* The markdown block lays its content out with `items-center`, which shrinks
+   each child to its own content width. The research areas next door get away
+   with it because a three-column grid of paragraphs is naturally wide; a table
+   of short names is not, and stopped at the prose measure. Stretch the column
+   instead, then cap the table itself. */
+#alumni .flex.flex-col {
+  align-items: stretch;
+}
+
+#alumni .wide {
+  width: 100%;
+}
+
+.alumni-table {
+  overflow-x: auto;
+  max-width: 58rem;
+}
+
+.alumni-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.alumni-table th {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: left;
+  padding: 0 0 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.alumni-table td {
+  padding: 0.65rem 1.5rem 0.65rem 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: baseline;
+  color: var(--ink-soft);
+}
+
+.alumni-table td:last-child,
+.alumni-table th:last-child {
+  padding-right: 0;
+  white-space: nowrap;
+}
+
+.alumni-table .alumni-category {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--cu-gold-deep);
+  white-space: nowrap;
+}
+
+.alumni-table .alumni-name {
+  color: inherit;
+  font-weight: 600;
+  white-space: nowrap;
+}
