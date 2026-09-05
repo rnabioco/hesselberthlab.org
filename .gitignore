@@ -20,3 +20,6 @@ graphics/out/
 
 # Lighthouse CI reports
 .lighthouseci/
+
+# Python bytecode from scripts/
+__pycache__/
