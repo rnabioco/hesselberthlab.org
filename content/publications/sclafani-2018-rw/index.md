@@ -7,7 +7,11 @@ date: '2018-06-01'
 publishDate: '2026-02-13T13:27:51.523024Z'
 publication_types:
 - article-journal
-publication: '*Curr. Genet.*'
+publication:
+  name: Curr. Genet.
+  volume: '64'
+  issue: '3'
+  pages: 677–680
 abstract: Although Cdc7 protein kinase is important for regulating DNA replication
   in all eukaryotes and is a target for cancer therapy, it has never been localized
   in cells. Recently, a novel molecular genomic method used by our laboratory to localize

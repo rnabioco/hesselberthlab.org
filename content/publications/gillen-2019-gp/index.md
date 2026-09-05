@@ -23,7 +23,9 @@ date: '2019-01-01'
 publishDate: '2026-02-13T13:27:51.587738Z'
 publication_types:
 - article-journal
-publication: '*SSRN Electron. J.*'
+publication:
+  name: SSRN Electron. J.
+  publisher: Elsevier BV
 hugoblox:
   ids:
     doi: 10.2139/ssrn.3474066

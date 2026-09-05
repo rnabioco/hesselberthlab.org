@@ -16,7 +16,10 @@ date: '2024-01-01'
 publishDate: '2026-02-13T13:27:51.420373Z'
 publication_types:
 - article-journal
-publication: '*JCI Insight*'
+publication:
+  name: JCI Insight
+  volume: '9'
+  issue: '4'
 abstract: Infection with chikungunya virus (CHIKV) causes disruption of draining lymph
   node (dLN) organization, including paracortical relocalization of B cells, loss
   of the B cell-T cell border, and lymphocyte depletion that is associated with infiltration

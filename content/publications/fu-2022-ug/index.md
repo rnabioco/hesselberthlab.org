@@ -12,7 +12,9 @@ date: '2022-08-01'
 publishDate: '2026-02-13T13:27:51.433563Z'
 publication_types:
 - manuscript
-publication: '*bioRxiv*'
+publication:
+  name: bioRxiv
+  pages: 2022.08.22.504859
 abstract: "Alternative cleavage and polyadenylation (APA) contributes to the diversity
   of mRNA 3' ends, affecting post-transcriptional regulation by including or excluding
   cis -regulatory elements in mRNAs, altering their stability and translational efficiency.

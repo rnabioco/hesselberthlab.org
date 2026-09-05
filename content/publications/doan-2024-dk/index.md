@@ -17,7 +17,11 @@ date: '2024-03-01'
 publishDate: '2026-02-13T13:27:51.410325Z'
 publication_types:
 - article-journal
-publication: '*NPJ Vaccines*'
+publication:
+  name: NPJ Vaccines
+  volume: '9'
+  issue: '1'
+  pages: '66'
 abstract: Antigens from viruses or immunizations can persist or are archived in lymph
   node stromal cells such as lymphatic endothelial cells (LEC) and fibroblastic reticular
   cells (FRC). Here, we find that, during the time frame of antigen archiving, LEC

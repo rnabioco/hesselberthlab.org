@@ -10,7 +10,11 @@ date: '2017-11-01'
 publishDate: '2026-02-13T13:27:51.532475Z'
 publication_types:
 - article-journal
-publication: '*G3*'
+publication:
+  name: G3
+  volume: '7'
+  issue: '11'
+  pages: 3757–3774
 abstract: DDK, a conserved serine-threonine protein kinase composed of a regulatory
   subunit, Dbf4, and a catalytic subunit, Cdc7, is essential for DNA replication initiation
   during S phase of the cell cycle through MCM2-7 helicase phosphorylation. The biological

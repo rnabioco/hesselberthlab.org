@@ -9,7 +9,11 @@ date: '2023-06-01'
 publishDate: '2026-02-13T13:27:51.426844Z'
 publication_types:
 - article-journal
-publication: '*RNA*'
+publication:
+  name: RNA
+  volume: '29'
+  issue: '6'
+  pages: 847–861
 abstract: "Ligation by plant and fungal RNA ligases yields an internal 2'-phosphate
   group on each RNA ligation product. In budding yeast, this covalent mark occurs
   at the splice junction of two targets of ligation: intron-containing tRNAs and the

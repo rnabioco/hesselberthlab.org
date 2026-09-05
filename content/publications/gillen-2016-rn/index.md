@@ -10,7 +10,10 @@ date: '2016-05-01'
 publishDate: '2026-02-13T13:27:51.551564Z'
 publication_types:
 - article-journal
-publication: '*BMC Genomics*'
+publication:
+  name: BMC Genomics
+  volume: '17'
+  pages: '338'
 abstract: 'BACKGROUND: High-throughput sequencing of RNA isolated by crosslinking
   immunoprecipitation (HITS-CLIP) allows for high resolution, genome-wide mapping
   of RNA-binding proteins. This methodology is frequently used to validate predicted

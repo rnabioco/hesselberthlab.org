@@ -15,7 +15,11 @@ date: '2014-01-01'
 publishDate: '2026-02-13T13:27:51.484079Z'
 publication_types:
 - manuscript
-publication: '*RNA*'
+publication:
+  name: RNA
+  volume: '20'
+  issue: '8'
+  pages: 1337–1348
 hugoblox:
   ids:
     doi: 10.1261/rna.044602.114

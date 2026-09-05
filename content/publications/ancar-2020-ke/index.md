@@ -14,7 +14,11 @@ date: '2020-12-01'
 publishDate: '2026-02-13T13:27:51.474986Z'
 publication_types:
 - article-journal
-publication: '*RNA*'
+publication:
+  name: RNA
+  volume: '26'
+  issue: '12'
+  pages: 1976–1999
 abstract: Coronavirus EndoU inhibits dsRNA-activated antiviral responses; however,
   the physiologic RNA substrates of EndoU are unknown. In this study, we used mouse
   hepatitis virus (MHV)-infected bone marrow-derived macrophage (BMM) and cyclic phosphate

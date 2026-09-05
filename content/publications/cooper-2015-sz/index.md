@@ -12,7 +12,12 @@ date: '2015-03-01'
 publishDate: '2026-02-13T13:27:51.584332Z'
 publication_types:
 - article-journal
-publication: '*J. Virol.*'
+publication:
+  name: J. Virol.
+  volume: '89'
+  issue: '5'
+  pages: 2764–2776
+  publisher: American Society for Microbiology
 abstract: 'UNLABELLED: Influenza A virus (IAV) infections are influenced by type 1
   interferon-mediated antiviral defenses and by viral countermeasures to these defenses.
   When IAV NS1 protein is disabled, RNase L restricts virus replication; however,

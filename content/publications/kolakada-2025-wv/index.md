@@ -20,7 +20,10 @@ publishDate: '2026-02-13T13:27:51.382775Z'
 featured: true
 publication_types:
 - article-journal
-publication: '*Cell Genom.*'
+publication:
+  name: Cell Genom.
+  pages: '100882'
+  publisher: Elsevier BV
 abstract: The phenotypic impact of nonsense variants is determined by nonsense-mediated
   mRNA decay (NMD), which degrades transcripts with premature termination codons (PTCs).
   Despite the clinical importance of nonsense variants, transcript-specific and context-dependent

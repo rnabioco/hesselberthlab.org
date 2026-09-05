@@ -8,7 +8,11 @@ date: '2010-03-01'
 publishDate: '2026-02-13T13:27:51.490299Z'
 publication_types:
 - article-journal
-publication: '*RNA*'
+publication:
+  name: RNA
+  volume: '16'
+  issue: '3'
+  pages: 621–631
 abstract: The combination of ligation-based RNA capture methods and high-throughput
   sequencing has facilitated the characterization of transcriptomes and the identification
   of novel noncoding RNAs. However, current ligation-based RNA capture methods require

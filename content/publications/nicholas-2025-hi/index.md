@@ -16,7 +16,11 @@ date: '2025-04-22'
 publishDate: '2026-02-13T13:27:51.386098Z'
 publication_types:
 - article-journal
-publication: '*Cell Rep.*'
+publication:
+  name: Cell Rep.
+  volume: '44'
+  pages: '115425'
+  publisher: Elsevier BV
 abstract: Autoreactive B cells play an important but ill-defined role in autoimmune
   type 1 diabetes (T1D). We isolated pancreatic islet antigen-reactive B cells from
   the peripheral blood of non-diabetic autoantibody-negative first-degree relatives,

@@ -17,7 +17,11 @@ date: '2009-04-01'
 publishDate: '2026-02-13T13:27:51.616452Z'
 publication_types:
 - article-journal
-publication: '*Nat. Methods*'
+publication:
+  name: Nat. Methods
+  volume: '6'
+  issue: '4'
+  pages: 283–289
 abstract: The orchestrated binding of transcriptional activators and repressors to
   specific DNA sequences in the context of chromatin defines the regulatory program
   of eukaryotic genomes. We developed a digital approach to assay regulatory protein

@@ -9,7 +9,11 @@ date: '2000-02-01'
 publishDate: '2026-02-13T13:27:51.566259Z'
 publication_types:
 - article-journal
-publication: '*J. Biol. Chem.*'
+publication:
+  name: J. Biol. Chem.
+  volume: '275'
+  issue: '7'
+  pages: 4937–4942
 abstract: The cytotoxin ricin disables translation by depurinating a conserved site
   in eukaryotic rRNA. In vitro selection has been used to generate RNA ligands (aptamers)
   specific for the catalytic ricin A-chain (RTA). The anti-RTA aptamers bear no resemblance

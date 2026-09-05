@@ -20,7 +20,8 @@ date: '2024-12-06'
 publishDate: '2026-02-13T13:27:51.396252Z'
 publication_types:
 - manuscript
-publication: '*bioRxiv*'
+publication:
+  name: bioRxiv
 abstract: Invasive lobular carcinoma of the breast (ILC) are typically estrogen receptor
   α (ER)-positive and present with biomarkers of anti-estrogen sensitive disease,
   yet patients with ILC face uniquely poor long-term outcomes with increased recurrence

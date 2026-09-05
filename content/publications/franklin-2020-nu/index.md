@@ -10,7 +10,9 @@ date: '2020-06-01'
 publishDate: '2026-02-13T13:27:51.569324Z'
 publication_types:
 - manuscript
-publication: '*bioRxiv*'
+publication:
+  name: bioRxiv
+  pages: 2020.06.25.169177
 abstract: "Structured RNA elements that protect RNA transcripts from 5'$i̊ghtarrow$3'
   degradation are becoming useful research tools. Here we show that exonuclease-resistant
   RNA structures (xrRNAs) from Flaviviruses can be used to protect heterologous messenger

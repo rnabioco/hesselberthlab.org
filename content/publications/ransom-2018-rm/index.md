@@ -8,7 +8,10 @@ date: '2018-01-01'
 publishDate: '2026-02-13T13:27:51.526280Z'
 publication_types:
 - article-journal
-publication: '*Methods Mol. Biol.*'
+publication:
+  name: Methods Mol. Biol.
+  volume: '1672'
+  pages: 63–76
 abstract: Modification of DNA nucleobases has a profound effect on genome function.
   We developed a method that maps the positions of the modified DNA nucleobases throughout
   genomic DNA. This method couples in vitro nucleobase excision with massively parallel
