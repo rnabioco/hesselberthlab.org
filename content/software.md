@@ -80,6 +80,11 @@ sections:
               <span class="sw-desc">Rust-based sra-tools.</span>
               <span class="sw-meta"><span class="sw-lang">Rust</span><span class="sw-stars">72</span></span>
             </a>
+            <a class="sw-card" href="https://github.com/rnabioco/fqxv">
+              <span class="sw-name">fqxv</span>
+              <span class="sw-desc">Rust-based FASTQ archiving.</span>
+              <span class="sw-meta"><span class="sw-lang">Rust</span><span class="sw-stars">2</span></span>
+            </a>
           </div>
 
           <p class="eyebrow eyebrow--bare">Teaching</p>
