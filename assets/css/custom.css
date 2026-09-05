@@ -804,9 +804,14 @@ main > time.mt-12 {
   justify-content: center;
 }
 
-#nav-menu,
-.navbar > div:has(.theme-toggle) {
+#nav-menu {
   margin-inline: 0;
+}
+
+/* Clear of the links rather than crowding them: the controls are a separate
+   group, so they get more room than the gap between two menu items. */
+.navbar > div:has(.theme-toggle) {
+  margin-inline: 2rem 0;
 }
 
 /* Uppercasing turns tRNA into TRNA and aa-tRNA-seq into AA-TRNA-SEQ, which is
