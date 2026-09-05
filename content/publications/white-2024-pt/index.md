@@ -1,7 +1,7 @@
 ---
 title: Nanopore sequencing of intact aminoacylated tRNAs
 authors:
-- Laura K White
+- laura-white
 - Aleksandar Radakovic
 - Marcin P Sajek
 - kezia-dobson
