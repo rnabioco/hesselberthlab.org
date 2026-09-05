@@ -1,0 +1,16 @@
+name:
+  given: Scott
+  family: Demarest
+  display: Scott Demarest, M.D.
+
+weight: 33
+
+role: Children's Hospital Colorado
+
+user_groups:
+  - Friends
+
+links:
+  - icon: hero/globe-alt
+    url: https://www.childrenscolorado.org/doctors-and-departments/physicians/d/scott-demarest/
+    label: Children's Hospital Colorado

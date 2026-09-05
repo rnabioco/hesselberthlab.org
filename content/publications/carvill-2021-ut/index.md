@@ -5,7 +5,7 @@ authors:
 - Gemma L Carvill
 - Tyler Matheny
 - jay-hesselberth
-- Scott Demarest
+- scott-demarest
 date: '2021-07-01'
 publishDate: '2026-02-13T13:27:51.442055Z'
 publication_types:

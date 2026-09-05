@@ -2,7 +2,7 @@
 title: Chikungunya virus persists in joint associated macrophages and promotes chronic
   disease
 authors:
-- Thomas Morrison
+- tem-morrison
 - Kristen Zarrella
 - ryan-sheridan
 - Brian Ware

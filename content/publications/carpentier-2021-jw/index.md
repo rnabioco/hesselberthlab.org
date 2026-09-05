@@ -11,10 +11,10 @@ authors:
 - Mary K McCarthy
 - Glennys V Reynoso
 - Nicholas A May
-- Beth A J Tamburini
+- beth-tamburini
 - jay-hesselberth
 - Heather D Hickman
-- Thomas E Morrison
+- tem-morrison
 date: '2021-10-01'
 publishDate: '2026-02-13T13:27:51.445209Z'
 publication_types:

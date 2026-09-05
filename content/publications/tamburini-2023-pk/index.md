@@ -2,14 +2,14 @@
 title: Vaccine-induced antigen archiving enhances local memory CD8+ T cell responses
   following an unrelated viral infection
 authors:
-- Beth Tamburini
+- beth-tamburini
 - Thu Doan
 - Tadg Forward
 - Erin Lucas
 - ira-fleming
 - Aspen Uecker-Martin
 - jay-hesselberth
-- Thomas Morrison
+- tem-morrison
 date: '2023-09-01'
 publishDate: '2026-02-13T13:27:51.413636Z'
 publication_types:

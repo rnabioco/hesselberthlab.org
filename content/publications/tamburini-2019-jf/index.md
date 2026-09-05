@@ -2,7 +2,7 @@
 title: Chronic liver disease in humans causes expansion and differentiation of liver
   lymphatic endothelial cells
 authors:
-- Beth A Jiron Tamburini
+- beth-tamburini
 - Jeffrey M Finlon
 - Austin E Gillen
 - Michael S Kriss

@@ -1,0 +1,16 @@
+name:
+  given: Kathryn
+  family: Walters
+  display: Kathryn Walters, Ph.D.
+
+weight: 21
+
+role: RNA Innovation, Technology & Therapeutics Core
+
+user_groups:
+  - Friends
+
+links:
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/kathryn-walters-phd-4b43b1137/
+    label: LinkedIn

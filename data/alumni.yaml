@@ -15,6 +15,10 @@
 # section, so it reads "Graduate student" rather than "Former graduate
 # student", matching "RBI fellow".
 
+- name: Christina Akirtava, PhD
+  category: RBI fellow
+  contact: https://www.linkedin.com/in/christina-akirtava/
+
 - name: Rachel Ancar, MD, PhD
   category: Graduate student
   position: Pulmonary fellowship, Harvard Medical School
@@ -35,6 +39,10 @@
 - name: Rui Fu
   category: RBI fellow
   contact: https://www.linkedin.com/in/rui-fu-rna/
+
+- name: Stephen Garrey, PhD
+  category: Postdoc
+  contact: https://www.linkedin.com/in/stephen-garrey-90423227/
 
 - name: Austin Gillen, PhD
   category: RBI fellow
@@ -57,7 +65,7 @@
   contact: https://www.linkedin.com/in/tyler-matheny-phd/
 
 - name: Kelleen McEntee
-  category: Professional research assistant
+  category: Research services professional
   contact: https://www.linkedin.com/in/kelleen-mcentee/
 
 - name: Catherine Nicholas, PhD
@@ -72,6 +80,14 @@
   category: Research services professional
   contact: https://www.linkedin.com/in/prekeris/
 
+- name: Jillian Ramos, PhD
+  category: Postdoc
+  contact: https://www.linkedin.com/in/jillian-ramos-phd-53237791/
+
+- name: Monica Ransom, PhD
+  category: Postdoc
+  contact: https://www.linkedin.com/in/monica-ransom-253a44419/
+
 - name: Amanda Richer, PhD
   category: Graduate student
   position: Honeycomb Bio
@@ -81,6 +97,10 @@
 - name: Kent Riemondy, PhD
   category: RBI fellow
   contact: https://www.linkedin.com/in/kent-riemondy/
+
+- name: Marcin Sajek, PhD
+  category: RBI fellow
+  contact: https://www.linkedin.com/in/marcin-sajek-3456172a/
 
 - name: Saylor Strugar
   category: Research services professional

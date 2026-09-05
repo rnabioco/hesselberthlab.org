@@ -11,7 +11,7 @@ authors:
 - Rui Fu
 - Matthew A Burchill
 - jay-hesselberth
-- Beth Ann Jiron Tamburini
+- beth-tamburini
 date: '2021-04-01'
 publishDate: '2026-02-13T13:27:51.468754Z'
 publication_types:

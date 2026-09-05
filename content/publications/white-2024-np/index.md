@@ -12,7 +12,7 @@ authors:
 - Federico Martinez-Seidel
 - Saylor M Strugar
 - Kristin E.N. Watt
-- Neelanjan Mukherjee
+- neelanjan-mukherjee
 - jay-hesselberth
 date: '2024-07-01'
 publishDate: '2026-02-13T13:27:51.403440Z'
