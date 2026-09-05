@@ -4,7 +4,7 @@ title: 'Addendum: Ribose-seq: global mapping of ribonucleotides embedded in geno
 authors:
 - Kyung Duk Koh
 - Sathya Balachander
-- Jay R Hesselberth
+- jay-hesselberth
 - Francesca Storici
 date: '2019-08-01'
 publishDate: '2026-02-13T13:27:51.578855Z'

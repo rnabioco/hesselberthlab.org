@@ -5,7 +5,7 @@ authors:
 - Amanda L Richer
 - Kent A Riemondy
 - Lakotah Hardie
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2020-06-01'
 publishDate: '2026-02-13T13:27:51.472128Z'
 publication_types:

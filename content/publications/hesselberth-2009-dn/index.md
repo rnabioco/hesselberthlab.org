@@ -1,7 +1,7 @@
 ---
 title: Global mapping of protein-DNA interactions in vivo by digital genomic footprinting
 authors:
-- Jay R Hesselberth
+- jay-hesselberth
 - Xiaoyu Chen
 - Zhihong Zhang
 - Peter J Sabo

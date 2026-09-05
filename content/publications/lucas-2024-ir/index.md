@@ -3,12 +3,12 @@ title: Chikungunya virus infection disrupts lymph node lymphatic endothelial cel
   composition and function via MARCO
 authors:
 - Cormac J Lucas
-- Ryan M Sheridan
+- ryan-sheridan
 - Glennys V Reynoso
 - Bennett J Davenport
 - Mary K McCarthy
 - Aspen Martin
-- Jay R Hesselberth
+- jay-hesselberth
 - Heather D Hickman
 - Beth Aj Tamburini
 - Thomas E Morrison

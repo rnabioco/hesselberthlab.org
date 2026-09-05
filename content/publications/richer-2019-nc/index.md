@@ -2,7 +2,7 @@
 title: METHODS TO MEASURE FUNCTIONAL HETEROGENEITY AMONG SINGLE CELLS
 authors:
 - A L Richer
-- J R Hesselberth
+- jay-hesselberth
 date: '2019-01-01'
 publishDate: '2026-02-13T13:27:51.581592Z'
 publication_types:

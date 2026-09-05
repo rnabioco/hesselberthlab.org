@@ -4,7 +4,7 @@ title: 'Automated selection of aptamers against protein targets translated in vi
 authors:
 - J Colin Cox
 - Andrew Hayhurst
-- Jay Hesselberth
+- jay-hesselberth
 - Travis S Bayer
 - George Georgiou
 - Andrew D Ellington

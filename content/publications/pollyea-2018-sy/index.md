@@ -12,7 +12,7 @@ authors:
 - Rachel Culp-Hill
 - Kent A Riemondy
 - Austin E Gillen
-- Jay R Hesselberth
+- jay-hesselberth
 - Diana Abbott
 - Derek Schatz
 - Jonathan A Gutman

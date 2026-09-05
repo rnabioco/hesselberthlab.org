@@ -11,7 +11,7 @@ authors:
 - Alyssa J Miller
 - Jason R Spence
 - Anthony N Gerber
-- Jay R Hesselberth
+- jay-hesselberth
 - Rachel L Zemans
 date: '2019-03-01'
 publishDate: '2026-02-13T13:27:51.600013Z'

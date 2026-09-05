@@ -2,7 +2,7 @@
 title: O Cdc7 kinase where art thou?
 authors:
 - Robert A Sclafani
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2018-06-01'
 publishDate: '2026-02-13T13:27:51.523024Z'
 publication_types:

@@ -4,7 +4,7 @@ authors:
 - Patrick D Cherry
 - Laura K White
 - Kerri York
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2018-03-01'
 publishDate: '2026-02-13T13:27:51.622655Z'
 publication_types:

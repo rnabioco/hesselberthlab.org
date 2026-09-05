@@ -4,7 +4,7 @@ title: Localization of Cdc7 Protein Kinase During DNA Replication in Saccharomyc
 authors:
 - Daniel Rossbach
 - D Suzi Bryan
-- Jay R Hesselberth
+- jay-hesselberth
 - Robert Sclafani
 date: '2017-11-01'
 publishDate: '2026-02-13T13:27:51.532475Z'

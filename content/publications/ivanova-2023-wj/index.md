@@ -7,8 +7,8 @@ authors:
 - Jared Klarquist
 - Michael G Harbell
 - Augustus M Kilgore
-- Erika L Lasda
-- Jay R Hesselberth
+- erika-lasda
+- jay-hesselberth
 - Christopher A Hunter
 - Ross M Kedl
 date: '2023-07-01'

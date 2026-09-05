@@ -6,7 +6,7 @@ authors:
 - Austin E Gillen
 - Emily A White
 - Lori K Bogren
-- Jay R Hesselberth
+- jay-hesselberth
 - Sandra L Martin
 date: '2018-11-01'
 publishDate: '2026-02-13T13:27:51.572483Z'

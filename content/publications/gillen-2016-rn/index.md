@@ -4,7 +4,7 @@ authors:
 - Austin E Gillen
 - Tomomi M Yamamoto
 - Enos Kline
-- Jay R Hesselberth
+- jay-hesselberth
 - Peter Kabos
 date: '2016-05-01'
 publishDate: '2026-02-13T13:27:51.551564Z'

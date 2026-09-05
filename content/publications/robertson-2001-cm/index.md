@@ -3,7 +3,7 @@ title: Optimization and optimality of a short ribozyme ligase that joins non-Wat
   base pairings
 authors:
 - M P Robertson
-- J R Hesselberth
+- jay-hesselberth
 - A D Ellington
 date: '2001-04-01'
 publishDate: '2026-02-13T13:27:51.501959Z'

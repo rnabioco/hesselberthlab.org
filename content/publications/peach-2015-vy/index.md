@@ -3,7 +3,7 @@ title: Global analysis of RNA cleavage by 5'-hydroxyl RNA sequencing
 authors:
 - Sally E Peach
 - Kerri York
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2015-09-01'
 publishDate: '2026-02-13T13:27:51.632288Z'
 publication_types:

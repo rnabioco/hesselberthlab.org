@@ -8,7 +8,7 @@ authors:
 - Angelo D'Alessandro
 - Travis Nemkov
 - Kirk C Hansen
-- Jay R Hesselberth
+- jay-hesselberth
 - Tânia Reis
 date: '2015-09-01'
 publishDate: '2026-02-13T13:27:51.529224Z'

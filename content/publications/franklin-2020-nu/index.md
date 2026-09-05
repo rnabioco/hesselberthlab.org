@@ -4,7 +4,7 @@ authors:
 - Ana L Franklin
 - Andrea Macfadden
 - Jeffrey S Kieft
-- Jay R Hesselberth
+- jay-hesselberth
 - Erich G Chapman
 date: '2020-06-01'
 publishDate: '2026-02-13T13:27:51.569324Z'

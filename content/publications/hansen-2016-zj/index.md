@@ -3,7 +3,7 @@ title: Diverse fates of uracilated HIV-1 DNA during infection of myeloid lineage
 authors:
 - Erik C Hansen
 - Monica Ransom
-- Jay R Hesselberth
+- jay-hesselberth
 - Nina N Hosmane
 - Adam A Capoferri
 - Katherine M Bruner

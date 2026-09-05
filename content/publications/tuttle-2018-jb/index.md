@@ -11,7 +11,7 @@ authors:
 - Adam Lefferts
 - Catherine Halluszczak
 - Kent Riemondy
-- Jay R Hesselberth
+- jay-hesselberth
 - Anjana Rao
 - Brian P O'Connor
 - Philippa Marrack

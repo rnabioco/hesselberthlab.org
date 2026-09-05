@@ -13,7 +13,7 @@ authors:
 - Edgar D Provencio
 - Mia Harris
 - Emily Allen
-- Jay R Hesselberth
+- jay-hesselberth
 - Olivia S Rissland
 date: '2025-07-18'
 publishDate: '2026-02-13T13:27:51.379706Z'

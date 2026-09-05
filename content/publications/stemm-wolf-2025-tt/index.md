@@ -8,7 +8,7 @@ authors:
 - Erik Collet
 - Gayatri L Dholakia
 - Vikram Raju
-- Jay R Hesselberth
+- jay-hesselberth
 - J Matthew Taliaferro
 - Robert F Murphy
 - Lydia R Heasley

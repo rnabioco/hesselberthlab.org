@@ -13,7 +13,7 @@ authors:
 - Rui Fu
 - Patricia L Opresko
 - Sanjana Mehrotra
-- Jay R Hesselberth
+- jay-hesselberth
 - Jennifer R Diamond
 - Matthew J Sikora
 date: '2024-12-06'

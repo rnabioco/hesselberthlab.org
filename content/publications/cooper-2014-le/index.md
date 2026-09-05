@@ -5,7 +5,7 @@ authors:
 - Daphne A Cooper
 - Babal K Jha
 - Robert H Silverman
-- Jay R Hesselberth
+- jay-hesselberth
 - David J Barton
 date: '2014-04-01'
 publishDate: '2026-02-13T13:27:51.629082Z'

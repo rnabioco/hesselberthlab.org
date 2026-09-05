@@ -8,7 +8,7 @@ authors:
 - Kevin P Toole
 - Jessica E Prendergast
 - Hali Broncucia
-- Jay R Hesselberth
+- jay-hesselberth
 - Peter A Gottlieb
 - Kristen L Wells
 - Mia J Smith

@@ -19,7 +19,7 @@ authors:
 - Timothy R Gershon
 - Alexandra Garancher
 - Robert J Wechsler-Reya
-- Jay R Hesselberth
+- jay-hesselberth
 - Nicholas K Foreman
 - Andrew M Donson
 - Rajeev Vibhakar

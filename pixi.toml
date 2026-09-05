@@ -15,7 +15,7 @@ academic = ">=0.10.0"
 [tasks]
 serve = "hugo server --disableFastRender --bind 0.0.0.0"
 build = "hugo --minify && npx pagefind --site public"
-import-pubs = "academic import publications.bib content/publications/ --compact --verbose"
+import-pubs = { cmd = "academic import publications.bib content/publications/ --compact --verbose && python scripts/normalize_authors.py", description = "Import BibTeX, then point lab-member bylines at their profiles" }
 setup = "pnpm install --no-frozen-lockfile"
 
 # Image generation with bananarama (https://hadley.github.io/bananarama/).

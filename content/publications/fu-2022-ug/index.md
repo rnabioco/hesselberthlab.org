@@ -4,8 +4,8 @@ title: 'scraps: an end-to-end pipeline for measuring alternative polyadenylation
 authors:
 - Rui Fu
 - Kent A Riemondy
-- Ryan M Sheridan
-- Jay R Hesselberth
+- ryan-sheridan
+- jay-hesselberth
 - Craig T Jordan
 - Austin E Gillen
 date: '2022-08-01'

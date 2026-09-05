@@ -2,7 +2,7 @@
 title: Aptamer database
 authors:
 - Jennifer F Lee
-- Jay R Hesselberth
+- jay-hesselberth
 - Lauren Ancel Meyers
 - Andrew D Ellington
 date: '2004-01-01'

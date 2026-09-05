@@ -6,7 +6,7 @@ authors:
 - Navtej Singh
 - Stephen R Garret
 - John C Whitney
-- Jay R Hesselberth
+- jay-hesselberth
 - Breck A Duerkop
 date: '2025-10-08'
 publishDate: '2026-02-13T13:27:51.366660Z'

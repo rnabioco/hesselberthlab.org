@@ -10,7 +10,7 @@ authors:
 - Amy E Campbell
 - Michael A Cortázar
 - Marcin P Sajek
-- Jay R Hesselberth
+- jay-hesselberth
 - Neelanjan Mukherjee
 - Elena Alkalaeva
 - Zeynep H Coban-Akdemir

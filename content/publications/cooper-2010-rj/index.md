@@ -6,7 +6,7 @@ authors:
 - G L Finney
 - S L Brown
 - S K Nelson
-- J Hesselberth
+- jay-hesselberth
 - M J MacCoss
 - S Fields
 date: '2010-01-01'

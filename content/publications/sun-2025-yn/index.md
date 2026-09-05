@@ -13,8 +13,8 @@ authors:
 - Elliott J Yee
 - Junyi Hu
 - Ross M Kedl
-- Erika L Lasda
-- Jay R Hesselberth
+- erika-lasda
+- jay-hesselberth
 - Paul MacLean
 - Kimberley D Bruce
 - Gwendalyn J Randolph

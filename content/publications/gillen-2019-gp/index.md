@@ -16,7 +16,7 @@ authors:
 - Rajeev Vibhakar
 - Kenneth L Jones
 - Siddhartha Mitra
-- Jay Hesselberth
+- jay-hesselberth
 - Nicholas K Foreman
 - Andrew Donson
 date: '2019-01-01'

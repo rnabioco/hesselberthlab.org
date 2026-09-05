@@ -2,13 +2,13 @@
 title: A specific and portable gene expression program underlies antigen archiving
   by lymphatic endothelial cells
 authors:
-- Ryan M Sheridan
+- ryan-sheridan
 - Thu A Doan
 - Cormac Lucas
 - Tadg S Forward
 - Aspen Uecker-Martin
 - Thomas E Morrison
-- Jay R Hesselberth
+- jay-hesselberth
 - Beth A Jiron Tamburini
 date: '2024-04-01'
 publishDate: '2026-02-13T13:27:51.407015Z'

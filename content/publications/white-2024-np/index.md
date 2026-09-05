@@ -2,9 +2,9 @@
 title: Comparative analysis of 43 distinct RNA modifications by nanopore tRNA sequencing
 authors:
 - Laura K White
-- Kezia Dobson
+- kezia-dobson
 - Samantha del Pozo
-- Jill M Bilodeaux
+- jill-bilodeaux
 - Shelby E Andersen
 - Amber Baldwin
 - Chloe Barrington
@@ -13,7 +13,7 @@ authors:
 - Saylor M Strugar
 - Kristin E.N. Watt
 - Neelanjan Mukherjee
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2024-07-01'
 publishDate: '2026-02-13T13:27:51.403440Z'
 featured: true

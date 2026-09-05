@@ -1,7 +1,7 @@
 ---
 title: Simultaneous detection of diverse analytes with an aptazyme ligase array
 authors:
-- Jay R Hesselberth
+- jay-hesselberth
 - Michael P Robertson
 - Scott M Knudsen
 - Andrew D Ellington

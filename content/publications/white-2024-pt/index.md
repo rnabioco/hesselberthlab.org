@@ -4,11 +4,11 @@ authors:
 - Laura K White
 - Aleksandar Radakovic
 - Marcin P Sajek
-- Kezia Dobson
+- kezia-dobson
 - Kent A Riemondy
 - Samantha del Pozo
 - Jack W Szostak
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2024-11-01'
 publishDate: '2026-02-13T13:27:51.400174Z'
 publication_types:

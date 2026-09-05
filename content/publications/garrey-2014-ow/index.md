@@ -10,7 +10,7 @@ authors:
 - Stanley Fields
 - Rui Zhao
 - Masad J Damha
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2014-08-01'
 publishDate: '2026-02-13T13:27:51.486939Z'
 publication_types:

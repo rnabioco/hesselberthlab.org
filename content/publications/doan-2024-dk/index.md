@@ -6,11 +6,11 @@ authors:
 - Tadg S Forward
 - Johnathon B Schafer
 - Erin D Lucas
-- Ira Fleming
+- ira-fleming
 - Aspen Uecker-Martin
 - Edgardo Ayala
 - Jenna J Guthmiller
-- Jay R Hesselberth
+- jay-hesselberth
 - Thomas E Morrison
 - Beth A Jirón Tamburini
 date: '2024-03-01'

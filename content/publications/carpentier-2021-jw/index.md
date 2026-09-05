@@ -3,7 +3,7 @@ title: MARCO+ lymphatic endothelial cells sequester arthritogenic alphaviruses t
   limit viremia and viral dissemination
 authors:
 - Kathryn S Carpentier
-- Ryan M Sheridan
+- ryan-sheridan
 - Cormac J Lucas
 - Bennett J Davenport
 - Frances S Li
@@ -12,7 +12,7 @@ authors:
 - Glennys V Reynoso
 - Nicholas A May
 - Beth A J Tamburini
-- Jay R Hesselberth
+- jay-hesselberth
 - Heather D Hickman
 - Thomas E Morrison
 date: '2021-10-01'

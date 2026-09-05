@@ -8,7 +8,7 @@ authors:
 - Kent A Riemondy
 - L Elaine Epperson
 - Carlos D Bustamante
-- Jay R Hesselberth
+- jay-hesselberth
 - Sandra L Martin
 date: '2020-01-01'
 publishDate: '2026-02-13T13:27:51.452149Z'

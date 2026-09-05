@@ -54,6 +54,8 @@ jobs:
 
       - name: Regenerate publication pages
         if: steps.changed.outputs.found == 'true'
+        # import-pubs also runs scripts/normalize_authors.py, so freshly
+        # imported papers reach the right lab-member profiles.
         run: pixi run import-pubs
 
       - name: Open a pull request

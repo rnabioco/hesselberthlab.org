@@ -6,9 +6,9 @@ authors:
 - Thu Doan
 - Tadg Forward
 - Erin Lucas
-- Ira Fleming
+- ira-fleming
 - Aspen Uecker-Martin
-- Jay Hesselberth
+- jay-hesselberth
 - Thomas Morrison
 date: '2023-09-01'
 publishDate: '2026-02-13T13:27:51.413636Z'

@@ -5,7 +5,7 @@ authors:
 - Shuvojit Banerjee
 - Arindam Chakrabarti
 - Adolfo Garcı́a-Sastre
-- Jay R Hesselberth
+- jay-hesselberth
 - Robert H Silverman
 - David J Barton
 date: '2015-03-01'

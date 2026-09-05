@@ -2,7 +2,7 @@
 title: Capture and sequence analysis of RNAs with terminal 2',3'-cyclic phosphates
 authors:
 - Kevin Schutz
-- Jay R Hesselberth
+- jay-hesselberth
 - Stanley Fields
 date: '2010-03-01'
 publishDate: '2026-02-13T13:27:51.490299Z'

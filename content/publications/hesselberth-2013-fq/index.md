@@ -1,7 +1,7 @@
 ---
 title: Lives that introns lead after splicing
 authors:
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2013-11-01'
 publishDate: '2026-02-13T13:27:51.480969Z'
 publication_types:

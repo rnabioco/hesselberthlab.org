@@ -2,11 +2,11 @@
 title: 'valr: Reproducible genome interval analysis in R'
 authors:
 - Kent A Riemondy
-- Ryan M Sheridan
+- ryan-sheridan
 - Austin Gillen
 - Yinni Yu
 - Christopher G Bennett
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2017-06-01'
 publishDate: '2026-02-13T13:27:51.575883Z'
 publication_types:

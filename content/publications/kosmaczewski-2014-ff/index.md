@@ -8,7 +8,7 @@ authors:
 - Matthew J Eckwahl
 - Benjamin Isaiah Meyer
 - Sally Peach
-- Jay R Hesselberth
+- jay-hesselberth
 - Sandra L Wolin
 - Marc Hammarlund
 date: '2014-01-01'

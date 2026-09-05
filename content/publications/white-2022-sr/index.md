@@ -2,7 +2,7 @@
 title: Modification mapping by nanopore sequencing
 authors:
 - Laura K White
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2022-10-01'
 publishDate: '2026-02-13T13:27:51.429995Z'
 publication_types:

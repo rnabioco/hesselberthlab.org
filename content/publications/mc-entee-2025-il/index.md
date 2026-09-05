@@ -11,7 +11,7 @@ authors:
 - Chad G Pearson
 - Scott Demarest
 - J Matthew Taliaferro
-- Jay R Hesselberth
+- jay-hesselberth
 - Sujatha Jagannathan
 date: '2025-10-15'
 publishDate: '2026-02-13T13:27:51.361492Z'

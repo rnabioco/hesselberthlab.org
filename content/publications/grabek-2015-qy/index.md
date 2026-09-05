@@ -5,7 +5,7 @@ authors:
 - Katharine R Grabek
 - Cecilia Diniz Behn
 - Gregory S Barsh
-- Jay R Hesselberth
+- jay-hesselberth
 - Sandra L Martin
 date: '2015-01-01'
 publishDate: '2026-02-13T13:27:51.542407Z'

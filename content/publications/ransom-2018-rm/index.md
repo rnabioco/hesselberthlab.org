@@ -3,7 +3,7 @@ title: High-Resolution Mapping of Modified DNA Nucleobases Using Excision Repair
 authors:
 - Monica Ransom
 - D Suzi Bryan
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2018-01-01'
 publishDate: '2026-02-13T13:27:51.526280Z'
 publication_types:

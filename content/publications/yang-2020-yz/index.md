@@ -9,7 +9,7 @@ authors:
 - Kenneth L Jones
 - Austin E Gillen
 - Kent Riemondy
-- Jay Hesselberth
+- jay-hesselberth
 - David Bryder
 - Patricia Ernst
 date: '2020-02-01'

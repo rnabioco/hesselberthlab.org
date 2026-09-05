@@ -5,7 +5,7 @@ authors:
 - Monica Ransom
 - Biniam Adane
 - Kerri York
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2014-09-01'
 publishDate: '2026-02-13T13:27:51.625918Z'
 publication_types:

@@ -12,7 +12,7 @@ authors:
 - Jorge Di Paola
 - Peter Kabos
 - Carol A Sartorius
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2019-02-01'
 publishDate: '2026-02-13T13:27:51.603499Z'
 publication_types:

@@ -1,7 +1,7 @@
 ---
 title: In vitro selection of RNA molecules that inhibit the activity of ricin A-chain
 authors:
-- J R Hesselberth
+- jay-hesselberth
 - D Miller
 - J Robertus
 - A D Ellington

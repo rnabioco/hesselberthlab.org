@@ -2,11 +2,11 @@
 title: Comparative analysis of Saccharomyces cerevisiae WW domains and their interacting
   proteins
 authors:
-- J R Hesselberth
+- jay-hesselberth
 - J P Miller
 - A Golob
 - J E Stajich
-- ' others'
+-  others
 date: '2006-01-01'
 publishDate: '2026-02-13T13:27:51.554751Z'
 publication_types:

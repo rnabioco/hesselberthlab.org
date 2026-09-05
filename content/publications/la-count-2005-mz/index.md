@@ -6,7 +6,7 @@ authors:
 - Rakesh Chettier
 - Amit Phansalkar
 - Russell Bell
-- Jay R Hesselberth
+- jay-hesselberth
 - Lori W Schoenfeld
 - Irene Ota
 - Sudhir Sahasrabudhe

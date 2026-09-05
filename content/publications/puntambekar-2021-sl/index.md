@@ -3,7 +3,7 @@ title: Cell-level metadata are indispensable for documenting single-cell sequenc
   datasets
 authors:
 - Sidhant Puntambekar
-- Jay R Hesselberth
+- jay-hesselberth
 - Kent A Riemondy
 - Rui Fu
 date: '2021-05-01'

@@ -2,7 +2,7 @@
 title: Genome-wide identification of spliced introns using a tiling microarray
 authors:
 - Z Zhang
-- J R Hesselberth
+- jay-hesselberth
 - S Fields
 date: '2007-01-01'
 publishDate: '2026-02-13T13:27:51.508080Z'

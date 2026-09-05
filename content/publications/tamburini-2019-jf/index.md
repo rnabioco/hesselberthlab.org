@@ -9,7 +9,7 @@ authors:
 - Kent A Riemondy
 - Rui Fu
 - Ronald P Schuyler
-- Jay R Hesselberth
+- jay-hesselberth
 - Hugo R Rosen
 - Matthew A Burchill
 date: '2019-05-01'

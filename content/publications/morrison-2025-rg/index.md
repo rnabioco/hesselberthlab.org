@@ -4,7 +4,7 @@ title: Chikungunya virus persists in joint associated macrophages and promotes c
 authors:
 - Thomas Morrison
 - Kristen Zarrella
-- Ryan Sheridan
+- ryan-sheridan
 - Brian Ware
 - Bennett Davenport
 - Mariana da Silva
@@ -13,7 +13,7 @@ authors:
 - Nicholas May
 - Daniela Weiskopf
 - Dan Streblow
-- Jay Hesselberth
+- jay-hesselberth
 - Alexander Greninger
 date: '2025-06-25'
 publishDate: '2026-02-13T13:27:51.376472Z'

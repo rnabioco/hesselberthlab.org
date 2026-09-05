@@ -8,7 +8,7 @@ authors:
 - Monica Ransom
 - Volker Thiel
 - Susan R Weiss
-- Jay R Hesselberth
+- jay-hesselberth
 - David J Barton
 date: '2020-12-01'
 publishDate: '2026-02-13T13:27:51.474986Z'

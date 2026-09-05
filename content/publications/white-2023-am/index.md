@@ -4,7 +4,7 @@ authors:
 - Laura K White
 - Saylor M Strugar
 - Andrea MacFadden
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2023-06-01'
 publishDate: '2026-02-13T13:27:51.426844Z'
 publication_types:

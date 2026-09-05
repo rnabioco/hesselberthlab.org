@@ -7,7 +7,7 @@ authors:
 - Sally Peach
 - Mary Sweet
 - Yuying Wang
-- Jay Hesselberth
+- jay-hesselberth
 date: 2015-12-01
 publishDate: '2026-02-13T13:27:51.520256Z'
 publication_types:

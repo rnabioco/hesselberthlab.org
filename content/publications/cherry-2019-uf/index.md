@@ -4,7 +4,7 @@ title: Multiple decay events target HAC1 mRNA during splicing to regulate the un
 authors:
 - Patrick D Cherry
 - Sally E Peach
-- Jay R Hesselberth
+- jay-hesselberth
 date: '2019-03-01'
 publishDate: '2026-02-13T13:27:51.606983Z'
 publication_types:

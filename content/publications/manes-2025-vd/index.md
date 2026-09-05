@@ -10,8 +10,8 @@ authors:
 - Sean Selva
 - Christopher Mizenko
 - Tyler L Borko
-- Erika L Lasda
-- Jay R Hesselberth
+- erika-lasda
+- jay-hesselberth
 - Elena Wy Hsieh
 - Michael R Verneris
 - Amanda L Piquet

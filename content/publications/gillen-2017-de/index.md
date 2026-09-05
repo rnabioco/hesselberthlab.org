@@ -7,7 +7,7 @@ authors:
 - Tomomi M Yamamoto
 - Enos Kline
 - Manoj M Pillai
-- Jay R Hesselberth
+- jay-hesselberth
 - Peter Kabos
 date: '2017-12-01'
 publishDate: '2026-02-13T13:27:51.539109Z'

@@ -3,11 +3,11 @@ title: 'clustifyr: an R package for automated single-cell RNA sequencing cluster
 authors:
 - Rui Fu
 - Austin E Gillen
-- Ryan M Sheridan
+- ryan-sheridan
 - Chengzhe Tian
 - Michelle Daya
 - Yue Hao
-- Jay R Hesselberth
+- jay-hesselberth
 - Kent A Riemondy
 date: '2020-04-01'
 publishDate: '2026-02-13T13:27:51.455898Z'

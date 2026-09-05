@@ -5,7 +5,7 @@ authors:
 - N Smirnova
 - K Riemondy
 - S Collins
-- J Hesselberth
+- jay-hesselberth
 - O Eickelberg
 date: '2020-04-01'
 publishDate: '2026-02-13T13:27:51.597284Z'

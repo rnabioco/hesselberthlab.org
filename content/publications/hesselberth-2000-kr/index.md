@@ -1,7 +1,7 @@
 ---
 title: In vitro selection of nucleic acids for diagnostic applications
 authors:
-- J Hesselberth
+- jay-hesselberth
 - M P Robertson
 - S Jhaveri
 - A D Ellington

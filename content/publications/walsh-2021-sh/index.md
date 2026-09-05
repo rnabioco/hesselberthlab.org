@@ -3,14 +3,14 @@ title: Molecular tracking devices quantify antigen distribution and archiving in
   murine lymph node
 authors:
 - Shannon M Walsh
-- Ryan M Sheridan
+- ryan-sheridan
 - Erin D Lucas
 - Thu A Doan
 - Brian C Ware
 - Johnathon Schafer
 - Rui Fu
 - Matthew A Burchill
-- Jay R Hesselberth
+- jay-hesselberth
 - Beth Ann Jiron Tamburini
 date: '2021-04-01'
 publishDate: '2026-02-13T13:27:51.468754Z'
