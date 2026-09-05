@@ -9,9 +9,7 @@
 # just a name and a link; entries with no `contact` leave that cell empty.
 # `contact` takes any profile URL — the label is derived from the host.
 #
-# Left off deliberately from the old site's people photographs: Kelly McEntee
-# (PRA, 2023, who publishes as Kelleen E McEntee and is first author on the
-# 2025 Bardet-Biedl paper, so may not be an alum at all), and Ashlyn Stahly.
+# Ashlyn Stahly is deliberately not listed.
 #
 # `category` is the person's role in the lab; "former" is implied by the
 # section, so it reads "Graduate student" rather than "Former graduate
@@ -58,6 +56,10 @@
   url: https://www.sophiagenetics.com/
   contact: https://www.linkedin.com/in/tyler-matheny-phd/
 
+- name: Kelleen McEntee
+  category: Professional research assistant
+  contact: https://www.linkedin.com/in/kelleen-mcentee/
+
 - name: Catherine Nicholas, PhD
   category: Graduate student
   contact: https://www.linkedin.com/in/canicholas/
@@ -84,6 +86,7 @@
   category: Research services professional
   position: Graduate student, University of Wisconsin
   url: https://ipib.wisc.edu/
+  contact: https://www.linkedin.com/in/saylor-strugar-4985061b6/
 
 - name: Shannon Walsh, PhD
   category: Postdoc
