@@ -776,3 +776,9 @@ main > time.mt-12 {
   font-size: 1.375rem; /* 22px */
   letter-spacing: -0.005em;
 }
+
+/* Uppercasing turns tRNA into TRNA and aa-tRNA-seq into AA-TRNA-SEQ, which is
+   wrong for terms of art. Opt individual words out of the caps treatment. */
+.nocaps {
+  text-transform: none;
+}

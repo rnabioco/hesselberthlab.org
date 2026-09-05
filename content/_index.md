@@ -18,8 +18,8 @@ sections:
           <img class="lab-hero__mark" src="/media/lab-portrait.png" alt="The Hesselberth Lab" width="1018" height="522">
           <div class="lab-hero__body">
             <p class="eyebrow">RNA Technology &amp; Therapeutics · CU School of Medicine</p>
-            <h1 class="lab-hero__title">Reading translation, <em>one tRNA at a time.</em></h1>
-            <p class="lab-hero__lede">We are RNA biologists, technology developers and data analysts working out how transfer RNA shapes protein synthesis — and turning what we learn into RNA therapies.</p>
+            <h1 class="lab-hero__title">We build the tools, then <em>go where the biology is.</em></h1>
+            <p class="lab-hero__lede">An RNA technology lab: nanopore, single-cell and spatial sequencing, and the analysis behind it, developed in-house and put to work with collaborators across CU Anschutz and beyond.</p>
             <p class="lab-hero__actions">
               <a class="btn-gold" href="/publications/">Publications</a>
               <a class="btn-plain" href="/people/">Meet the lab</a>
@@ -45,19 +45,19 @@ sections:
           <h2 class="section-title">What we study</h2>
           <div class="areas">
             <section>
-              <h3><span class="n">01</span>tRNA &amp; translation</h3>
-              <p>Transfer RNAs link the RNA and protein worlds. We apply nanopore sequencing to read tRNA sequence, modification and aminoacylation state on single molecules, resolving how tRNA is used across the steps of protein synthesis.</p>
-              <span class="with">Nanopore · aa-tRNA-seq</span>
+              <h3><span class="n">01</span>Sequencing technology</h3>
+              <p>We develop methods to read RNA directly: nanopore sequencing of intact tRNA, its modifications and its charging state, alongside single-cell and spatial approaches — and the analysis pipelines that make the signal interpretable.</p>
+              <span class="with">Nanopore · Single-cell · Spatial</span>
             </section>
             <section>
-              <h3><span class="n">02</span>RNA therapeutics</h3>
-              <p>We work with clinicians at Children's Hospital Colorado to develop RNA therapies for pediatric genetic disease, lately focused on inherited retinopathies and on correcting cryptic splicing.</p>
+              <h3><span class="n">02</span>Translation &amp; RNA decay</h3>
+              <p>How transcripts are read and destroyed: tRNA modification and aminoacylation, the rules governing nonsense-mediated decay, and unusual translational events such as peptide-bond skipping.</p>
+              <span class="with"><span class="nocaps">tRNA</span> · NMD · 2A peptides</span>
+            </section>
+            <section>
+              <h3><span class="n">03</span>RNA therapeutics</h3>
+              <p>Splice-switching antisense oligonucleotides for pediatric genetic disease, developed with clinicians at Children's Hospital Colorado — and applied with immunologists, virologists and cell biologists wherever the methods are useful.</p>
               <span class="with">Children's Hospital Colorado</span>
-            </section>
-            <section>
-              <h3><span class="n">03</span>Immunity &amp; infection</h3>
-              <p>With immunologists and virologists we develop new ways to manipulate and understand the mammalian immune system, from antigen archiving to how viruses persist in tissue.</p>
-              <span class="with">Collaborative studies</span>
             </section>
           </div>
         </div>
