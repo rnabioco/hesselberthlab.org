@@ -332,6 +332,14 @@ body {
   max-width: 74rem;
 }
 
+/* The news list opens on a hairline immediately under its heading, which reads
+   tighter than the citation list beside it, whose first row starts with an
+   image. Push the rule down. Homepage only — the blog index has nothing
+   alongside it to match. */
+#news .news-list {
+  margin-top: 1rem;
+}
+
 /* date-title-summary wraps the list in `w-fit`, which shrink-wraps it. */
 #news .w-fit {
   width: 100%;
