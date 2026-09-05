@@ -8,9 +8,6 @@ main:
   - name: Publications
     url: publications/
     weight: 30
-  - name: News
-    url: blog/
-    weight: 40
   - name: Software
     url: software/
-    weight: 50
+    weight: 40
