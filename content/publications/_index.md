@@ -2,7 +2,7 @@
 title: Publications
 cms_exclude: true
 
-view: citation
+view: citation-image
 
 banner:
   caption: ''

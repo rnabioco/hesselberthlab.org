@@ -633,13 +633,11 @@ main .max-w-prose.grid > div:nth-child(odd) {
   border-bottom: 1px solid var(--rule);
 }
 
-/* Papers without a generated image keep their text in the same column. */
-.pub-with-thumb:not(:has(.pub-thumb)) {
-  grid-template-columns: minmax(0, 1fr);
-}
-
+/* Only a few papers have an illustration, so the thumbnail column is reserved
+   on every row rather than collapsed on the ones without. Collapsing it left
+   the citations zigzagging by 90px down the full publications list. */
 .pub-with-thumb:not(:has(.pub-thumb)) .pub-cite {
-  grid-column: 1;
+  grid-column: 2;
 }
 
 .pub-thumb {
