@@ -788,3 +788,55 @@ main > time.mt-12 {
 .text-neutral-500 {
   color: var(--ink-soft);
 }
+
+/* ---------------------------------------------------------------------------
+   Homepage density
+
+   Publications and news are both indexes — short scannable lines, not running
+   text — so stacking them spends a screen of scrolling on very little ink.
+   Side by side they land in one view.
+
+   `.page-body` is the only common parent the sections have, so the pairing is
+   done by making it a grid and letting every other section span both tracks.
+   The `:has()` guard keeps that scoped to the homepage; no other page carries
+   both blocks.
+   ------------------------------------------------------------------------ */
+
+@media (min-width: 1000px) {
+  .page-body:has(> #papers):has(> #news) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-body:has(> #papers):has(> #news) > * {
+    grid-column: 1 / -1;
+  }
+
+  /* Qualified by the parent: `:has()` takes the specificity of its argument,
+     so a bare `#papers` loses to the span-all rule above and both columns end
+     up spanning the row. */
+  .page-body:has(> #papers):has(> #news) > #papers {
+    grid-column: 1;
+  }
+
+  .page-body:has(> #papers):has(> #news) > #news {
+    grid-column: 2;
+  }
+
+  /* The news band would now colour half a row, so drop it and separate the two
+     columns the way the research areas separate theirs: one hairline. */
+  #news .home-section-bg {
+    background: none;
+  }
+
+  #news {
+    border-block: 0;
+    border-left: 1px solid var(--rule);
+  }
+}
+
+/* The hero already closes on a wide margin; the research band does not need to
+   open with another one on top of it. */
+#research.hbb-section {
+  padding-block: 1.25rem 2.5rem;
+}
