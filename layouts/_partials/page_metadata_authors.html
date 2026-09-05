@@ -1,0 +1,79 @@
+{{/* Author list, with only lab members linked.
+
+     The stock partial links every author, because Hugo mints an /authors/<name>/
+     taxonomy term page for each one — so a paper with twenty co-authors offered
+     twenty links to pages that hold nothing but that one paper.
+
+     Here a name is a link only when the theme's profile resolver finds it in
+     data/authors/, which is
+     also what normalize_authors.py keys on: it rewrites lab members' entries to
+     their slug, so `$raw` is already the slug for them and a display string for
+     everyone else. Linked names are set bold and underlined, so the lab's own
+     people are findable in a long byline at a glance.
+
+     Everything else, including the author_notes tooltip, is the stock partial. */}}
+
+{{- $authors := .Params.authors -}}
+
+{{ if $authors }}
+  {{- if not (reflect.IsSlice $authors) -}}
+    {{- $authors = slice $authors -}}
+  {{- end -}}
+
+  {{ range $index, $raw := $authors }}
+    {{- $slug := $raw | urlize -}}
+    {{- $profile := partial "functions/get_author_profile" (dict "slug" $slug "title" $raw) -}}
+    {{- $termPage := site.GetPage (printf "/authors/%s" $slug) -}}
+    {{- $display := $profile.title | default $raw -}}
+    {{- $is_lab_member := $profile.has_data -}}
+
+    {{/* A citation byline wants the plain name. The People card shows the
+         profile's display name, which carries postnominals for those who have
+         them, and "Erika Lasda, Ph.D." inside a comma-separated author list
+         reads as an extra author. */}}
+    {{- if and $profile.name_given $profile.name_family -}}
+      {{- $display = printf "%s %s" $profile.name_given $profile.name_family -}}
+    {{- end -}}
+
+    {{- if gt $index 0 }}, {{ end -}}
+    {{- if and $is_lab_member $termPage -}}
+      <span class="lab-author"><a href="{{ $termPage.RelPermalink }}">{{ $display }}</a></span>
+    {{- else -}}
+      <span>{{ $display }}</span>
+    {{- end -}}
+    {{- if isset $.Params "author_notes" -}}
+      {{- with (index $.Params.author_notes $index) -}}
+        <span class="relative inline-block ml-1" x-data="{ tooltip: false }">
+          <button
+            @mouseenter="tooltip = true"
+            @mouseleave="tooltip = false"
+            @click="tooltip = !tooltip"
+            class="author-notes text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-200 transition-colors cursor-help"
+            data-tooltip="{{.}}"
+            aria-label="{{.}}"
+            type="button"
+          >
+            <svg class="inline-block w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div
+            x-show="tooltip"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 transform scale-95"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-95"
+            @click.away="tooltip = false"
+            class="absolute z-50 bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 text-sm text-white bg-gray-900 dark:bg-gray-700 rounded-lg shadow-lg whitespace-nowrap"
+            x-cloak
+          >
+            {{.}}
+            <div class="absolute top-full left-1/2 transform -translate-x-1/2 -mt-1 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
+          </div>
+        </span>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
