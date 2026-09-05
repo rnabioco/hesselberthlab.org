@@ -17,3 +17,6 @@ node_modules/
 
 # Trial renders from bananarama; not site assets
 graphics/out/
+
+# Lighthouse CI reports
+.lighthouseci/

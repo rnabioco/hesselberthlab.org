@@ -1,0 +1,58 @@
+name: Link check
+
+# Weekly rather than per-PR: most links here are external DOIs and journal
+# pages, which go down for reasons that have nothing to do with a change, and
+# would make pull requests fail at random.
+on:
+  schedule:
+    - cron: '0 10 * * 1' # Mondays, 10:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pixi
+        uses: prefix-dev/setup-pixi@v0.8.1
+        with:
+          cache: true
+
+      - name: Install Node dependencies
+        run: pixi run setup
+
+      - name: Build
+        run: HUGO_BASEURL=http://localhost/ pixi run build
+
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Internal links resolve against the built site; external ones are
+          # followed for real. 429s are rate limiting, not breakage.
+          args: >-
+            --no-progress
+            --accept 200,206,429
+            --max-concurrency 8
+            --timeout 20
+            --retry-wait-time 5
+            --exclude-path public/pagefind
+            --exclude '^https?://localhost'
+            --exclude 'doi\.org'
+            'public/**/*.html'
+          output: lychee-report.md
+          fail: false
+
+      - name: Open an issue when links are broken
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Broken links found on the site
+          content-filepath: lychee-report.md
+          labels: links
