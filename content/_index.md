@@ -45,19 +45,19 @@ sections:
           <h2 class="section-title">What we study</h2>
           <div class="areas">
             <section>
-              <h3><span class="n">01</span>Reading RNA directly</h3>
-              <p>Standard sequencing averages away most of what a transcript carries. We develop nanopore methods that keep it — chemical modifications, aminoacylation state, whole intact molecules — alongside single-cell and spatial approaches, and the analysis that makes the signal interpretable.</p>
-              <span class="with">Nanopore · Single-cell · Spatial</span>
+              <h3><span class="n">01</span>RNA technology</h3>
+              <p>We build sequencing methods and the software that makes sense of them: nanopore direct sequencing that reads modification and aminoacylation state on intact <span class="nocaps">tRNA</span>s, and single-cell and spatial approaches that measure biochemical activity alongside gene expression. Applied with collaborators, they track how antigen and viral <span class="nocaps">RNA</span> move through the lymph node.</p>
+              <span class="with">Nanopore · Single-cell · Spatial · Open software</span>
             </section>
             <section>
-              <h3><span class="n">02</span>Translation &amp; RNA decay</h3>
-              <p>What determines whether a transcript is translated, mistranslated or destroyed: the rules governing nonsense-mediated decay, unusual translational events such as peptide-bond skipping, and the modified <span class="nocaps">tRNA</span>s that supply the ribosome.</p>
-              <span class="with">NMD · 2A peptides · <span class="nocaps">tRNA</span></span>
+              <h3><span class="n">02</span>RNA biology</h3>
+              <p>Cells damage their own <span class="nocaps">RNA</span>, and repair it. We study how cleavage, end modification and processing are integrated into an <span class="nocaps">RNA</span> damage response, combining genetics, biochemistry and bioinformatics — work that has turned up new concepts in post-transcriptional regulation and, with collaborators, new determinants of nonsense-mediated decay.</p>
+              <span class="with">RNA damage · Repair · <span class="nocaps">tRNA</span> · NMD</span>
             </section>
             <section>
-              <h3><span class="n">03</span>RNA therapeutics</h3>
-              <p>Turning that understanding into treatment: splice-switching antisense oligonucleotides that correct cryptic exon inclusion in pediatric genetic disease, developed with clinicians at Children's Hospital Colorado.</p>
-              <span class="with">Children's Hospital Colorado</span>
+              <h3><span class="n">03</span>RNA therapy</h3>
+              <p>With clinicians at Children's Hospital Colorado we run a pipeline for antisense oligonucleotides that correct disease-causing splicing. The current focus is cryptic splicing — most recently an <span class="nocaps">ASO</span> that restores a ciliogenesis factor lost to a splicing mutation — alongside mRNA vaccine work with immunologists at CU Anschutz.</p>
+              <span class="with">Antisense oligos · Cryptic splicing · Children's Hospital Colorado</span>
             </section>
           </div>
         </div>
