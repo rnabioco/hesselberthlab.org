@@ -1,0 +1,56 @@
+# Dependency updates. The site has three machine-readable dependency sets and
+# one that Dependabot cannot see:
+#
+#   .github/workflows/*.yml  actions      -> github-actions, below
+#   package.json             Tailwind etc -> npm, below
+#   go.mod                   HugoBlox     -> gomod, below
+#   pixi.toml / pixi.lock    Hugo, Go, Node, Python, academic
+#
+# There is no pixi ecosystem, so the toolchain pins in pixi.toml stay manual.
+# Anything Dependabot opens is built by the PR checks workflow before it can be
+# merged, which is what makes a theme or Tailwind bump safe to take.
+version: 2
+
+updates:
+  # Actions drift quietly and are the cheapest thing here to keep current.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      timezone: America/Denver
+    commit-message:
+      prefix: deps
+    groups:
+      actions:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  # Tailwind, Pagefind and Preact, via pnpm.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      timezone: America/Denver
+    commit-message:
+      prefix: deps
+    groups:
+      npm:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  # The HugoBlox modules are pinned to commits rather than releases, so each
+  # update is "whatever is on their default branch now". Monthly keeps that from
+  # becoming a weekly pull request, and a broken theme bump shows up as a red
+  # build and a broken deploy preview.
+  - package-ecosystem: gomod
+    directory: /
+    schedule:
+      interval: monthly
+      timezone: America/Denver
+    commit-message:
+      prefix: deps
+    groups:
+      hugoblox:
+        patterns: ["github.com/HugoBlox/*"]
