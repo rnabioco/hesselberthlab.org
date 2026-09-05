@@ -18,7 +18,7 @@ sections:
           <img class="lab-hero__mark" src="/media/lab-portrait.png" alt="The Hesselberth Lab" width="1018" height="522">
           <div class="lab-hero__body">
             <p class="eyebrow">RNA Technology &amp; Therapeutics · CU School of Medicine</p>
-            <h1 class="lab-hero__title">Hesselberth Lab <span class="lab-hero__sep">|</span> <em>University of Colorado School of Medicine</em></h1>
+            <h1 class="lab-hero__title">Hesselberth Lab</h1>
             <p class="lab-hero__lede">A collaborative lab of RNA biologists, technology developers and data analysts, discovering and translating fundamental principles of RNA regulation — from how transfer RNA links the RNA and protein worlds, to RNA therapies built with clinicians at Children's Hospital Colorado.</p>
             <p class="lab-hero__actions">
               <a class="btn-gold" href="/publications/">Publications</a>
