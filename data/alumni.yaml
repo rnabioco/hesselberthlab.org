@@ -1,0 +1,78 @@
+# Former lab members, listed at the foot of the People page. Sorted by surname.
+#
+# `position` and `url` for the first five came from the lab's own farewell
+# notes in the old Jekyll site (_news/2023/summer-updates.md), so they are
+# accurate as of 2023 and worth re-checking. Entries with no `position` show
+# just a name and a link; entries with no `contact` leave that cell empty.
+# `contact` takes any profile URL — the label is derived from the host.
+#
+# Others whose photographs are in the old site but who have no destination
+# recorded anywhere in the repo: Ashlyn Stahly, Catherine Nicholas, Kelly
+# McEntee, and a first-name-only entry for maggie.
+#
+# `category` is the person's role in the lab; "former" is implied by the
+# section, so it reads "Graduate student" rather than "Former graduate
+# student", matching "RBI fellow".
+
+- name: Rachel Ancar, MD, PhD
+  category: Graduate student
+  position: Resident, Massachusetts General Hospital
+
+- name: Patrick Cherry, PhD
+  category: Graduate student
+  contact: https://www.linkedin.com/in/p-cherry/
+
+- name: Rui Fu
+  category: RBI fellow
+  contact: https://www.linkedin.com/in/rui-fu-rna/
+
+- name: Austin Gillen, PhD
+  category: RBI fellow
+  contact: https://github.com/agillen
+
+- name: Michael Kaufman
+  category: RBI fellow
+  contact: https://www.linkedin.com/in/michael-kaufman-88460720b/
+
+- name: Aspen Martin
+  position: Foresight Diagnostics
+  url: https://foresight-dx.com/
+
+- name: Tyler Matheny, PhD
+  position: Sophia Genetics
+  url: https://www.sophiagenetics.com/
+
+- name: Catherine Nicholas, PhD
+  category: Graduate student
+  contact: https://www.linkedin.com/in/canicholas/
+
+- name: Sally Peach, MD
+  contact: https://connect.medicalnewstoday.com/provider/dr-sally-peach-1578066304
+
+- name: Mantas Prekeris
+  contact: https://www.linkedin.com/in/prekeris/
+
+- name: Amanda Richer, PhD
+  category: Graduate student
+  position: Honeycomb Bio
+  url: https://honeycomb.bio/
+  contact: https://www.linkedin.com/in/amanda-richer-1718b297/
+
+- name: Kent Riemondy, PhD
+  category: RBI fellow
+  contact: https://www.linkedin.com/in/kent-riemondy/
+
+- name: Saylor Strugar
+  position: Graduate student, University of Wisconsin
+  url: https://ipib.wisc.edu/
+
+- name: Kristen Wells, PhD
+  category: RBI fellow
+  contact: https://www.linkedin.com/in/kristen-wells-955b25104/
+
+- name: Caitlin Winkler
+  category: RBI fellow
+  contact: https://www.linkedin.com/in/caitlin-winkler/
+
+- name: Kerri York
+  contact: https://www.linkedin.com/in/kerriyork/

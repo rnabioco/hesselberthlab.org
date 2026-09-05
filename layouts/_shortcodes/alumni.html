@@ -1,0 +1,41 @@
+{{/* Alumni table, from data/alumni.yaml.
+
+     A table rather than cards: there is no portrait for most of them, and the
+     useful information is a name, where they went, and a way to reach them.
+     A row with no linkedin simply leaves that cell empty. */}}
+
+{{ with hugo.Data.alumni }}
+<div class="alumni-table">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Role</th>
+        <th scope="col">Current position</th>
+        <th scope="col">Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range . }}
+      <tr>
+        <td class="alumni-name">{{ .name }}</td>
+        <td class="alumni-category">{{ with .category }}{{ . }}{{ end }}</td>
+        <td>
+          {{- if .url -}}<a href="{{ .url }}">{{ .position }}</a>
+          {{- else -}}{{ .position }}{{- end -}}
+        </td>
+        <td>
+          {{- with .contact -}}
+            <a href="{{ . }}">
+              {{- if strings.Contains . "linkedin.com" }}LinkedIn
+              {{- else if strings.Contains . "github.com" }}GitHub
+              {{- else }}Profile{{ end -}}
+            </a>
+          {{- end -}}
+        </td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+{{ end }}
