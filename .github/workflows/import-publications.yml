@@ -28,7 +28,7 @@ jobs:
         run: pixi run import-pubs
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: 'content: import publications from BibTeX'
           title: 'Import publications from BibTeX'
