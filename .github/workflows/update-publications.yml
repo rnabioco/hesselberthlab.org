@@ -60,7 +60,7 @@ jobs:
 
       - name: Open a pull request
         if: steps.changed.outputs.found == 'true'
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: 'content: add ${{ steps.changed.outputs.added }} new publication(s) from PubMed'
           title: 'Add ${{ steps.changed.outputs.added }} new publication(s)'
