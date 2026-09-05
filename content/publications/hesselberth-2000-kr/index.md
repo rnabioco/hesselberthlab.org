@@ -9,7 +9,11 @@ date: '2000-03-01'
 publishDate: '2026-02-13T13:27:51.498929Z'
 publication_types:
 - article-journal
-publication: '*J. Biotechnol.*'
+publication:
+  name: J. Biotechnol.
+  volume: '74'
+  issue: '1'
+  pages: 15–25
 abstract: In vitro selection methods have proven to be extraordinarily adept at generating
   a wide variety of nucleic acid-binding species (aptamers) and catalysts (ribozymes).
   To date, selected nucleic acids have primarily been of academic interest. However,

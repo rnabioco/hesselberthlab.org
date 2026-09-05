@@ -14,7 +14,8 @@ date: '2023-09-01'
 publishDate: '2026-02-13T13:27:51.413636Z'
 publication_types:
 - article-journal
-publication: '*Res Sq*'
+publication:
+  name: Res Sq
 abstract: Viral and vaccine antigens persist or are archived in lymph node stromal
   cells (LNSC) such as lymphatic endothelial cells (LEC) and fibroblastic reticular
   cells (FRC). Here, we find that, during the time frame of antigen archiving, LEC

@@ -13,7 +13,11 @@ date: '2010-01-01'
 publishDate: '2026-02-13T13:27:51.493584Z'
 publication_types:
 - manuscript
-publication: '*Genome Research*'
+publication:
+  name: Genome Research
+  volume: '20'
+  issue: '9'
+  pages: 1288–1296
 hugoblox:
   ids:
     doi: 10.1101/gr.105825.110

@@ -7,7 +7,10 @@ date: '2022-10-01'
 publishDate: '2026-02-13T13:27:51.429995Z'
 publication_types:
 - article-journal
-publication: '*Front. Genet.*'
+publication:
+  name: Front. Genet.
+  volume: '13'
+  pages: '1037134'
 abstract: Next generation sequencing (NGS) has provided biologists with an unprecedented
   view into biological processes and their regulation over the past 2 decades, fueling
   a wave of development of high throughput methods based on short read DNA and RNA

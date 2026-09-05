@@ -6,7 +6,11 @@ date: '2013-11-01'
 publishDate: '2026-02-13T13:27:51.480969Z'
 publication_types:
 - article-journal
-publication: '*Wiley Interdiscip. Rev. RNA*'
+publication:
+  name: Wiley Interdiscip. Rev. RNA
+  volume: '4'
+  issue: '6'
+  pages: 677–691
 abstract: After transcription of a eukaryotic pre-mRNA, its introns are removed by
   the spliceosome, joining exons for translation. The intron products of splicing
   have long been considered 'junk' and destined only for destruction. But because

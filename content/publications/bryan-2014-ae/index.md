@@ -10,7 +10,11 @@ date: '2014-09-01'
 publishDate: '2026-02-13T13:27:51.625918Z'
 publication_types:
 - article-journal
-publication: '*Genome Res.*'
+publication:
+  name: Genome Res.
+  volume: '24'
+  issue: '9'
+  pages: 1534–1542
 abstract: The incorporation and creation of modified nucleobases in DNA have profound
   effects on genome function. We describe methods for mapping positions and local
   content of modified DNA nucleobases in genomic DNA. We combined in vitro nucleobase

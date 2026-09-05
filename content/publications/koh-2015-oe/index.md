@@ -9,7 +9,11 @@ date: '2015-03-01'
 publishDate: '2026-02-13T13:27:51.619642Z'
 publication_types:
 - article-journal
-publication: '*Nat. Methods*'
+publication:
+  name: Nat. Methods
+  volume: '12'
+  issue: '3'
+  pages: 251–7, 3 p following 257
 abstract: Abundant ribonucleotide incorporation in DNA during replication and repair
   has profound consequences for genome stability, but the global distribution of ribonucleotide
   incorporation is unknown. We developed ribose-seq, a method for capturing unique

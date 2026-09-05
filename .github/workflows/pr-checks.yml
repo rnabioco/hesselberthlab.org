@@ -39,6 +39,13 @@ jobs:
       - name: Author entries point at profiles
         run: pixi run python scripts/normalize_authors.py --check
 
+      # `academic import` writes the journal as one markdown string and the DOI
+      # at the top level; the theme wants the parts separately and warns on
+      # every page until it gets them. Same reason as the check above: the
+      # importer regenerates the old shape every time it runs.
+      - name: Publication metadata is structured
+        run: pixi run python scripts/structure_publications.py --check
+
       # Built with a localhost baseURL so Lighthouse can load the assets; the
       # production baseURL comes from hugo.yaml on Netlify.
       - name: Build

@@ -11,7 +11,11 @@ date: '2014-04-01'
 publishDate: '2026-02-13T13:27:51.629082Z'
 publication_types:
 - article-journal
-publication: '*Nucleic Acids Res.*'
+publication:
+  name: Nucleic Acids Res.
+  volume: '42'
+  issue: '8'
+  pages: 5202–5216
 abstract: Ribonuclease L (RNase L) is a metal-ion-independent endoribonuclease associated
   with antiviral and antibacterial defense, cancer and lifespan. Despite the biological
   significance of RNase L, the RNAs cleaved by this enzyme are poorly defined. In

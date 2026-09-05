@@ -15,7 +15,7 @@ academic = ">=0.10.0"
 [tasks]
 serve = "hugo server --disableFastRender --bind 0.0.0.0"
 build = "hugo --minify && npx pagefind --site public"
-import-pubs = { cmd = "academic import publications.bib content/publications/ --compact --verbose && python scripts/normalize_authors.py", description = "Import BibTeX, then point lab-member bylines at their profiles" }
+import-pubs = { cmd = "academic import publications.bib content/publications/ --compact --verbose && python scripts/normalize_authors.py && python scripts/structure_publications.py", description = "Import BibTeX, point lab-member bylines at their profiles, then restructure publication metadata into the shape the theme wants" }
 # Hugo compiles the stylesheet by running the Tailwind CLI itself, and it
 # insists that binary be a Node.js script. pnpm writes node_modules/.bin
 # entries as POSIX shell wrappers, which Hugo rejects with `binary

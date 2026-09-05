@@ -22,7 +22,11 @@ date: '2025-07-09'
 publishDate: '2026-09-05T02:30:19.978560Z'
 publication_types:
 - article-journal
-publication: '*Sci. Adv.*'
+publication:
+  name: Sci. Adv.
+  volume: '11'
+  issue: '28'
+  pages: eadw1731
 abstract: The activation of complement by nanomedicines triggers immune uptake and
   proinflammatory responses. Complement pathway inhibitors could offer strategies
   to address these challenges. Here, we assess the efficacy of inhibitors with various

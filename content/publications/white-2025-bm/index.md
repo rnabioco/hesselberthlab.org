@@ -14,7 +14,10 @@ publishDate: '2026-02-13T13:27:51.369944Z'
 featured: true
 publication_types:
 - article-journal
-publication: '*Springer Science and Business Media LLC*'
+publication:
+  name: Springer Science and Business Media LLC
+  volume: '16'
+  publisher: Springer Science and Business Media LLC
 abstract: Abstract The intricate landscape of tRNA modification presents persistent
   analytical challenges, which have impeded efforts to simultaneously resolve sequence,
   modification, and aminoacylation state at the level of individual tRNAs. To address

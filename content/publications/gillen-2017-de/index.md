@@ -13,7 +13,11 @@ date: '2017-12-01'
 publishDate: '2026-02-13T13:27:51.539109Z'
 publication_types:
 - article-journal
-publication: '*Mol. Cancer Res.*'
+publication:
+  name: Mol. Cancer Res.
+  volume: '15'
+  issue: '12'
+  pages: 1741–1751
 abstract: 'Disruption of posttranscriptional gene regulation is a critical step in
   oncogenesis that can be difficult to observe using traditional molecular techniques.
   To overcome this limitation, a modified polyadenylation site sequencing (PAS-seq)

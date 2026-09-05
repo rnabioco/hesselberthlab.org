@@ -16,7 +16,11 @@ date: '2019-05-01'
 publishDate: '2026-02-13T13:27:51.593864Z'
 publication_types:
 - article-journal
-publication: '*Front. Immunol.*'
+publication:
+  name: Front. Immunol.
+  volume: '10'
+  pages: '1036'
+  publisher: Frontiers Media SA
 abstract: Liver lymphatic vessels support liver function by draining interstitial
   fluid, cholesterol, fat, and immune cells for surveillance in the liver draining
   lymph node. Chronic liver disease is associated with increased inflammation and

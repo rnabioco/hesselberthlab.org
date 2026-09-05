@@ -11,7 +11,9 @@ date: '2015-01-01'
 publishDate: '2026-02-13T13:27:51.542407Z'
 publication_types:
 - article-journal
-publication: '*Elife*'
+publication:
+  name: Elife
+  volume: '4'
 abstract: During hibernation, animals cycle between torpor and arousal. These cycles
   involve dramatic but poorly understood mechanisms of dynamic physiological regulation
   at the level of gene expression. Each cycle, Brown Adipose Tissue (BAT) drives periodic

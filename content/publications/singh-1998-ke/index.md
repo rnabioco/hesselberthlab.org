@@ -16,5 +16,10 @@ date: '1998-01-01'
 publishDate: '2026-02-13T13:27:51.478225Z'
 publication_types:
 - article-journal
-publication: '*Proceedings of the National Academy of Sciences*'
+publication:
+  name: Proceedings of the National Academy of Sciences
+  volume: '95'
+  issue: '25'
+  pages: 14961–14966
+  publisher: National Acad Sciences
 ---

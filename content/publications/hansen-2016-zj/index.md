@@ -17,7 +17,9 @@ date: '2016-09-01'
 publishDate: '2026-02-13T13:27:51.635518Z'
 publication_types:
 - article-journal
-publication: '*Elife*'
+publication:
+  name: Elife
+  volume: '5'
 abstract: We report that a major subpopulation of monocyte-derived macrophages (MDMs)
   contains high levels of dUTP, which is incorporated into HIV-1 DNA during reverse
   transcription (U/A pairs), resulting in pre-integration restriction and post-integration

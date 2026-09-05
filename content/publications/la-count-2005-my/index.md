@@ -17,7 +17,11 @@ date: '2005-11-01'
 publishDate: '2026-02-13T13:27:51.516848Z'
 publication_types:
 - article-journal
-publication: '*Nature*'
+publication:
+  name: Nature
+  volume: '438'
+  issue: '7064'
+  pages: 103–107
 abstract: Plasmodium falciparum causes the most severe form of malaria and kills up
   to 2.7 million people annually. Despite the global importance of P. falciparum,
   the vast majority of its proteins have not been characterized experimentally. Here

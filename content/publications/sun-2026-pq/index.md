@@ -26,7 +26,11 @@ date: '2026-03-24'
 publishDate: '2026-09-05T02:30:19.973272Z'
 publication_types:
 - article-journal
-publication: '*J. Clin. Invest.*'
+publication:
+  name: J. Clin. Invest.
+  volume: '136'
+  issue: '12'
+  pages: e200857
 abstract: The lymphatic system plays a central role in lipid absorption by transporting
   triglyceride-rich particles called chylomicrons (CMs) from the small intestine to
   the systemic circulation. However, the molecular mechanism by which CMs get into

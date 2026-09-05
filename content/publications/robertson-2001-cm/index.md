@@ -9,7 +9,11 @@ date: '2001-04-01'
 publishDate: '2026-02-13T13:27:51.501959Z'
 publication_types:
 - article-journal
-publication: '*RNA*'
+publication:
+  name: RNA
+  volume: '7'
+  issue: '4'
+  pages: 513–523
 abstract: A small ribozyme ligase (L1) selected from a random sequence population
   appears to utilize non-Watson-Crick base pairs at its ligation junction. Mutational
   and selection analyses confirmed the presence of these base pairings. Randomization

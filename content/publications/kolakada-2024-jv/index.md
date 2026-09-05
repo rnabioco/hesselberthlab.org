@@ -18,7 +18,8 @@ date: '2024-01-01'
 publishDate: '2026-02-13T13:27:51.416939Z'
 publication_types:
 - article-journal
-publication: '*bioRxiv*'
+publication:
+  name: bioRxiv
 abstract: Nonsense-mediated mRNA decay (NMD) is a quality control mechanism that prevents
   the accumulation of harmful truncated proteins by degrading transcripts with premature
   termination codons (PTCs). NMD efficiency varies across many contexts, but the factors
