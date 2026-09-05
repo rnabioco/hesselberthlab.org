@@ -1,7 +1,7 @@
 name:
   given: Ryan
   family: Sheridan
-  display: Ryan Sheridan
+  display: Ryan Sheridan, Ph.D.
 
 weight: 11
 
@@ -9,6 +9,7 @@ role: Senior Research Scientist
 
 user_groups:
   - Researchers
+  - Lab
 
 affiliations:
   - name: University of Colorado School of Medicine

@@ -1,7 +1,7 @@
 name:
   given: Erika
   family: Lasda
-  display: Erika Lasda
+  display: Erika Lasda, Ph.D.
 
 weight: 10
 
@@ -9,6 +9,7 @@ role: Senior Research Scientist
 
 user_groups:
   - Researchers
+  - Lab
 
 affiliations:
   - name: University of Colorado School of Medicine
