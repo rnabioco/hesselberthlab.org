@@ -1,0 +1,38 @@
+name: Dependabot auto-merge
+
+# Dependency bumps are not worth a human opening each one, but they are worth
+# not merging blind. `--auto` hands the pull request to GitHub, which merges it
+# only once the required `build` check on main goes green, and leaves it sitting
+# there if the site stops building.
+#
+# Majors are deliberately left for a person. The build check only builds the
+# site — it never runs update-publications.yml or link-check.yml — so a major
+# bump of, say, peter-evans/create-pull-request can pass this gate and still
+# break the nightly publications job. To auto-merge those too, add
+# "version-update:semver-major" to the list below.
+
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      # For a grouped pull request this reports the largest change in the group,
+      # so one major in a group holds the whole group back.
+      - name: What is Dependabot proposing
+        id: meta
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Queue minor and patch updates behind the build
+        if: contains(fromJSON('["version-update:semver-minor", "version-update:semver-patch"]'), steps.meta.outputs.update-type)
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

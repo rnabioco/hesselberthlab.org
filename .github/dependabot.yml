@@ -3,10 +3,17 @@
 #
 #   .github/workflows/*.yml  actions      -> github-actions, below
 #   package.json             Tailwind etc -> npm, below
-#   go.mod                   HugoBlox     -> gomod, below
+#   go.mod                   HugoBlox     -> deliberately not covered
 #   pixi.toml / pixi.lock    Hugo, Go, Node, Python, academic
 #
 # There is no pixi ecosystem, so the toolchain pins in pixi.toml stay manual.
+#
+# gomod is left out on purpose. The HugoBlox modules are pinned to commits on
+# their default branch, and Dependabot prefers a semver tag to a pseudo-version
+# even when the tag is older: its first three pull requests moved blox from a
+# January 2026 commit back to the v0.12.0 tag, whose templates still use
+# `site.Locale` and no longer build. Update the theme with `hugo mod get -u`
+# instead.
 # Anything Dependabot opens is built by the PR checks workflow before it can be
 # merged, which is what makes a theme or Tailwind bump safe to take.
 version: 2
@@ -39,18 +46,3 @@ updates:
       npm:
         patterns: ["*"]
         update-types: [minor, patch]
-
-  # The HugoBlox modules are pinned to commits rather than releases, so each
-  # update is "whatever is on their default branch now". Monthly keeps that from
-  # becoming a weekly pull request, and a broken theme bump shows up as a red
-  # build and a broken deploy preview.
-  - package-ecosystem: gomod
-    directory: /
-    schedule:
-      interval: monthly
-      timezone: America/Denver
-    commit-message:
-      prefix: deps
-    groups:
-      hugoblox:
-        patterns: ["github.com/HugoBlox/*"]
