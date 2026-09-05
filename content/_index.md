@@ -80,7 +80,9 @@ sections:
     content:
       title: Latest news
       page_type: blog
-      count: 5
+      # Sized to the publication list beside it: five items left about 360px of
+      # the column empty, which is roughly five more of these lines.
+      count: 10
       filters:
         author: ''
         category: ''
