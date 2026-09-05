@@ -9,10 +9,10 @@ authors:
 - Michael L Kaufman
 - Amy E Campbell
 - Chad G Pearson
-- Scott Demarest
+- scott-demarest
 - J Matthew Taliaferro
 - jay-hesselberth
-- Sujatha Jagannathan
+- suja-jagannathan
 date: '2025-10-15'
 publishDate: '2026-02-13T13:27:51.361492Z'
 featured: true

@@ -7,9 +7,9 @@ authors:
 - Cormac Lucas
 - Tadg S Forward
 - Aspen Uecker-Martin
-- Thomas E Morrison
+- tem-morrison
 - jay-hesselberth
-- Beth A Jiron Tamburini
+- beth-tamburini
 date: '2024-04-01'
 publishDate: '2026-02-13T13:27:51.407015Z'
 publication_types:

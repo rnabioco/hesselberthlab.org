@@ -25,7 +25,13 @@
     {{- $profile := partial "functions/get_author_profile" (dict "slug" $slug "title" $raw) -}}
     {{- $termPage := site.GetPage (printf "/authors/%s" $slug) -}}
     {{- $display := $profile.title | default $raw -}}
-    {{- $is_lab_member := $profile.has_data -}}
+    {{/* Having a profile is not the same as being a lab member: collaborators
+         under Friends have one too. Emphasis and links are for the Lab group,
+         which is what "cross reference with lab members" asked for. */}}
+    {{- $is_lab_member := false -}}
+    {{- with $profile.user_groups -}}
+      {{- if in . "Lab" }}{{ $is_lab_member = true }}{{ end -}}
+    {{- end -}}
 
     {{/* A citation byline wants the plain name. The People card shows the
          profile's display name, which carries postnominals for those who have

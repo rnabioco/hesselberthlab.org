@@ -1,0 +1,16 @@
+name:
+  given: Neelanjan
+  family: Mukherjee
+  display: Neelanjan Mukherjee, Ph.D.
+
+weight: 20
+
+role: RNA Innovation, Technology & Therapeutics Core
+
+user_groups:
+  - Friends
+
+links:
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/neelanjan-mukherjee-65052010/
+    label: LinkedIn

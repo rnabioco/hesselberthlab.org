@@ -10,10 +10,6 @@ role: CEO, Andon Bio
 user_groups:
   - Friends
 
-affiliations:
-  - name: Andon Bio
-    url: https://andon.bio
-
 links:
   - icon: hero/globe-alt
     url: https://andon.bio

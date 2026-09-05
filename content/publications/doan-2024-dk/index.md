@@ -11,8 +11,8 @@ authors:
 - Edgardo Ayala
 - Jenna J Guthmiller
 - jay-hesselberth
-- Thomas E Morrison
-- Beth A Jirón Tamburini
+- tem-morrison
+- beth-tamburini
 date: '2024-03-01'
 publishDate: '2026-02-13T13:27:51.410325Z'
 publication_types:

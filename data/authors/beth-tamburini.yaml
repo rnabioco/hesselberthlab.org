@@ -1,0 +1,16 @@
+name:
+  given: Beth
+  family: Tamburini
+  display: Beth Jiron Tamburini, Ph.D.
+
+weight: 30
+
+role: University of Colorado School of Medicine
+
+user_groups:
+  - Friends
+
+links:
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/beth-jiron-tamburini-1757b68/
+    label: LinkedIn

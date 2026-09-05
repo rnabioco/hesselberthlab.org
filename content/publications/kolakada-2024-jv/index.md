@@ -11,9 +11,9 @@ authors:
 - Michael A Cortazar
 - Marcin P Sajek
 - jay-hesselberth
-- Neelanjan Mukherjee
+- neelanjan-mukherjee
 - Elena Alkalaeva
-- Sujatha Jagannathan
+- suja-jagannathan
 date: '2024-01-01'
 publishDate: '2026-02-13T13:27:51.416939Z'
 publication_types:

@@ -11,10 +11,10 @@ authors:
 - Michael A Cortázar
 - Marcin P Sajek
 - jay-hesselberth
-- Neelanjan Mukherjee
+- neelanjan-mukherjee
 - Elena Alkalaeva
 - Zeynep H Coban-Akdemir
-- Sujatha Jagannathan
+- suja-jagannathan
 date: '2025-05-13'
 publishDate: '2026-02-13T13:27:51.382775Z'
 featured: true

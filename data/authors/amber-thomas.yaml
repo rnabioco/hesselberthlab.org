@@ -1,0 +1,16 @@
+name:
+  given: Amber
+  family: Thomas
+  display: Amber Thomas
+
+weight: 22
+
+role: RNA Innovation, Technology & Therapeutics Core
+
+user_groups:
+  - Friends
+
+links:
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/amber-thomas-0a8ab178/
+    label: LinkedIn
