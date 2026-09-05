@@ -9,10 +9,9 @@
 # just a name and a link; entries with no `contact` leave that cell empty.
 # `contact` takes any profile URL — the label is derived from the host.
 #
-# Still unaccounted for from the old site's people photographs: Ashlyn Stahly
-# (MSTP > MOLB student, 2023) and Kelly McEntee (PRA, 2023, who publishes as
-# Kelleen E McEntee and is first author on the 2025 Bardet-Biedl paper, so may
-# not be an alum at all).
+# Left off deliberately from the old site's people photographs: Kelly McEntee
+# (PRA, 2023, who publishes as Kelleen E McEntee and is first author on the
+# 2025 Bardet-Biedl paper, so may not be an alum at all), and Ashlyn Stahly.
 #
 # `category` is the person's role in the lab; "former" is implied by the
 # section, so it reads "Graduate student" rather than "Former graduate
@@ -51,11 +50,13 @@
   category: Research services professional
   position: Foresight Diagnostics
   url: https://foresight-dx.com/
+  contact: https://www.linkedin.com/in/aspenmartin/
 
 - name: Tyler Matheny, PhD
   category: RBI fellow
   position: Sophia Genetics
   url: https://www.sophiagenetics.com/
+  contact: https://www.linkedin.com/in/tyler-matheny-phd/
 
 - name: Catherine Nicholas, PhD
   category: Graduate student
