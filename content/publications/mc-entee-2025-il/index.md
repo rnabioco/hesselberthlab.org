@@ -4,8 +4,8 @@ title: Splice-switching antisense oligonucleotides correct cryptic exon inclusio
 authors:
 - Kelleen E McEntee
 - Bailey L McCurdy
-- Austin Larson
-- Emily A McCourt
+- austin-larson
+- emily-mccourt
 - Michael L Kaufman
 - Amy E Campbell
 - Chad G Pearson
