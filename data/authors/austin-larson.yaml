@@ -1,0 +1,16 @@
+name:
+  given: Austin
+  family: Larson
+  display: Austin Larson, M.D.
+
+weight: 35
+
+role: Children's Hospital Colorado
+
+user_groups:
+  - Friends
+
+links:
+  - icon: hero/globe-alt
+    url: https://www.childrenscolorado.org/doctors-and-departments/physicians/l/austin-larson/
+    label: Children's Hospital Colorado

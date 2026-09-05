@@ -1,0 +1,16 @@
+name:
+  given: Emily
+  family: McCourt
+  display: Emily McCourt, M.D.
+
+weight: 34
+
+role: Children's Hospital Colorado
+
+user_groups:
+  - Friends
+
+links:
+  - icon: hero/globe-alt
+    url: https://www.childrenscolorado.org/doctors-and-departments/physicians/m/emily-mccourt/
+    label: Children's Hospital Colorado
