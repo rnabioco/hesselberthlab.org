@@ -1,0 +1,20 @@
+{{/* Homepage hero, from data/lab_hero.yaml. Plain text and URLs only, so
+     editing the name, tagline or links can't break markup. */}}
+
+{{ $data := hugo.Data.lab_hero }}
+<div class="wide lab-hero">
+  <img class="lab-hero__mark" src="{{ $data.image.src }}" alt="{{ $data.image.alt }}" width="{{ $data.image.width }}" height="{{ $data.image.height }}">
+  <div class="lab-hero__body">
+    <p class="eyebrow">{{ $data.eyebrow }}</p>
+    <h1 class="lab-hero__title">{{ $data.title }}</h1>
+    <p class="lab-hero__lede">{{ $data.lede }}</p>
+    <p class="lab-hero__actions">
+      {{ range $data.actions }}<a class="btn-{{ .style }}" href="{{ .url }}">{{ .label }}</a>
+      {{ end }}
+    </p>
+    <p class="affil">
+      {{ range $i, $a := $data.affiliations }}{{ if $i }} ·
+      {{ end }}<a href="{{ $a.url }}">{{ $a.label }}</a>{{ end }}
+    </p>
+  </div>
+</div>

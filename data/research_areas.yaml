@@ -1,0 +1,53 @@
+# "What we study" cards on the homepage, rendered by
+# layouts/_shortcodes/research-areas.html. Plain text only — no HTML — so
+# these are safe to edit without breaking markup. The card number is derived
+# from list order. Mixed-case acronyms listed under `acronyms` are styled
+# (wrapped in .nocaps) automatically by the shortcode, wherever they appear
+# in a body or tag.
+
+acronyms:
+  - tRNA
+  - mRNA
+  - RNA
+  - ASO
+  - NMD
+
+areas:
+  - title: RNA technology
+    body: >-
+      We build sequencing methods and the software that makes sense of them:
+      nanopore direct sequencing that reads modification and aminoacylation
+      state on intact tRNAs, and single-cell and spatial approaches that
+      measure biochemical activity alongside gene expression. Applied with
+      collaborators, they track how antigen and viral RNA move through the
+      lymph node.
+    tags:
+      - Nanopore
+      - Single-cell
+      - Spatial
+      - Open software
+
+  - title: RNA biology
+    body: >-
+      Cells damage their own RNA, and repair it. We study how cleavage, end
+      modification and processing are integrated into an RNA damage response,
+      combining genetics, biochemistry and bioinformatics — work that has
+      turned up new concepts in post-transcriptional regulation and, with
+      collaborators, new determinants of nonsense-mediated decay.
+    tags:
+      - RNA damage
+      - Repair
+      - tRNA
+      - NMD
+
+  - title: RNA therapy
+    body: >-
+      With clinicians at Children's Hospital Colorado we run a pipeline for
+      antisense oligonucleotides that correct disease-causing splicing. The
+      current focus is cryptic splicing — most recently an ASO that restores a
+      ciliogenesis factor lost to a splicing mutation — alongside mRNA vaccine
+      work with immunologists at CU Anschutz.
+    tags:
+      - Antisense oligos
+      - Cryptic splicing
+      - Children's Hospital Colorado
