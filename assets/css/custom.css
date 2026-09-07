@@ -37,6 +37,7 @@
   --band: #f2ecdf;
   --rule: #e2d9c6;
   --ink-soft: #55534e;
+  --ink-faint: #6b665d; /* quieter than ink-soft but still AA — 5.33:1 on cream */
 }
 
 .dark {
@@ -45,6 +46,7 @@
   --band: #211f1d;
   --rule: #35322d;
   --ink-soft: #b8b1a3;
+  --ink-faint: #8e887d; /* 5.0:1 on the dark background */
 }
 
 body {
@@ -672,6 +674,50 @@ main .max-w-prose.grid > div:nth-child(odd) {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* ---------------------------------------------------------------------------
+   Publications list — year markers + year index
+   (layouts/publications/list.html)
+
+   The theme has no notion of grouping a collection by year, so the list
+   template inserts a heading per year itself and this styles it like the
+   rest of the site's dividers: a hairline rule with a small caps label,
+   matching `.news-date`/`.eyebrow` rather than a full-size heading. The index
+   on the right reuses the theme's own `.hb-toc` — same sticky rail that
+   `components/toc.html` puts beside a single page — so it matches without
+   duplicating that partial's CSS.
+   ------------------------------------------------------------------------ */
+
+.pub-year {
+  margin: 2.25rem 0 0.85rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cu-gold-deep);
+}
+
+.pub-year:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+/* Year index links: quiet until touched, so the eye still lands on the
+   citations rather than the rail beside them. `opacity` faded this below the
+   4.5:1 AA floor at this text size (caught by Lighthouse CI), so the muted
+   state is a distinct color rather than a faded one. */
+.pub-year-link {
+  color: var(--ink-faint);
+  transition: color 0.15s ease;
+}
+
+.pub-year-link:hover {
+  color: var(--cu-gold-deep);
 }
 
 /* ---------------------------------------------------------------------------
