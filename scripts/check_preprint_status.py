@@ -31,15 +31,16 @@ For every @UNPUBLISHED entry this tries three signals, in order:
      skipping any candidate itself hosted on a preprint server. This is the
      only probabilistic signal of the three, and the last resort.
 
-This only reports; it never edits publications.bib. Turning a flagged entry
-into the real fix means picking a new citekey (published year, same
-lastname+suffix scheme as find_new_publications.cite_key), rewriting the
-entry with the published byline/abstract/venue, deleting the old preprint's
-content/publications/<slug> bundle, and running `pixi run import-pubs` --
-and, per the Andersen case, checking whether find_new_publications.py has
-already added the published version separately, in which case the fix is to
-delete the stale entry rather than rewrite it. Enough judgment calls that
-this is left to a human or an agent, not this script.
+This only reports; it never edits publications.bib. scripts/fix_stale_preprints.py
+applies the part of the fix that doesn't need a human judgment call --
+signals (1) and (2) above, plus a (3) match that resolves to a PMID already
+in the file (recognizing a duplicate never invents new data, so it's safe
+even off a fuzzy match) -- and leaves everything else for this script's
+report to surface. The CI workflow (check-preprint-status.yml) runs both in
+sequence: fix_stale_preprints.py first (opening a PR if it changed
+anything), then this script again against the now-partially-fixed file, so
+whatever it still flags genuinely needs a human to pick the citekey, write
+the published byline/abstract/venue by hand, and decide it's worth doing.
 
 Usage:
     python scripts/check_preprint_status.py [--bib publications.bib]
@@ -316,13 +317,14 @@ def render_markdown(flagged: list[dict]) -> str:
             lines.append(f"  > {m['title']}")
         lines.append("")
     lines.append(
-        "Fixing one of these means checking whether `find_new_publications.py` has already "
-        "added the published version as a separate entry (delete the stale one if so), or "
-        "otherwise updating the entry in place with the published byline/abstract/venue, "
-        "renaming the citekey to the publication year, deleting the old "
-        "`content/publications/<slug>` bundle, and running `pixi run import-pubs` -- see the "
-        "Sheridan/Zarrella/Sottnik/Stemm-Wolf fixes for the pattern. This check does not edit "
-        "`publications.bib` itself."
+        "`scripts/fix_stale_preprints.py` already applies the part of the fix that "
+        "doesn't need a human judgment call, so anything still listed here needs one: "
+        "either a fuzzy match wasn't confirmable against an existing entry, or "
+        "resolving it means updating the entry in place with the published "
+        "byline/abstract/venue, renaming the citekey to the publication year, deleting "
+        "the old `content/publications/<slug>` bundle, and running `pixi run "
+        "import-pubs` -- see the Sheridan/Zarrella/Sottnik/Stemm-Wolf fixes for the "
+        "pattern. This check does not edit `publications.bib` itself."
     )
     return "\n".join(lines)
 
