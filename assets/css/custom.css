@@ -675,6 +675,50 @@ main .max-w-prose.grid > div:nth-child(odd) {
 }
 
 /* ---------------------------------------------------------------------------
+   Publications list — year markers + year index
+   (layouts/publications/list.html)
+
+   The theme has no notion of grouping a collection by year, so the list
+   template inserts a heading per year itself and this styles it like the
+   rest of the site's dividers: a hairline rule with a small caps label,
+   matching `.news-date`/`.eyebrow` rather than a full-size heading. The index
+   on the right reuses the theme's own `.hb-toc` — same sticky rail that
+   `components/toc.html` puts beside a single page — so it matches without
+   duplicating that partial's CSS.
+   ------------------------------------------------------------------------ */
+
+.pub-year {
+  margin: 2.25rem 0 0.85rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cu-gold-deep);
+}
+
+.pub-year:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+/* Year index links: quiet until touched, so the eye still lands on the
+   citations rather than the rail beside them. */
+.pub-year-link {
+  color: var(--ink-soft);
+  opacity: 0.6;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.pub-year-link:hover {
+  color: var(--cu-gold-deep);
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------------------
    News running list (layouts/_partials/views/news-line)
 
    Items are single sentences with no page of their own, so the text is the

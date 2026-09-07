@@ -1,0 +1,76 @@
+{{/* Publications list, overriding the theme's generic `layouts/list.html`.
+
+     Year markers down the list only make sense, and a year index only stays
+     accurate, if every publication is on the page at once — so this drops
+     the theme's pagination in favor of one long chronological list. The
+     right-hand year index mirrors `components/toc.html` (same `.hb-toc`
+     classes, sticky behavior, breakpoint), since a publications page has no
+     in-page headings of its own for that partial to pick up. */}}
+
+{{ define "main" }}
+
+<div class="max-w-prose mx-auto flex justify-center">
+  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
+    <h1 class="lg:text-6xl">{{ .Title }}</h1>
+    {{ .Content }}
+  </article>
+</div>
+
+{{ $view := .Params.view | default "card" }}
+{{ $pages := .Pages.ByDate.Reverse }}
+{{ $config := dict
+  "columns" (.Params.columns | default 2)
+  "len" (len $pages)
+  "fill_image" (.Params.fill_image | default true)
+  "show_date" (.Params.show_date | default true)
+  "show_read_time" (.Params.show_read_time | default true)
+  "show_read_more" (.Params.show_read_more | default true)
+}}
+
+{{ range $pages }}
+  {{ if isset .Params "author_notes" }}
+    {{ $.Store.Set "has_alpine" true }}
+    {{ break }}
+  {{ end }}
+{{ end }}
+
+{{ $years := slice }}
+{{ range $pages }}
+  {{ $y := (time (.Params.event_start | default .Date)).Format "2006" }}
+  {{ if not (in $years $y) }}{{ $years = $years | append $y }}{{ end }}
+{{ end }}
+
+<div class="mx-auto flex max-w-screen-xl">
+
+  <nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="publication years">
+    <div class="hb-scrollbar text-sm sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4">
+      <p class="mb-4 font-semibold tracking-tight">Years</p>
+      <ul>
+        {{ range $years }}
+        <li class="my-2 scroll-my-6 scroll-py-6">
+          <a class="pub-year-link inline-block w-full" href="#y{{ . }}">{{ . }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
+
+  <div class="flex min-w-0 flex-1 flex-col items-center">
+    {{ partial "functions/render_view" (dict "fragment" "start" "page" . "item" . "view" $view "config" $config) }}
+
+    {{ $prev_year := "" }}
+    {{ range $index, $item := $pages }}
+      {{ $y := (time ($item.Params.event_start | default $item.Date)).Format "2006" }}
+      {{ if ne $y $prev_year }}
+      <h2 id="y{{ $y }}" class="pub-year">{{ $y }}</h2>
+      {{ $prev_year = $y }}
+      {{ end }}
+      {{ partial "functions/render_view" (dict "page" $item "item" $item "view" $view "index" $index "config" $config) }}
+    {{ end }}
+
+    {{ partial "functions/render_view" (dict "fragment" "end" "page" . "item" . "view" $view) }}
+  </div>
+
+</div>
+
+{{ end }}
