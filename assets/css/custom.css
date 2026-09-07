@@ -720,6 +720,16 @@ main .max-w-prose.grid > div:nth-child(odd) {
   color: var(--cu-gold-deep);
 }
 
+/* Current section while scrolling — see
+   layouts/_partials/hooks/body-end/pub-year-toc.html, which toggles this via
+   an IntersectionObserver on each `.pub-year` heading. Bold rather than a
+   third color, so it reads as "this one" without adding another color to
+   track against the AA floor above. */
+.pub-year-link.active {
+  color: var(--cu-gold-deep);
+  font-weight: 600;
+}
+
 /* ---------------------------------------------------------------------------
    News running list (layouts/_partials/views/news-line)
 

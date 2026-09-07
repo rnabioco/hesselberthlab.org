@@ -1,0 +1,42 @@
+<script>
+(function () {
+  // Highlights the current year in the publications page's sticky year
+  // index (see .pub-year-link in custom.css) as its heading scrolls through
+  // a band just under the sticky header. `.pub-year` only exists on the
+  // publications list, so this is a no-op everywhere else.
+  var headings = [].slice.call(document.querySelectorAll('h2.pub-year'));
+  if (!headings.length || !('IntersectionObserver' in window)) return;
+
+  var links = {};
+  [].slice.call(document.querySelectorAll('.pub-year-link')).forEach(function (a) {
+    links[a.getAttribute('href').slice(1)] = a;
+  });
+
+  var current = null;
+  function setActive(id) {
+    if (id === current) return;
+    if (current && links[current]) links[current].classList.remove('active');
+    current = id;
+    if (current && links[current]) links[current].classList.add('active');
+  }
+
+  var header = document.getElementById('site-header');
+  var headerHeight = header ? header.offsetHeight : 0;
+
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) setActive(entry.target.id);
+      });
+    },
+    { rootMargin: '-' + (headerHeight + 8) + 'px 0px -70% 0px', threshold: 0 }
+  );
+  headings.forEach(function (h) {
+    observer.observe(h);
+  });
+
+  // Land already on the first year rather than waiting for it to scroll
+  // through the band, since that's what's in view on page load.
+  setActive(headings[0].id);
+})();
+</script>
