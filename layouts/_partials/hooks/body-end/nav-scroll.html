@@ -1,0 +1,27 @@
+<script>
+(function () {
+  // Reveals the "Hesselberth Lab" wordmark in the navbar (see .navbar-brand
+  // in custom.css). `.lab-hero` only exists on the homepage, where the hero
+  // already says the name, so there the wordmark waits until the hero
+  // scrolls out from under the sticky header. Every other page has no hero
+  // repeating the name, so the wordmark shows from the top there.
+  var header = document.getElementById('site-header');
+  if (!header) return;
+
+  var hero = document.querySelector('.lab-hero');
+  if (!hero || !('IntersectionObserver' in window)) {
+    header.classList.add('header--past-hero');
+    return;
+  }
+
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        header.classList.toggle('header--past-hero', !entry.isIntersecting);
+      });
+    },
+    { rootMargin: '-' + header.offsetHeight + 'px 0px 0px 0px', threshold: 0 }
+  );
+  observer.observe(hero);
+})();
+</script>

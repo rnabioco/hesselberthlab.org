@@ -10,6 +10,9 @@ role: University of Colorado School of Medicine
 user_groups:
   - Friends
 
+interests:
+  - RNA therapies for genetic diseases
+
 links:
   - icon: hero/globe-alt
     url: https://jagannathan-lab.org
