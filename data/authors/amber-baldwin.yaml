@@ -10,6 +10,10 @@ role: RNA Informatics, Technologies, and Therapies Core
 user_groups:
   - Friends
 
+interests:
+  - name: RNA Informatics, Technologies, and Therapies Core
+    url: https://tinyurl.com/cu-rittc
+
 links:
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/amber-thomas-0a8ab178/

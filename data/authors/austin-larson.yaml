@@ -10,6 +10,9 @@ role: Children's Hospital Colorado
 user_groups:
   - Friends
 
+interests:
+  - RNA therapies for genetic diseases
+
 links:
   - icon: hero/globe-alt
     url: https://www.childrenscolorado.org/doctors-and-departments/physicians/l/austin-larson/

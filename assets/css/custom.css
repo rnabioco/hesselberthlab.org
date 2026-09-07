@@ -836,18 +836,40 @@ main > time.mt-12 {
   letter-spacing: 0.005em;
 }
 
-/* The wordmark is the first thing the hero says, and every page carries the
-   name in its title, so the navbar spends its left third repeating it. Drop
-   it, and let the links and the controls sit together in the middle rather
-   than at opposite ends of the bar. The theme centres the menu with an auto
-   margin, which is what strands the controls on the right; clearing the auto
-   margins on both and centring the row keeps them adjacent.
+/* The wordmark is the first thing the homepage hero says, so while that hero
+   is in view the navbar would just be repeating it. Collapse it to zero
+   width (rather than `display: none`) so it stays in flow and can be
+   revealed with a transition instead of an abrupt reflow. Hidden-by-default
+   also keeps the links and controls sitting together in the middle rather
+   than at opposite ends of the bar on first paint. The theme centres the
+   menu with an auto margin, which is what strands the controls on the
+   right; clearing the auto margins on both and centring the row keeps them
+   adjacent.
 
    The newer HugoBlox in #19 has a `header.show_title: false` param for the
    first half of this. This does not use it, so the rule works either side of
-   that upgrade. */
+   that upgrade.
+
+   layouts/_partials/hooks/body-end/nav-scroll.html adds `header--past-hero`
+   to reveal it: immediately on any page without a `.lab-hero` (every page
+   but the homepage — there's no hero there repeating the name, so the
+   wordmark can show from the top), and on the homepage once the hero has
+   scrolled out from under the sticky header (via an IntersectionObserver on
+   `.lab-hero`). */
 .navbar-brand {
-  display: none;
+  display: inline-flex;
+  align-items: center;
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  transition: max-width 0.3s ease, opacity 0.2s ease;
+}
+
+#site-header.header--past-hero .navbar-brand {
+  max-width: 16rem;
+  margin-right: 1rem;
+  opacity: 1;
 }
 
 .navbar {

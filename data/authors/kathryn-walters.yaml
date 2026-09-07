@@ -10,6 +10,10 @@ role: RNA Informatics, Technologies, and Therapies Core
 user_groups:
   - Friends
 
+interests:
+  - name: RNA Informatics, Technologies, and Therapies Core
+    url: https://tinyurl.com/cu-rittc
+
 links:
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/kathryn-walters-phd-4b43b1137/

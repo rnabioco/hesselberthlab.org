@@ -12,6 +12,10 @@ role: RNA Informatics, Technologies, and Therapies Core
 user_groups:
   - Friends
 
+interests:
+  - name: RNA Informatics, Technologies, and Therapies Core
+    url: https://tinyurl.com/cu-rittc
+
 links:
   - icon: hero/globe-alt
     url: https://mukherjeelab.org
