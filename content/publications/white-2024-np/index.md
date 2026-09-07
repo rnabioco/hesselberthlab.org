@@ -6,7 +6,7 @@ authors:
 - Samantha del Pozo
 - jill-bilodeaux
 - Shelby E Andersen
-- Amber Baldwin
+- amber-baldwin
 - Chloe Barrington
 - Nadine Koertel
 - Federico Martinez-Seidel
