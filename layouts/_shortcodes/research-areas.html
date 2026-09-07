@@ -1,0 +1,21 @@
+{{/* Research-area cards on the homepage, from data/research_areas.yaml.
+
+     That data is plain prose with no markup, so editing it can't break the
+     page. Card numbers come from list order, and the mixed-case acronyms
+     listed under `acronyms` are wrapped in .nocaps automatically, so
+     authors never have to write HTML by hand. */}}
+
+{{ $data := hugo.Data.research_areas }}
+{{ $acronyms := printf `\b(%s)` (delimit $data.acronyms "|") }}
+{{ $nocaps := `<span class="nocaps">$1</span>` }}
+{{ range $i, $area := $data.areas }}
+<section>
+  <h3><span class="n">{{ printf "%02d" (add $i 1) }}</span>{{ $area.title }}</h3>
+  <p>{{ replaceRE $acronyms $nocaps $area.body | safeHTML }}</p>
+  {{ $tags := slice }}
+  {{ range $area.tags }}
+    {{ $tags = $tags | append (replaceRE $acronyms $nocaps .) }}
+  {{ end }}
+  <span class="with">{{ delimit $tags " · " | safeHTML }}</span>
+</section>
+{{ end }}
