@@ -37,6 +37,7 @@
   --band: #f2ecdf;
   --rule: #e2d9c6;
   --ink-soft: #55534e;
+  --ink-faint: #6b665d; /* quieter than ink-soft but still AA — 5.33:1 on cream */
 }
 
 .dark {
@@ -45,6 +46,7 @@
   --band: #211f1d;
   --rule: #35322d;
   --ink-soft: #b8b1a3;
+  --ink-faint: #8e887d; /* 5.0:1 on the dark background */
 }
 
 body {
@@ -706,16 +708,16 @@ main .max-w-prose.grid > div:nth-child(odd) {
 }
 
 /* Year index links: quiet until touched, so the eye still lands on the
-   citations rather than the rail beside them. */
+   citations rather than the rail beside them. `opacity` faded this below the
+   4.5:1 AA floor at this text size (caught by Lighthouse CI), so the muted
+   state is a distinct color rather than a faded one. */
 .pub-year-link {
-  color: var(--ink-soft);
-  opacity: 0.6;
-  transition: opacity 0.15s ease, color 0.15s ease;
+  color: var(--ink-faint);
+  transition: color 0.15s ease;
 }
 
 .pub-year-link:hover {
   color: var(--cu-gold-deep);
-  opacity: 1;
 }
 
 /* ---------------------------------------------------------------------------
