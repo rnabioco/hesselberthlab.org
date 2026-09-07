@@ -1,0 +1,38 @@
+# Homepage hero (name, tagline, portrait and links), rendered by
+# layouts/_shortcodes/lab-hero.html. Plain text and URLs only — no HTML —
+# so these are safe to edit without breaking markup.
+
+eyebrow: RNA Technology & Therapeutics · CU School of Medicine
+title: Hesselberth Lab
+lede: >-
+  A collaborative lab of RNA biologists, technology developers and data
+  analysts, discovering and translating fundamental principles of RNA
+  regulation — from how transfer RNA links the RNA and protein worlds, to
+  RNA therapies built with clinicians at Children's Hospital Colorado.
+
+image:
+  src: /media/lab-portrait.png
+  alt: The Hesselberth Lab
+  width: 1018
+  height: 522
+
+# `style` selects the button look: "gold" for the primary action, "plain" for
+# the rest.
+actions:
+  - label: Publications
+    url: /publications/
+    style: gold
+  - label: Meet the lab
+    url: /people/
+    style: plain
+  - label: Software
+    url: /software/
+    style: plain
+
+affiliations:
+  - label: RNA Bioscience Initiative
+    url: https://medschool.cuanschutz.edu/rbi
+  - label: Biochemistry & Molecular Genetics
+    url: https://medschool.cuanschutz.edu/biochemistry
+  - label: University of Colorado School of Medicine
+    url: https://www.cuanschutz.edu/
