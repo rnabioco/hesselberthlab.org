@@ -17,10 +17,10 @@ areas:
     body: >-
       We build sequencing methods and the software that makes sense of them:
       nanopore direct sequencing that reads modification and aminoacylation
-      state on intact tRNAs, and single-cell and spatial approaches that
+      state on intact tRNAs. We also developed single-cell and spatial approaches that
       measure biochemical activity alongside gene expression. Applied with
       collaborators, they track how antigen and viral RNA move through the
-      lymph node.
+      lymph node to initiate immune reponses.
     tags:
       - Nanopore
       - Single-cell
@@ -29,20 +29,18 @@ areas:
 
   - title: RNA biology
     body: >-
-      Cells damage their own RNA, and repair it. We study how cleavage, end
+      We study how cleavage, end
       modification and processing are integrated into an RNA damage response,
-      combining genetics, biochemistry and bioinformatics — work that has
-      turned up new concepts in post-transcriptional regulation and, with
-      collaborators, new determinants of nonsense-mediated decay.
+      combining genetics, biochemistry and bioinformatics. We also study
+      how tRNAs are using during bacterial infection by viruses, and how
+      tRNA misaminoacylation impacts protein synthesis.
     tags:
-      - RNA damage
-      - Repair
-      - tRNA
-      - NMD
+      - RNA damage & repair
+      - tRNAs in translation
 
   - title: RNA therapy
     body: >-
-      With clinicians at Children's Hospital Colorado we run a pipeline for
+      With clinicians at Children's Hospital Colorado we developed a pipeline for
       antisense oligonucleotides that correct disease-causing splicing. The
       current focus is cryptic splicing — most recently an ASO that restores a
       ciliogenesis factor lost to a splicing mutation — alongside mRNA vaccine
