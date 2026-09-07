@@ -9,7 +9,7 @@ authors:
 - jay-hesselberth
 - B A Duerkop
 date: '2026-01-01'
-publishDate: '2026-09-05T09:02:20.461779Z'
+publishDate: '2026-09-07T23:34:17.495042Z'
 publication_types:
 - article-journal
 publication:
@@ -17,8 +17,8 @@ publication:
   volume: '24'
   issue: '8'
   pages: e3003991
-abstract: 'Renewed interest in phage therapy has highlighted a need to understand
-  how bacteria subvert phage infection through antiphage defense systems. Traditionally,
+abstract: Renewed interest in phage therapy has highlighted a need to understand how
+  bacteria subvert phage infection through antiphage defense systems. Traditionally,
   strategies to identify antiphage defense systems lack throughput or have limitations
   for bacterial species where antiphage defense systems are understudied. Herein,
   we developed a bioinformatic pipeline that uses a small serine recombinase to identify
@@ -30,10 +30,7 @@ abstract: 'Renewed interest in phage therapy has highlighted a need to understan
   approach by discovering that KAP P-loop NTPases are fused to putative antiphage
   domains and reinforce prokaryotic Schlafen proteins as a new class of antiphage
   defense. Our work shows that small serine recombinases are a reliable genetic marker
-  for the discovery of antiphage defenses across diverse bacterial phyla.Copyright:
-  © 2026 Andersen et al. This is an open access article distributed under the terms
-  of the Creative Commons Attribution License, which permits unrestricted use, distribution,
-  and reproduction in any medium, provided the original author and source are credited.'
+  for the discovery of antiphage defenses across diverse bacterial phyla.
 hugoblox:
   ids:
     doi: 10.1371/journal.pbio.3003991

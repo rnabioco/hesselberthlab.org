@@ -1,0 +1,48 @@
+name: Check preprint status
+
+on:
+  schedule:
+    # 10:00 UTC Monday -- weekly, after the nightly PubMed search has had a
+    # chance to pick up anything genuinely new.
+    - cron: '0 10 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup pixi
+        uses: prefix-dev/setup-pixi@v0.10.2
+        with:
+          cache: true
+
+      - name: Check publications.bib for stale preprint entries
+        id: check
+        env:
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
+        run: |
+          set +e
+          pixi run python scripts/check_preprint_status.py --format markdown > report.md
+          echo "flagged=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update tracking issue
+        if: steps.check.outputs.flagged == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          existing=$(gh issue list --search "Stale preprint entries in publications.bib in:title" \
+            --state open --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file report.md
+          else
+            gh issue create --title "Stale preprint entries in publications.bib" \
+              --label publications --body-file report.md
+          fi
