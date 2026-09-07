@@ -1,0 +1,74 @@
+name: Check preprint status
+
+on:
+  schedule:
+    # 10:00 UTC Monday -- weekly, after the nightly PubMed search has had a
+    # chance to pick up anything genuinely new.
+    - cron: '0 10 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup pixi
+        uses: prefix-dev/setup-pixi@v0.10.2
+        with:
+          cache: true
+
+      - name: Apply fixes that don't need a human judgment call
+        id: fix
+        env:
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
+        run: |
+          set +e
+          pixi run python scripts/fix_stale_preprints.py --bib publications.bib --summary fix-summary.md
+          echo "fixed=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Regenerate publication pages
+        if: steps.fix.outputs.fixed == '1'
+        run: pixi run import-pubs
+
+      - name: Open a pull request with the fixes
+        if: steps.fix.outputs.fixed == '1'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: 'content: update stale preprint entries to their published versions'
+          title: 'Update stale preprint entries to their published versions'
+          body-path: fix-summary.md
+          branch: fix-stale-preprints
+          delete-branch: true
+          labels: publications
+
+      - name: Check what's left (needs a human either way)
+        id: review
+        env:
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
+        run: |
+          set +e
+          pixi run python scripts/check_preprint_status.py --bib publications.bib --format markdown > review-needed.md
+          echo "flagged=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update tracking issue
+        if: steps.review.outputs.flagged == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          existing=$(gh issue list --search "Stale preprint entries in publications.bib in:title" \
+            --state open --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file review-needed.md
+          else
+            gh issue create --title "Stale preprint entries in publications.bib" \
+              --label publications --body-file review-needed.md
+          fi

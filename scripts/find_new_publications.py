@@ -117,9 +117,14 @@ def fetch(pmids: list[str]) -> list[dict]:
                 last, initials = _text(au, "LastName"), _text(au, "Initials")
                 if last:
                     authors.append(f"{last}, {' '.join(initials)}".strip().rstrip(","))
+            # Scoped to the article's own id list -- art.findall(".//ArticleId")
+            # also matches ArticleId elements nested under ReferenceList (the
+            # article's own bibliography), so a reference's DOI can silently
+            # overwrite the article's real one.
+            id_list = art.find(".//PubmedData/ArticleIdList")
             ids = {
                 el.get("IdType"): (el.text or "").strip()
-                for el in art.findall(".//ArticleId")
+                for el in (id_list.findall("ArticleId") if id_list is not None else [])
             }
             pages = _text(a, ".//Pagination/MedlinePgn")
             out.append(
