@@ -321,11 +321,11 @@
                           {{ $interestText = printf "%v" . }}
                         {{ end }}
                         {{ if $interestUrl }}
-                        <a href="{{ $interestUrl | safeURL }}" target="_blank" rel="noopener" class="inline-block text-balance bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs px-2 py-1 rounded hover:bg-primary-100 hover:text-primary-700 dark:hover:bg-primary-900 dark:hover:text-primary-300 transition-colors">
+                        <a href="{{ $interestUrl | safeURL }}" target="_blank" rel="noopener" class="inline-block text-balance bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-400 text-xs px-2 py-1 rounded hover:bg-primary-100 hover:text-primary-700 dark:hover:bg-primary-900 dark:hover:text-primary-300 transition-colors">
                           {{ $interestText }}
                         </a>
                         {{ else }}
-                        <span class="inline-block text-balance bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs px-2 py-1 rounded">
+                        <span class="inline-block text-balance bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-400 text-xs px-2 py-1 rounded">
                           {{ $interestText }}
                         </span>
                         {{ end }}
@@ -530,9 +530,9 @@
                         {{ $interestText = printf "%v" . }}
                       {{ end }}
                       {{ if $interestUrl }}
-                      <a href="{{ $interestUrl | safeURL }}" target="_blank" rel="noopener" class="inline-block text-balance bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs px-2 py-1 rounded hover:bg-primary-100 hover:text-primary-700 dark:hover:bg-primary-900 dark:hover:text-primary-300 transition-colors">{{ $interestText }}</a>
+                      <a href="{{ $interestUrl | safeURL }}" target="_blank" rel="noopener" class="inline-block text-balance bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-400 text-xs px-2 py-1 rounded hover:bg-primary-100 hover:text-primary-700 dark:hover:bg-primary-900 dark:hover:text-primary-300 transition-colors">{{ $interestText }}</a>
                       {{ else }}
-                      <span class="inline-block text-balance bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs px-2 py-1 rounded">{{ $interestText }}</span>
+                      <span class="inline-block text-balance bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-400 text-xs px-2 py-1 rounded">{{ $interestText }}</span>
                       {{ end }}
                     {{ end }}
                   {{ end }}
