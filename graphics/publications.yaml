@@ -1,6 +1,6 @@
-# One illustration per featured publication, distilled from its abstract.
+# One illustration per publication, distilled from its abstract.
 #
-#   pixi run -e graphics publications     # 4 images, ~$0.27
+#   pixi run -e graphics publications     # 17 images, ~$1.19 (existing ones are skipped)
 #
 # Renders to graphics/out/cu/pubs/. A chosen image is copied into the paper's
 # page bundle as content/publications/<slug>/featured.png, where Hugo picks it
@@ -47,3 +47,79 @@ images:
     description: >
       A ribosome halted partway along a strand of messenger RNA at an early
       stop, with the remainder of the strand breaking apart behind it.
+
+  - name: andersen-2026-gl
+    description: >
+      A phage's tail fibers reaching toward a bacterial cell wall, stopped by
+      an angular gate embedded in the membrane, with a small coiled ribbon of
+      DNA hovering beside the gate like a marker pointing it out.
+
+  - name: doan-2024-dk
+    description: >
+      A branching stromal cell inside a lymph node holding a single small
+      archived antigen fragment in its dendrites, with a memory T cell nearby
+      turning toward it as if woken.
+
+  - name: kolakada-2024-jv
+    description: >
+      A ribosome paused on a strand of messenger RNA at a premature stop, a
+      transfer RNA lifting away as an hourglass motif drains beside it,
+      suggesting a narrowing window before hydrolysis.
+
+  - name: li-2025-ku
+    description: >
+      A liposome drifting through a bloodstream, a ring of small complement
+      proteins reaching toward it while a shield-like molecule intercepts
+      them just short of contact.
+
+  - name: lucas-2024-ir
+    description: >
+      The thin lining of a lymphatic vessel breaking apart into loose
+      fragments as small viral particles cluster along its inner wall.
+
+  - name: manes-2025-vd
+    description: >
+      A round B cell tethering a naive T cell by a single thread, holding it
+      calm and rounded, with a second untethered T cell nearby stretched into
+      a sharp, angular effector shape.
+
+  - name: nicholas-2025-hi
+    description: >
+      A cluster of B cell receptors branching from one clonal stem, each tip
+      touching a different small shape, with one tip resting against the
+      rounded form of a pancreatic islet.
+
+  - name: rao-2025-mb
+    description: >
+      A ribosome traveling along a strand of messenger RNA, releasing two
+      separate protein chains that drift apart at a single break point, one
+      strand ending abruptly where the other begins.
+
+  - name: sheridan-2025-mb
+    description: >
+      The ceiling and floor linings of a lymph node sinus, each studded with
+      small archived antigen particles like items on two facing shelves,
+      with a dendritic cell reaching up between them.
+
+  - name: sottnik-2026-bp
+    description: >
+      A DNA double helix broken mid-strand, its repair proteins scattered
+      and failing to assemble into a bridge, while a small molecule wedges
+      into the gap where repair should begin.
+
+  - name: stemm-wolf-2026-ro
+    description: >
+      A round ciliate cell ringed with evenly spaced basal bodies like a
+      beaded belt, one enlarged cyclin marker glowing at a single basal body
+      on its surface.
+
+  - name: sun-2026-pq
+    description: >
+      A fat droplet nosing into the tapered tip of an intestinal lacteal,
+      guided through a receptor gate stitched into the vessel's thin wall.
+
+  - name: zarrella-2026-ya
+    description: >
+      A macrophage settled within joint tissue, harboring small viral
+      particles inside it while inflammation marks radiate outward into the
+      surrounding fibers.
