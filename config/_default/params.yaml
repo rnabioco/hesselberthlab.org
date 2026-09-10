@@ -70,6 +70,7 @@ hugoblox:
     location:
       address:
         street: "12801 East 17th Ave"
+        unit: "L18-10402A (RC1 South)"
         city: "Aurora"
         region: "CO"
         postal_code: "80045"

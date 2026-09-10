@@ -1,0 +1,40 @@
+{{/* Lab address + a lightweight, JS-free OpenStreetMap embed for the
+     footer. People-page only -- this is a shared footer partial, so every
+     other page's footer falls through unchanged. Reads hugoblox.seo.location,
+     which is already populated for the Organization JSON-LD, so the address
+     lives in one place. */}}
+
+{{/* .File is nil for generated pages (404, etc.), so check via RelPermalink
+     rather than .File.Path. */}}
+{{ $is_people_page := eq .RelPermalink "/people/" }}
+
+{{ $loc := site.Params.hugoblox.seo.location | default dict }}
+{{ $addr := $loc.address | default dict }}
+{{ $coords := $loc.coordinates | default dict }}
+{{ $lat := $coords.latitude }}
+{{ $lon := $coords.longitude }}
+
+{{ if and $is_people_page $addr.street $lat $lon }}
+<div class="footer-visit">
+  <div class="footer-visit__info">
+    <p class="footer-visit__label">Visit</p>
+    <address class="footer-visit__address">
+      {{ site.Params.hugoblox.identity.organization }}<br>
+      {{ $addr.street }}<br>
+      {{ with $addr.unit }}{{ . }}<br>{{ end }}
+      {{ $addr.city }}, {{ $addr.region }} {{ $addr.postal_code }}
+    </address>
+  </div>
+  {{ $dlat := 0.004 }}
+  {{ $dlon := 0.006 }}
+  {{ $bbox := printf "%f,%f,%f,%f" (sub $lon $dlon) (sub $lat $dlat) (add $lon $dlon) (add $lat $dlat) }}
+  {{ $marker := printf "%f,%f" $lat $lon }}
+  <iframe
+    class="footer-visit__map"
+    src="https://www.openstreetmap.org/export/embed.html?bbox={{ $bbox }}&amp;layer=mapnik&amp;marker={{ $marker }}"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Map showing the Hesselberth Lab's location on the CU Anschutz Medical Campus"
+  ></iframe>
+</div>
+{{ end }}

@@ -1067,19 +1067,20 @@ main > time.mt-12 {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  /* Reserve the band's own height and centre the footer text inside it, so the
-     text sits in the middle of the panorama rather than above it. The
-     expression mirrors the ::before sizing below: 438/1584 = 0.2765. */
-  display: grid;
-  align-content: center;
-  min-height: 27.65vw;
   margin-top: 4rem;
 }
 
 .page-footer::before {
   content: '';
   position: absolute;
-  inset: auto 0 0;
+  /* Top-anchored, not bottom-anchored: the band is a fixed-height header for
+     the footer, not a backdrop centred across all of it. Anything after
+     .pano-credit-band (the visit block, copyright) renders in plain flow
+     below this band on the page's own ground, never over the art -- the
+     footer used to grow taller than the band once it held more than a short
+     credit + copyright line, and centring the whole thing across that grown
+     box pulled later content back up over the mountains. */
+  inset: 0 0 auto;
   z-index: -1;
   /* The band keeps the trimmed PNG's intrinsic ratio and grows with the
      viewport, so the ridge is never stretched and never cropped. A
@@ -1092,7 +1093,7 @@ main > time.mt-12 {
      through beside it. */
   width: 100%;
   aspect-ratio: 1584 / 438;
-  background: url('/media/footer-panorama.png') no-repeat center bottom / 100% auto;
+  background: url('/media/footer-panorama.png') no-repeat center top / 100% auto;
   opacity: 0.22;
   pointer-events: none;
 }
@@ -1102,12 +1103,21 @@ main > time.mt-12 {
   opacity: 0.16;
 }
 
-/* The theme's own `mt-24 mb-4` would fight the centring above. The inline
-   padding is for the credit line, which is the widest thing in the footer and
-   otherwise runs to both edges on a phone. */
 .page-footer footer {
   margin-block: 0;
   padding-inline: 1.25rem;
+}
+
+/* Reserves the band's own height and centres the credit line inside it, so
+   the credit sits in the middle of the panorama rather than above it —
+   the same effect the whole footer used to have, now scoped to just this
+   line so later content isn't pulled up over the art too. The expression
+   mirrors the ::before sizing above: 438/1584 = 0.2765. */
+.pano-credit-band {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 27.65vw;
 }
 
 .pano-credit {
@@ -1128,4 +1138,63 @@ main > time.mt-12 {
 
 .pano-credit a:hover {
   color: var(--cu-gold-deep);
+}
+
+/* ---------------------------------------------------------------------------
+   Footer visit (layouts/_partials/footer-visit.html)
+
+   Sits below the panorama band (see .pano-credit-band above -- that's what
+   keeps this out from under the mountains) and above the copyright line.
+   Two columns on anything wide enough: address left, map right. A plain OSM
+   iframe embed rather than the interactive MapLibre map block -- no JS
+   bundle, no card chrome to reconcile with the flat hairline language, and it
+   degrades to a static "here's the map" if it fails to load. Text colour is
+   inherited rather than set, same reasoning as .pano-credit above: over the
+   darkest part of the panorama band, --ink-soft falls under AA at this size,
+   where the footer's own foreground does not.
+   ------------------------------------------------------------------------ */
+
+.footer-visit {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  max-width: 32rem;
+  margin: 1.25rem auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .footer-visit {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.75rem;
+    max-width: 42rem;
+    text-align: left;
+  }
+}
+
+.footer-visit__label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+
+.footer-visit__address {
+  font-style: normal;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer-visit__map {
+  display: block;
+  width: 100%;
+  height: 160px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
 }
