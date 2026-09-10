@@ -69,14 +69,14 @@ hugoblox:
     title: "Hesselberth Lab"
     location:
       address:
-        street: ""
+        street: "12801 East 17th Ave"
         city: "Aurora"
         region: "CO"
         postal_code: "80045"
         country: "US"
       coordinates:
-        latitude: null
-        longitude: null
+        latitude: 39.7440898
+        longitude: -104.8393864
       phone: ""
     ai:
       allow:
