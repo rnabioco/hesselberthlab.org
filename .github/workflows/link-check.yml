@@ -35,16 +35,20 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           # Internal links resolve against the built site; external ones are
-          # followed for real. 429s are rate limiting, not breakage.
+          # followed for real. 429s are rate limiting, not breakage. Root-
+          # relative links (/css/..., /people/) need --root-dir or lychee
+          # reports every one as an error. unsplash.com answers 401 to bots.
           args: >-
             --no-progress
             --accept 200,206,429
             --max-concurrency 8
             --timeout 20
             --retry-wait-time 5
+            --root-dir ${{ github.workspace }}/public
             --exclude-path public/pagefind
             --exclude '^https?://localhost'
             --exclude 'doi\.org'
+            --exclude '^https://unsplash\.com'
             'public/**/*.html'
           output: lychee-report.md
           fail: false
