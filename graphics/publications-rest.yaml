@@ -1,0 +1,265 @@
+# Illustrations for the remaining publications without a featured image.
+#
+#   pixi run -e graphics Rscript -e 'bananarama::bananarama("graphics/publications-rest.yaml")'   # 59 images, ~$4
+#
+# Renders to graphics/out/cu/pubs-rest/. Then run scripts/install_pub_images.py,
+# which copies each image to content/publications/<slug>/featured.png (and to
+# preprint/published twins that share one image).
+#
+# `name` must match the publication's directory under content/publications/.
+
+output-dir: out/cu/pubs-rest
+
+defaults:
+  model: gemini-3.1-flash-image-preview
+  aspect-ratio: "1:1"
+  n: 1
+  # Same house style as graphics/cu.yaml — keep the two in step.
+  style: >
+    Flat vector editorial illustration with a prominent grainy, chalk-pastel
+    texture overlaid on the entire image. The style is lineless, relying on
+    colour blocking and soft, textured shading to define forms.
+    The colour palette is restricted to the University of Colorado colours and
+    nothing else: warm cream, CU gold, a deeper ochre gold, near-black ink and
+    warm grey. Gold carries the largest areas of colour. Do not introduce
+    blues, greens, pinks or any other hue.
+    A single clear subject, generous negative space, readable when shrunk to a
+    small thumbnail. No lettering or text of any kind.
+
+images:
+  - name: ancar-2020-ke
+    description: >
+      A pair of molecular scissors snipping a long viral RNA strand at repeated small marks, the cut fragments falling away, with a spiky virus particle faint in the background.
+
+  - name: baschal-undated-ix
+    description: >
+      A tall stack of gold coins beside a growing bar chart whose bars are made of stacked coins, with a small magnifying lens resting on top.
+
+  - name: brown-2006-ci
+    description: >
+      Two small receptor proteins sitting side by side in a membrane, their cytoplasmic tails reaching down and touching different adaptor shapes of distinct form.
+
+  - name: bryan-2014-ae
+    description: >
+      A double helix of DNA with a few bases bearing small flag marks, a small enzyme plucking one flagged base out of the strand.
+
+  - name: carpentier-2021-jw
+    description: >
+      A lymphatic vessel lined with cells that scoop up and trap small spiky virus particles before they reach a stream of blood.
+
+  - name: carvill-2021-ut
+    description: >
+      A brain in profile with a neural pathway of three nodes, one node dim, one fractured, one glowing too brightly.
+
+  - name: cherry-2018-cs
+    description: >
+      A broken RNA strand with two loose ends being stitched together by a small enzyme, while a second path bypasses it with a simple bridge.
+
+  - name: cherry-2019-uf
+    description: >
+      A messenger RNA strand with a short loop excised and two exon halves rejoining, with small pieces of the strand being chewed away at the edges.
+
+  - name: cooper-2010-rj
+    description: >
+      A row of small flasks of yeast, each holding a different pattern of tiny amino acid shapes, arranged in a neat grid.
+
+  - name: cooper-2014-le
+    description: >
+      A large ring-shaped enzyme cutting an RNA strand at several marked sites, the cut pieces drifting apart.
+
+  - name: cooper-2015-sz
+    description: >
+      A segmented influenza virus genome of eight short RNA strands, with scissors cutting a few of them at marked sites.
+
+  - name: cox-2002-kt
+    description: >
+      A small robotic arm picking tiny folded RNA aptamers off a rack and dropping them toward protein shapes.
+
+  - name: franklin-2020-nu
+    description: >
+      A messenger RNA strand with a knotted protective structure at its start that blocks an approaching exonuclease shaped like a hungry pair of jaws.
+
+  - name: fu-2020-nn
+    description: >
+      A scatter of many small dots resolving into colour-coded clusters, with a label-less tag attached to each cluster.
+
+  - name: fu-2020-yn
+    description: >
+      A sleeping ground squirrel curled up in a burrow with a brain overlay showing slow waves of RNA, and a faint sun rising outside.
+
+  - name: fu-2022-ug
+    description: >
+      A messenger RNA strand ending in several alternative tails of different lengths, a pipeline of simple pipes channeling them to a bar chart.
+
+  - name: garrey-2014-ow
+    description: >
+      A lariat-shaped branched RNA being unknotted at its branch point by a small enzyme beside a second similar enzyme looking on.
+
+  - name: gillen-2016-rn
+    description: >
+      A protein clamped to an RNA strand by light rays, with a stray primer attaching to the wrong spot and being crossed out by a gentle gesture.
+
+  - name: gillen-2017-de
+    description: >
+      A mitochondrion beside an mRNA strand whose tail is short, with small radiating sparks representing reactive oxygen.
+
+  - name: gillen-2020-jl
+    description: >
+      A brain tumor cell cluster seen as a scatter of dots separated into distinct neighbourhoods, with a young child's silhouette faint behind.
+
+  - name: grabek-2015-qy
+    description: >
+      A brown fat cell glowing with warmth, producing heat, with a small hibernating animal curled beside it and thermometer-like rising lines.
+
+  - name: hansen-2016-zj
+    description: >
+      A macrophage containing a strand of viral DNA with a few mismatched bases highlighted, and a small repair enzyme approaching.
+
+  - name: hesselberth-2000-kr
+    description: >
+      A test strip with a folded nucleic acid aptamer binding a small analyte, producing a single clear colored line.
+
+  - name: hesselberth-2000-mv
+    description: >
+      A small RNA aptamer wrapped around the active site of a toxin protein, blocking it from cutting a ribosome.
+
+  - name: hesselberth-2003-ip
+    description: >
+      A grid array of tiny wells, each holding a folded ribozyme that lights up when its particular small molecule arrives.
+
+  - name: hesselberth-2006-ik
+    description: >
+      A small WW-domain protein shaped like a clamp gripping a proline-rich peptide, with a web of linked nodes behind it.
+
+  - name: hesselberth-2009-dn
+    description: >
+      A DNA double helix wrapped around nucleosomes, with a protein sitting on a gap and a pair of scissors cutting around it, leaving a footprint.
+
+  - name: hesselberth-2013-fq
+    description: >
+      A spliced-out lariat intron that, instead of being discarded, drifts off with small arms reaching toward new tasks.
+
+  - name: hesselberth-undated-fj
+    description: >
+      A factory of nucleotide building blocks, a gate valve controlling the flow of uracil units into a growing DNA strand.
+
+  - name: ivanova-2023-wj
+    description: >
+      Two transcription factor shapes locked together like gears driving a rising cytotoxic T cell, with a syringe in the background.
+
+  - name: koh-2015-oe
+    description: >
+      A DNA double helix with a few embedded ribonucleotides marked, and a sequencing ladder reading them out.
+
+  - name: kosmaczewski-2014-hd
+    description: >
+      A worm outlined in cross-section with a small RNA ligase stitching a spliced XBP1 transcript back together inside a stressed cell.
+
+  - name: la-count-2005-my
+    description: >
+      A malaria parasite cell at the center of a web of linked protein nodes radiating outward.
+
+  - name: lee-2004-mj
+    description: >
+      A library shelf filled with small folded aptamer shapes, each in its own labelled slot.
+
+  - name: mosher-2015-ae
+    description: >
+      A fruit fly larva with a brain highlighted, a few neurons lit up and fat droplets glowing in its body.
+
+  - name: peach-2015-vy
+    description: >
+      An RNA strand with cut ends, one carrying a hydroxyl mark, being picked up by a ligase and read out as a sequencing trace.
+
+  - name: pollyea-2018-sy
+    description: >
+      A leukemia stem cell with its mitochondria dimming and deflating, as a pair of drug capsules approach.
+
+  - name: puntambekar-2021-sl
+    description: >
+      A tidy ledger of cell metadata tags attached to a plate of single cells, with a checklist and a magnifying lens.
+
+  - name: richer-2019-nc
+    description: >
+      A tiny droplet containing a single cell and a barcoded bead, with enzyme activity represented as tiny glowing sparks.
+
+  - name: richer-2020-dx
+    description: >
+      A single cell in a droplet, with two readouts leaving it: one a row of enzyme activity bars, the other an mRNA strand.
+
+  - name: riemondy-2017-ew
+    description: >
+      Overlapping genomic intervals drawn as bars along a line, with a piping data pipeline joining them and a small R-shaped gem.
+
+  - name: riemondy-2018-si
+    description: >
+      A brain in a cooling environment with an RNA strand whose bases are being edited from A to I, with a thermometer falling.
+
+  - name: riemondy-2019-oh
+    description: >
+      A pooled mix of single cells sorted by a funnel into separate transcriptome subsets, each a distinct pile.
+
+  - name: riemondy-2019-pc
+    description: >
+      A lung with tiny air sacs, a wounded alveolar cell regenerating with a signalling molecule shaped like a key turning in a lock.
+
+  - name: riemondy-2021-ko
+    description: >
+      A cerebellum outline with a tumor dissolving into many cell types separated into neoplastic and immune groups.
+
+  - name: robertson-2001-cm
+    description: >
+      A short ribozyme joining two RNA ends with unusual wobbled base pairs at the junction.
+
+  - name: rossbach-2017-nf
+    description: >
+      A replicating chromosome with a kinase marker sitting on an origin of replication as the DNA forks open.
+
+  - name: schutz-2010-ha
+    description: >
+      An RNA strand ending with a cyclic phosphate, captured by a hook shaped ligase and fed into a sequencer.
+
+  - name: sclafani-2018-rw
+    description: >
+      A cell nucleus with a magnifying glass searching along a chromosome, a small kinase flag finally found on it.
+
+  - name: singh-1998-ke
+    description: >
+      A layer of airway epithelial cells secreting small defensin molecules that pierce approaching bacteria.
+
+  - name: smirnova-2020-jb
+    description: >
+      A cluster of B cells separated into distinct populations, one glowing, in an inflamed tissue.
+
+  - name: tamburini-2019-jf
+    description: >
+      A liver with lymphatic vessels expanding and branching, draining into a lymph node.
+
+  - name: tamburini-2023-pk
+    description: >
+      A lymph node stromal cell holding a tiny archived antigen fragment while a memory T cell responds to a vaccine.
+
+  - name: tuttle-2018-fn
+    description: >
+      A developing T cell in the thymus receiving a strong or weak signal, branching into three distinct iNKT subsets.
+
+  - name: walsh-2021-sh
+    description: >
+      A molecular barcode tag attached to an antigen, tracked as it spreads into a lymph node, a tiny tracking device with a barcode.
+
+  - name: white-2022-sr
+    description: >
+      A strand of RNA passing through a nanopore, its modified bases producing different squiggle signals.
+
+  - name: white-2023-am
+    description: >
+      An RNA strand passing through a nanopore, with a 2'-phosphate mark at a splice junction altering the signal.
+
+  - name: yang-2020-yz
+    description: >
+      An embryonic stem cell differentiating into blood cells, with a switch labelled only by an icon turning on a histone methyltransferase.
+
+  - name: zhang-2007-zo
+    description: >
+      A tiling microarray grid, with a spliced intron highlighted along a strand laid across the tiles.
+
